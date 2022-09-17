@@ -1,6 +1,6 @@
-test 1000
-bob 900
-jim 56
-gym 25
-billy 15
-garrison 7
+MrP 100
+bob 80
+jim 60
+gym 20
+billy 10
+garrison 0

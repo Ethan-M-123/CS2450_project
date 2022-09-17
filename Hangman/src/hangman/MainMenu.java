@@ -86,7 +86,11 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_highscoreButtonActionPerformed
 
     private void playButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playButtonActionPerformed
-        // TODO add your handling code here:
+        if(evt.getSource()== playButton){
+            PlayScreen gameScreen = new PlayScreen();
+            gameScreen.show();
+            this.dispose();
+        }
     }//GEN-LAST:event_playButtonActionPerformed
 
     /**
