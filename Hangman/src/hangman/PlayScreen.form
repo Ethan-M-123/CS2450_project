@@ -68,7 +68,10 @@
                                   <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Component id="btn_GetNewWord" min="-2" pref="141" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="btn_GetNewWord" min="-2" pref="141" max="-2" attributes="0"/>
+                              <Component id="btn_GetNewWord1" min="-2" pref="141" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -142,6 +145,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                           <Component id="btn_GetNewWord" min="-2" pref="46" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btn_GetNewWord1" min="-2" pref="46" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -451,6 +456,14 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Score: 100"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_GetNewWord1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Skip!"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_GetNewWord1ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

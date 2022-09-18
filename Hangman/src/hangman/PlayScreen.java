@@ -25,6 +25,7 @@ public class PlayScreen extends javax.swing.JFrame{
     GetGuessWord guessWord = new GetGuessWord();
     String currWord;
     String displayedWord;
+    Highscores scorePage = new Highscores();
     int score;
     int numWrongAnswers;
     ImageIcon[] hangManParts;
@@ -101,6 +102,7 @@ public class PlayScreen extends javax.swing.JFrame{
         buttonY = new javax.swing.JButton();
         buttonZ = new javax.swing.JButton();
         scoreLabel = new javax.swing.JLabel();
+        btn_GetNewWord1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -311,6 +313,13 @@ public class PlayScreen extends javax.swing.JFrame{
         scoreLabel.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         scoreLabel.setText("Score: 100");
 
+        btn_GetNewWord1.setText("Skip!");
+        btn_GetNewWord1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_GetNewWord1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -335,7 +344,9 @@ public class PlayScreen extends javax.swing.JFrame{
                                     .addComponent(label_GuessWord, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel1))
                                 .addGap(106, 106, 106)))
-                        .addComponent(btn_GetNewWord, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn_GetNewWord, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_GetNewWord1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(45, 45, 45))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(44, 44, 44)
@@ -400,7 +411,9 @@ public class PlayScreen extends javax.swing.JFrame{
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(72, 72, 72)
-                        .addComponent(btn_GetNewWord, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btn_GetNewWord, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_GetNewWord1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -465,6 +478,59 @@ public class PlayScreen extends javax.swing.JFrame{
         this.currWord = guessWord.getCurrentWord();
         this.displayedWord = guessWord.getCurrWordHidden();
         label_GuessWord.setText(displayedWord);
+        
+        buttonA.enable();
+        buttonA.setBackground(java.awt.Color.WHITE);
+        buttonB.enable();
+        buttonB.setBackground(java.awt.Color.WHITE);
+        buttonC.enable();
+        buttonC.setBackground(java.awt.Color.WHITE);
+        buttonD.enable();
+        buttonD.setBackground(java.awt.Color.WHITE);
+        buttonE.enable();
+        buttonE.setBackground(java.awt.Color.WHITE);
+        buttonF.enable();
+        buttonF.setBackground(java.awt.Color.WHITE);
+        buttonG.enable();
+        buttonG.setBackground(java.awt.Color.WHITE);
+        buttonH.enable();
+        buttonH.setBackground(java.awt.Color.WHITE);
+        buttonI.enable();
+        buttonI.setBackground(java.awt.Color.WHITE);
+        buttonJ.enable();
+        buttonJ.setBackground(java.awt.Color.WHITE);
+        buttonK.enable();
+        buttonK.setBackground(java.awt.Color.WHITE);
+        buttonL.enable();
+        buttonL.setBackground(java.awt.Color.WHITE);
+        buttonM.enable();
+        buttonM.setBackground(java.awt.Color.WHITE);
+        buttonN.enable();
+        buttonN.setBackground(java.awt.Color.WHITE);
+        buttonO.enable();
+        buttonO.setBackground(java.awt.Color.WHITE);
+        buttonP.enable();
+        buttonP.setBackground(java.awt.Color.WHITE);
+        buttonQ.enable();
+        buttonQ.setBackground(java.awt.Color.WHITE);
+        buttonR.enable();
+        buttonR.setBackground(java.awt.Color.WHITE);
+        buttonS.enable();
+        buttonS.setBackground(java.awt.Color.WHITE);
+        buttonT.enable();
+        buttonT.setBackground(java.awt.Color.WHITE);
+        buttonU.enable();
+        buttonU.setBackground(java.awt.Color.WHITE);
+        buttonV.enable();
+        buttonV.setBackground(java.awt.Color.WHITE);
+        buttonW.enable();
+        buttonW.setBackground(java.awt.Color.WHITE);
+        buttonX.enable();
+        buttonX.setBackground(java.awt.Color.WHITE);
+        buttonY.enable();
+        buttonY.setBackground(java.awt.Color.WHITE);
+        buttonZ.enable();
+        buttonZ.setBackground(java.awt.Color.WHITE);
     }//GEN-LAST:event_btn_GetNewWordActionPerformed
 
     private void buttonAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAActionPerformed
@@ -623,6 +689,12 @@ public class PlayScreen extends javax.swing.JFrame{
         buttonZ.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonZActionPerformed
 
+    private void btn_GetNewWord1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_GetNewWord1ActionPerformed
+        score = 0;
+        scorePage.show();
+        this.dispose();
+    }//GEN-LAST:event_btn_GetNewWord1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -693,11 +765,18 @@ public class PlayScreen extends javax.swing.JFrame{
             scoreLabel.setText("Score: " + score);
             jLabel1.setIcon(this.hangManParts[numWrongAnswers]);
             numWrongAnswers++;
+            
+            if((score<0) || (numWrongAnswers==6))
+            {
+                scorePage.show();
+                this.dispose();
+            }
         }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_GetNewWord;
+    private javax.swing.JButton btn_GetNewWord1;
     private javax.swing.JButton buttonA;
     private javax.swing.JButton buttonB;
     private javax.swing.JButton buttonC;
