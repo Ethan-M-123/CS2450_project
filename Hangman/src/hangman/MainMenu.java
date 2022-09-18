@@ -47,6 +47,11 @@ public class MainMenu extends javax.swing.JFrame {
         });
 
         creditsButton.setText("Credits");
+        creditsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                creditsButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -92,6 +97,14 @@ public class MainMenu extends javax.swing.JFrame {
             this.dispose();
         }
     }//GEN-LAST:event_playButtonActionPerformed
+
+    private void creditsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_creditsButtonActionPerformed
+        if(evt.getSource()== creditsButton){
+            CreditsScreen credits = new CreditsScreen();
+            credits.show();
+            this.dispose();
+        } 
+    }//GEN-LAST:event_creditsButtonActionPerformed
 
     /**
      * @param args the command line arguments
