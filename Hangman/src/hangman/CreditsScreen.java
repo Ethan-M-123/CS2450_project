@@ -40,9 +40,8 @@ public class CreditsScreen extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Dixon Dai, 014899781\nShane Baxter, 013655473\nEthan Melero, 014669369\n");
+        jTextArea1.setText("Dixon Dai, 014899781\nShane Baxter, 013655473\nEthan Melero, 014669369\nMarvin Sevilla, 014646346");
         jTextArea1.setWrapStyleWord(true);
-        jTextArea1.setSize(new java.awt.Dimension(600, 400));
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton1.setText("Back");
