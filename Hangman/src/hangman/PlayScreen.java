@@ -102,7 +102,7 @@ public class PlayScreen extends javax.swing.JFrame{
         buttonY = new javax.swing.JButton();
         buttonZ = new javax.swing.JButton();
         scoreLabel = new javax.swing.JLabel();
-        btn_GetNewWord1 = new javax.swing.JButton();
+        btn_Skip = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -313,10 +313,10 @@ public class PlayScreen extends javax.swing.JFrame{
         scoreLabel.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         scoreLabel.setText("Score: 100");
 
-        btn_GetNewWord1.setText("Skip!");
-        btn_GetNewWord1.addActionListener(new java.awt.event.ActionListener() {
+        btn_Skip.setText("Skip!");
+        btn_Skip.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_GetNewWord1ActionPerformed(evt);
+                btn_SkipActionPerformed(evt);
             }
         });
 
@@ -346,7 +346,7 @@ public class PlayScreen extends javax.swing.JFrame{
                                 .addGap(106, 106, 106)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btn_GetNewWord, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_GetNewWord1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btn_Skip, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(45, 45, 45))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(44, 44, 44)
@@ -413,7 +413,7 @@ public class PlayScreen extends javax.swing.JFrame{
                         .addGap(72, 72, 72)
                         .addComponent(btn_GetNewWord, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_GetNewWord1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btn_Skip, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -689,11 +689,11 @@ public class PlayScreen extends javax.swing.JFrame{
         buttonZ.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonZActionPerformed
 
-    private void btn_GetNewWord1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_GetNewWord1ActionPerformed
+    private void btn_SkipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SkipActionPerformed
         score = 0;
         scorePage.show();
         this.dispose();
-    }//GEN-LAST:event_btn_GetNewWord1ActionPerformed
+    }//GEN-LAST:event_btn_SkipActionPerformed
 
     /**
      * @param args the command line arguments
@@ -776,7 +776,7 @@ public class PlayScreen extends javax.swing.JFrame{
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_GetNewWord;
-    private javax.swing.JButton btn_GetNewWord1;
+    private javax.swing.JButton btn_Skip;
     private javax.swing.JButton buttonA;
     private javax.swing.JButton buttonB;
     private javax.swing.JButton buttonC;
