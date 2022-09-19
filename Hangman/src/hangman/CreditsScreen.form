@@ -73,11 +73,8 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Dixon Dai, 014899781&#xa;Shane Baxter, 013655473&#xa;Ethan Melero, 014669369&#xa;"/>
+            <Property name="text" type="java.lang.String" value="Dixon Dai, 014899781&#xa;Shane Baxter, 013655473&#xa;Ethan Melero, 014669369&#xa;Marvin Sevilla, 014646346"/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
-            <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[600, 400]"/>
-            </Property>
           </Properties>
         </Component>
       </SubComponents>
