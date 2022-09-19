@@ -32,6 +32,8 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(600, 400));
+        setResizable(false);
 
         playButton.setText("Play");
         playButton.addActionListener(new java.awt.event.ActionListener() {
