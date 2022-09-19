@@ -12,11 +12,9 @@ package hangman;
 import java.util.Date;
 import java.util.Calendar;
 import java.awt.event.*;
+import java.util.Arrays;
 import java.util.GregorianCalendar;
 import javax.swing.ImageIcon;
-import java.io.File;
-import java.io.*;
-import java.util.*;
 
 public class PlayScreen extends javax.swing.JFrame{
 
@@ -28,8 +26,10 @@ public class PlayScreen extends javax.swing.JFrame{
     GetGuessWord guessWord = new GetGuessWord();
     String currWord;
     String displayedWord;
+    Highscores scorePage = new Highscores();
     int score;
     int numWrongAnswers;
+    int numRightAnswers;
     ImageIcon[] hangManParts;
     
     public PlayScreen() {
@@ -475,21 +475,6 @@ public class PlayScreen extends javax.swing.JFrame{
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void recordPlayerScore()
-    {
-        try
-        {
-            FileWriter write = new FileWriter(".\\src\\hangman\\LastScore.txt");
-            
-            write.write("lastScore " + score);
-            write.close();
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-    } 
-    
     private void btn_GetNewWordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_GetNewWordActionPerformed
         guessWord.getNewWord();
         this.currWord = guessWord.getCurrentWord();
@@ -708,9 +693,7 @@ public class PlayScreen extends javax.swing.JFrame{
 
     private void btn_SkipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SkipActionPerformed
         score = 0;
-        recordPlayerScore();
-        EndScreen endPage = new EndScreen();
-        endPage.show();
+        scorePage.show();
         this.dispose();
     }//GEN-LAST:event_btn_SkipActionPerformed
 
@@ -768,18 +751,29 @@ public class PlayScreen extends javax.swing.JFrame{
             }
         }
         
-        if(isGuessCorrect){
-            
+        if(isGuessCorrect)
+        {
             char[] newDisplay = label_GuessWord.getText().toCharArray();
             
-            for(int i=0; i<newDisplay.length; i++){
-                if(correctGuessIndexes[i] == 1){
+            for(int i=0; i<newDisplay.length; i++)
+            {
+                if(correctGuessIndexes[i] == 1)
+                {
                     newDisplay[i] = currWord.toCharArray()[i/2];
+                    numRightAnswers++;
                 }
                 
                 label_GuessWord.setText(new String(newDisplay));
             }
-        } else {
+            
+            if (numRightAnswers == currWord.length())
+            {
+                scorePage.show();
+                this.dispose();
+            }
+        } 
+        else 
+        {
             score = score - 10;
             scoreLabel.setText("Score: " + score);
             jLabel1.setIcon(this.hangManParts[numWrongAnswers]);
@@ -787,9 +781,7 @@ public class PlayScreen extends javax.swing.JFrame{
             
             if((score<0) || (numWrongAnswers==6))
             {
-                recordPlayerScore();
-                EndScreen endPage = new EndScreen();
-                endPage.show();
+                scorePage.show();
                 this.dispose();
             }
         }
