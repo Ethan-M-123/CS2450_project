@@ -1,1 +1,1 @@
-lastScore 40
+lastScore 0

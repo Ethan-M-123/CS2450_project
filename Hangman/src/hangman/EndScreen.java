@@ -18,6 +18,7 @@ public class EndScreen extends javax.swing.JFrame {
      */
     public EndScreen() {
         initComponents();
+        setLocationRelativeTo(null);
         setScore(retrieveLatestScore());
     }
 
