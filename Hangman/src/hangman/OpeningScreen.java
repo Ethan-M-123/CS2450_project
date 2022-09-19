@@ -30,7 +30,6 @@ public class OpeningScreen extends javax.swing.JFrame {
         teamName = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(600, 400));
 
         projectTitle.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         projectTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
