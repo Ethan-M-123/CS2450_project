@@ -3,8 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package hangman;
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.*;
 
 /**
@@ -127,6 +126,24 @@ public class EndScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_EndActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_EndActionPerformed
+        /* 
+        //Keeping this in case the person who made the Player class ever comes 
+        // fix it or properly implement their function here
+        
+        Player newPlayer = new Player("Random", retrieveLatestScore());
+        HighscoresController hsCtrl = new HighscoresController(new File(".\\src\\hangman\\highscores.txt"));
+        hsCtrl.addPlayer(newPlayer);
+        */
+        try
+        { 
+            FileWriter file = new FileWriter(".\\src\\hangman\\highscores.txt", true);
+            file.append("\nRandom " + String.valueOf(retrieveLatestScore()));
+            file.close();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+        
         MainMenu mainScreen = new MainMenu();
         mainScreen.show();
         this.dispose();

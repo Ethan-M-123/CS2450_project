@@ -21,16 +21,17 @@ public class Highscores extends javax.swing.JFrame {
     public Highscores() {
         initComponents();
         HighscoresController hsc = new HighscoresController(new File(".\\src\\hangman\\highscores.txt"));
+        hsc.sortList();
         Player[] temp = hsc.getList();
         for(int i = 0; i < highscoreNames.length; ++i){
             highscoreNames[i] = temp[i].getName();
             highscores[i] = temp[i].getScore();
         }
-        scoreOne.setText(highscoreNames[0] + "....." + highscores[0]);
-        scoreTwo.setText(highscoreNames[1] + "....." + highscores[1]);
+        scoreOne.setText(highscoreNames[4] + "....." + highscores[4]);
+        scoreTwo.setText(highscoreNames[3] + "....." + highscores[3]);
         scoreThree.setText(highscoreNames[2] + "....." + highscores[2]);
-        scoreFour.setText(highscoreNames[3] + "....." + highscores[3]);
-        scoreFive.setText(highscoreNames[4] + "....." + highscores[4]);
+        scoreFour.setText(highscoreNames[1] + "....." + highscores[1]);
+        scoreFive.setText(highscoreNames[0] + "....." + highscores[0]);
     }
 
     /**
