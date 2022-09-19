@@ -71,16 +71,21 @@ public class EndScreen extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
+        jPanel1.setPreferredSize(new java.awt.Dimension(600, 400));
+
         label_YourScore.setFont(new java.awt.Font("Showcard Gothic", 0, 24)); // NOI18N
         label_YourScore.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         label_YourScore.setText("YOUR SCORE");
+        label_YourScore.setAlignmentY(0.0F);
 
         label_ScoreDisplay.setFont(new java.awt.Font("Segoe UI Emoji", 0, 24)); // NOI18N
         label_ScoreDisplay.setForeground(new java.awt.Color(255, 0, 0));
         label_ScoreDisplay.setText("0");
+        label_ScoreDisplay.setAlignmentY(0.0F);
 
         btn_End.setFont(new java.awt.Font("SWIsot3", 0, 18)); // NOI18N
         btn_End.setText("END");
+        btn_End.setAlignmentY(0.0F);
         btn_End.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_EndActionPerformed(evt);
@@ -92,12 +97,17 @@ public class EndScreen extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(323, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(label_ScoreDisplay)
-                    .addComponent(label_YourScore, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_End))
-                .addGap(312, 312, 312))
+                .addContainerGap(209, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(label_YourScore, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(195, 195, 195))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(label_ScoreDisplay)
+                        .addGap(285, 285, 285))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(btn_End)
+                        .addGap(258, 258, 258))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,9 +116,9 @@ public class EndScreen extends javax.swing.JFrame {
                 .addComponent(label_YourScore, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(label_ScoreDisplay)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 242, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(btn_End)
-                .addGap(138, 138, 138))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
