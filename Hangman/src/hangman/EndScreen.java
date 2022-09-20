@@ -17,6 +17,7 @@ public class EndScreen extends javax.swing.JFrame {
      */
     public EndScreen() {
         initComponents();
+        setSize(600,400);
         setLocationRelativeTo(null);
         setScore(retrieveLatestScore());
     }
@@ -67,69 +68,95 @@ public class EndScreen extends javax.swing.JFrame {
         label_YourScore = new javax.swing.JLabel();
         label_ScoreDisplay = new javax.swing.JLabel();
         btn_End = new javax.swing.JButton();
+        playerNameField = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(600, 400));
+        setMinimumSize(new java.awt.Dimension(600, 400));
         setResizable(false);
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(600, 400));
+        jPanel1.setPreferredSize(new java.awt.Dimension(636, 400));
+        jPanel1.setRequestFocusEnabled(false);
 
         label_YourScore.setFont(new java.awt.Font("Showcard Gothic", 0, 24)); // NOI18N
         label_YourScore.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         label_YourScore.setText("YOUR SCORE");
-        label_YourScore.setAlignmentY(0.0F);
 
         label_ScoreDisplay.setFont(new java.awt.Font("Segoe UI Emoji", 0, 24)); // NOI18N
         label_ScoreDisplay.setForeground(new java.awt.Color(255, 0, 0));
+        label_ScoreDisplay.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         label_ScoreDisplay.setText("0");
-        label_ScoreDisplay.setAlignmentY(0.0F);
 
         btn_End.setFont(new java.awt.Font("SWIsot3", 0, 18)); // NOI18N
         btn_End.setText("END");
-        btn_End.setAlignmentY(0.0F);
         btn_End.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_EndActionPerformed(evt);
             }
         });
 
+        playerNameField.setText("ABC");
+        playerNameField.setName(""); // NOI18N
+        playerNameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                playerNameFieldActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Enter Your Name");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(209, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(label_YourScore, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(195, 195, 195))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(label_ScoreDisplay)
-                        .addGap(285, 285, 285))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(btn_End)
-                        .addGap(258, 258, 258))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(196, 196, 196)
+                        .addComponent(label_YourScore, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(258, 258, 258)
+                        .addComponent(btn_End))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(292, 292, 292)
+                        .addComponent(label_ScoreDisplay))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(250, 250, 250)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(playerNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel1))))
+                .addContainerGap(208, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(122, 122, 122)
+                .addGap(35, 35, 35)
                 .addComponent(label_YourScore, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(label_ScoreDisplay)
-                .addGap(18, 18, 18)
+                .addGap(54, 54, 54)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(playerNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
                 .addComponent(btn_End)
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addGap(14, 14, 14))
         );
+
+        playerNameField.getAccessibleContext().setAccessibleName("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
         );
 
         pack();
@@ -147,7 +174,7 @@ public class EndScreen extends javax.swing.JFrame {
         try
         { 
             FileWriter file = new FileWriter(".\\src\\hangman\\highscores.txt", true);
-            file.append("\nRandom " + String.valueOf(retrieveLatestScore()));
+            file.append("\n" + playerNameField.getText() + " " + String.valueOf(retrieveLatestScore()));
             file.close();
         }
         catch(IOException e){
@@ -158,6 +185,10 @@ public class EndScreen extends javax.swing.JFrame {
         mainScreen.show();
         this.dispose();
     }//GEN-LAST:event_btn_EndActionPerformed
+
+    private void playerNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playerNameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_playerNameFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -196,8 +227,10 @@ public class EndScreen extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_End;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel label_ScoreDisplay;
     private javax.swing.JLabel label_YourScore;
+    private javax.swing.JTextField playerNameField;
     // End of variables declaration//GEN-END:variables
 }

@@ -15,6 +15,7 @@ public class OpeningScreen extends javax.swing.JFrame {
      */
     public OpeningScreen() {
         initComponents();
+        setSize(600,400);
     }
 
     /**
@@ -30,6 +31,8 @@ public class OpeningScreen extends javax.swing.JFrame {
         teamName = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(600, 400));
+        setMinimumSize(new java.awt.Dimension(600, 400));
 
         projectTitle.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         projectTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

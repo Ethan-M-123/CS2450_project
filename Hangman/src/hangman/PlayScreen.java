@@ -18,6 +18,7 @@ import javax.swing.ImageIcon;
 import java.io.File;
 import java.io.*;
 import java.util.*;
+import javax.swing.JOptionPane;
 
 public class PlayScreen extends javax.swing.JFrame{
 
@@ -36,6 +37,7 @@ public class PlayScreen extends javax.swing.JFrame{
     
     public PlayScreen() {
         initComponents();
+        this.setSize(600, 400);
         new Thread(){
             public void run(){
                 while(true){
@@ -110,9 +112,11 @@ public class PlayScreen extends javax.swing.JFrame{
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setPreferredSize(new java.awt.Dimension(639, 440));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 255, 204));
+        jPanel1.setPreferredSize(new java.awt.Dimension(600, 400));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/HangmanPictures/hangEmpty.png"))); // NOI18N
 
@@ -134,286 +138,390 @@ public class PlayScreen extends javax.swing.JFrame{
             }
         });
 
-        buttonA.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonA.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonA.setText("A");
+        buttonA.setAlignmentY(0.0F);
+        buttonA.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonA.setIconTextGap(0);
+        buttonA.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonA.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonA.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonA.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonA.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonAActionPerformed(evt);
             }
         });
 
-        buttonB.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonB.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonB.setText("B");
+        buttonB.setAlignmentY(0.0F);
+        buttonB.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonB.setIconTextGap(0);
+        buttonB.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonB.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonB.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonB.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonB.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonBActionPerformed(evt);
             }
         });
 
-        buttonC.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonC.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonC.setText("C");
+        buttonC.setAlignmentY(0.0F);
+        buttonC.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonC.setIconTextGap(0);
+        buttonC.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonC.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonC.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonC.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonC.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonCActionPerformed(evt);
             }
         });
 
-        buttonD.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonD.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonD.setText("D");
+        buttonD.setAlignmentY(0.0F);
+        buttonD.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonD.setIconTextGap(0);
+        buttonD.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonD.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonD.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonD.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonD.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonDActionPerformed(evt);
             }
         });
 
-        buttonE.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonE.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonE.setText("E");
+        buttonE.setAlignmentY(0.0F);
+        buttonE.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonE.setIconTextGap(0);
+        buttonE.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonE.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonE.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonE.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonE.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonEActionPerformed(evt);
             }
         });
 
-        buttonF.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonF.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonF.setText("F");
+        buttonF.setAlignmentY(0.0F);
+        buttonF.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonF.setIconTextGap(0);
+        buttonF.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonF.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonF.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonF.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonF.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonFActionPerformed(evt);
             }
         });
 
-        buttonG.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonG.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonG.setText("G");
+        buttonG.setAlignmentY(0.0F);
+        buttonG.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonG.setIconTextGap(0);
+        buttonG.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonG.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonG.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonG.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonG.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonG.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonGActionPerformed(evt);
             }
         });
 
-        buttonH.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonH.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonH.setText("H");
+        buttonH.setAlignmentY(0.0F);
+        buttonH.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonH.setIconTextGap(0);
+        buttonH.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonH.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonH.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonH.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonH.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonHActionPerformed(evt);
             }
         });
 
-        buttonI.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonI.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonI.setText("I");
+        buttonI.setAlignmentY(0.0F);
+        buttonI.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonI.setIconTextGap(0);
+        buttonI.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonI.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonI.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonI.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonI.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonIActionPerformed(evt);
             }
         });
 
-        buttonJ.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonJ.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonJ.setText("J");
+        buttonJ.setAlignmentY(0.0F);
+        buttonJ.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonJ.setIconTextGap(0);
+        buttonJ.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonJ.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonJ.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonJ.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonJ.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonJ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonJActionPerformed(evt);
             }
         });
 
-        buttonK.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonK.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonK.setText("K");
+        buttonK.setAlignmentY(0.0F);
+        buttonK.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonK.setIconTextGap(0);
+        buttonK.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonK.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonK.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonK.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonK.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonK.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonKActionPerformed(evt);
             }
         });
 
-        buttonL.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonL.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonL.setText("L");
+        buttonL.setAlignmentY(0.0F);
+        buttonL.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonL.setIconTextGap(0);
+        buttonL.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonL.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonL.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonL.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonL.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonLActionPerformed(evt);
             }
         });
 
-        buttonM.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonM.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonM.setText("M");
+        buttonM.setAlignmentY(0.0F);
+        buttonM.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonM.setIconTextGap(0);
+        buttonM.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonM.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonM.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonM.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonM.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonMActionPerformed(evt);
             }
         });
 
-        buttonN.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonN.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonN.setText("N");
+        buttonN.setAlignmentY(0.0F);
+        buttonN.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonN.setIconTextGap(0);
+        buttonN.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonN.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonN.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonN.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonN.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonNActionPerformed(evt);
             }
         });
 
-        buttonO.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonO.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonO.setText("O");
+        buttonO.setAlignmentY(0.0F);
+        buttonO.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonO.setIconTextGap(0);
+        buttonO.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonO.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonO.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonO.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonO.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonOActionPerformed(evt);
             }
         });
 
-        buttonP.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonP.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonP.setText("P");
+        buttonP.setAlignmentY(0.0F);
+        buttonP.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonP.setIconTextGap(0);
+        buttonP.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonP.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonP.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonP.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonP.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonPActionPerformed(evt);
             }
         });
 
-        buttonQ.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonQ.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonQ.setText("Q");
+        buttonQ.setAlignmentY(0.0F);
+        buttonQ.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonQ.setIconTextGap(0);
+        buttonQ.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonQ.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonQ.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonQ.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonQ.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonQ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonQActionPerformed(evt);
             }
         });
 
-        buttonR.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonR.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonR.setText("R");
+        buttonR.setAlignmentY(0.0F);
+        buttonR.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonR.setIconTextGap(0);
+        buttonR.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonR.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonR.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonR.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonR.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonRActionPerformed(evt);
             }
         });
 
-        buttonS.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonS.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonS.setText("S");
+        buttonS.setAlignmentY(0.0F);
+        buttonS.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonS.setIconTextGap(0);
+        buttonS.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonS.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonS.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonS.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonS.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonSActionPerformed(evt);
             }
         });
 
-        buttonT.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonT.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonT.setText("T");
+        buttonT.setAlignmentY(0.0F);
+        buttonT.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonT.setIconTextGap(0);
+        buttonT.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonT.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonT.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonT.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonT.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonTActionPerformed(evt);
             }
         });
 
-        buttonU.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonU.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonU.setText("U");
+        buttonU.setAlignmentY(0.0F);
+        buttonU.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonU.setIconTextGap(0);
+        buttonU.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonU.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonU.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonU.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonU.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonU.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonUActionPerformed(evt);
             }
         });
 
-        buttonV.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonV.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonV.setText("V");
+        buttonV.setAlignmentY(0.0F);
+        buttonV.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonV.setIconTextGap(0);
+        buttonV.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonV.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonV.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonV.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonV.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonV.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonVActionPerformed(evt);
             }
         });
 
-        buttonW.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonW.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonW.setText("W");
+        buttonW.setAlignmentY(0.0F);
+        buttonW.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonW.setIconTextGap(0);
+        buttonW.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonW.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonW.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonW.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonW.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonWActionPerformed(evt);
             }
         });
 
-        buttonX.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonX.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonX.setText("X");
+        buttonX.setAlignmentY(0.0F);
+        buttonX.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonX.setIconTextGap(0);
+        buttonX.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonX.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonX.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonX.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonX.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonX.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonXActionPerformed(evt);
             }
         });
 
-        buttonY.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonY.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonY.setText("Y");
+        buttonY.setAlignmentY(0.0F);
+        buttonY.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonY.setIconTextGap(0);
+        buttonY.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonY.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonY.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonY.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonY.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonY.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonYActionPerformed(evt);
             }
         });
 
-        buttonZ.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        buttonZ.setFont(new java.awt.Font("Segoe UI", 0, 9)); // NOI18N
         buttonZ.setText("Z");
+        buttonZ.setAlignmentY(0.0F);
+        buttonZ.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonZ.setIconTextGap(0);
+        buttonZ.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buttonZ.setMaximumSize(new java.awt.Dimension(50, 50));
         buttonZ.setMinimumSize(new java.awt.Dimension(30, 30));
-        buttonZ.setPreferredSize(new java.awt.Dimension(40, 40));
+        buttonZ.setPreferredSize(new java.awt.Dimension(35, 35));
         buttonZ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonZActionPerformed(evt);
@@ -438,16 +546,13 @@ public class PlayScreen extends javax.swing.JFrame{
                 .addGap(18, 18, 18)
                 .addComponent(label_HANGMAN, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(label_currTimeandDate, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(90, 90, 90)
-                .addComponent(label_GuessWord, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 153, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(label_currTimeandDate, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(buttonN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -475,41 +580,44 @@ public class PlayScreen extends javax.swing.JFrame{
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(buttonZ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(buttonA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(buttonB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(buttonC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(buttonD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(buttonE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(buttonF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(buttonG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(buttonH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(buttonI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(buttonJ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(buttonK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(label_GuessWord, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(buttonA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(buttonB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(buttonC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(buttonD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(buttonE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(buttonF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(buttonG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(buttonH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(buttonI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(buttonJ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(buttonK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(buttonL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(buttonM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(buttonM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
                         .addComponent(scoreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btn_GetNewWord, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_Skip, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(40, 40, 40))))
+                            .addComponent(btn_Skip, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(40, 40, 40))
         );
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {buttonA, buttonB, buttonC, buttonD, buttonE, buttonF, buttonG, buttonH, buttonI, buttonJ, buttonK, buttonL, buttonN, buttonO, buttonP, buttonQ, buttonR, buttonS, buttonT, buttonU, buttonV, buttonW, buttonX, buttonY, buttonZ});
@@ -520,7 +628,9 @@ public class PlayScreen extends javax.swing.JFrame{
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(label_HANGMAN)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(label_HANGMAN)
+                            .addComponent(label_currTimeandDate))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(scoreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -528,13 +638,10 @@ public class PlayScreen extends javax.swing.JFrame{
                                 .addComponent(btn_GetNewWord, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(btn_Skip, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(label_currTimeandDate)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(label_GuessWord, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(buttonA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -564,7 +671,7 @@ public class PlayScreen extends javax.swing.JFrame{
                     .addComponent(buttonX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonZ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {buttonA, buttonB, buttonC, buttonD, buttonE, buttonF, buttonG, buttonH, buttonI, buttonJ, buttonK, buttonL, buttonM, buttonN, buttonO, buttonP, buttonQ, buttonR, buttonS, buttonT, buttonU, buttonV, buttonW, buttonX, buttonY, buttonZ});
@@ -573,7 +680,9 @@ public class PlayScreen extends javax.swing.JFrame{
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -594,157 +703,157 @@ public class PlayScreen extends javax.swing.JFrame{
 
     private void buttonZActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonZActionPerformed
         checkGuess('z');
-        buttonZ.setEnabled(false);
+        buttonZ.disable();
         buttonZ.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonZActionPerformed
 
     private void buttonYActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonYActionPerformed
         checkGuess('y');
-        buttonY.setEnabled(false);
+        buttonY.disable();
         buttonY.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonYActionPerformed
 
     private void buttonXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonXActionPerformed
         checkGuess('x');
-        buttonX.setEnabled(false);
+        buttonX.disable();
         buttonX.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonXActionPerformed
 
     private void buttonWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonWActionPerformed
         checkGuess('w');
-        buttonW.setEnabled(false);
+        buttonW.disable();
         buttonW.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonWActionPerformed
 
     private void buttonVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonVActionPerformed
         checkGuess('v');
-        buttonV.setEnabled(false);
+        buttonV.disable();
         buttonV.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonVActionPerformed
 
     private void buttonUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonUActionPerformed
         checkGuess('u');
-        buttonU.setEnabled(false);
+        buttonU.disable();
         buttonU.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonUActionPerformed
 
     private void buttonTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonTActionPerformed
         checkGuess('t');
-        buttonT.setEnabled(false);
+        buttonT.disable();
         buttonT.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonTActionPerformed
 
     private void buttonSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSActionPerformed
         checkGuess('s');
-        buttonS.setEnabled(false);
+        buttonS.disable();
         buttonS.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonSActionPerformed
 
     private void buttonRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRActionPerformed
         checkGuess('r');
-        buttonR.setEnabled(false);
+        buttonR.disable();
         buttonR.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonRActionPerformed
 
     private void buttonQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonQActionPerformed
         checkGuess('q');
-        buttonQ.setEnabled(false);
+        buttonQ.disable();
         buttonQ.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonQActionPerformed
 
     private void buttonPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPActionPerformed
         checkGuess('p');
-        buttonP.setEnabled(false);
+        buttonP.disable();
         buttonP.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonPActionPerformed
 
     private void buttonOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonOActionPerformed
         checkGuess('o');
-        buttonO.setEnabled(false);
+        buttonO.disable();
         buttonO.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonOActionPerformed
 
     private void buttonNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonNActionPerformed
         checkGuess('n');
-        buttonN.setEnabled(false);
+        buttonN.disable();
         buttonN.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonNActionPerformed
 
     private void buttonMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMActionPerformed
         checkGuess('m');
-        buttonM.setEnabled(false);
+        buttonM.disable();
         buttonM.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonMActionPerformed
 
     private void buttonLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLActionPerformed
         checkGuess('l');
-        buttonL.setEnabled(false);
+        buttonL.disable();
         buttonL.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonLActionPerformed
 
     private void buttonKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonKActionPerformed
         checkGuess('k');
-        buttonK.setEnabled(false);
+        buttonK.disable();
         buttonK.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonKActionPerformed
 
     private void buttonJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonJActionPerformed
         checkGuess('j');
-        buttonJ.setEnabled(false);
+        buttonJ.disable();
         buttonJ.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonJActionPerformed
 
     private void buttonIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonIActionPerformed
         checkGuess('i');
-        buttonI.setEnabled(false);
+        buttonI.disable();
         buttonI.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonIActionPerformed
 
     private void buttonHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonHActionPerformed
         checkGuess('h');
-        buttonH.setEnabled(false);
+        buttonH.disable();
         buttonH.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonHActionPerformed
 
     private void buttonGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGActionPerformed
         checkGuess('g');
-        buttonG.setEnabled(false);
+        buttonG.disable();
         buttonG.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonGActionPerformed
 
     private void buttonFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonFActionPerformed
         checkGuess('f');
-        buttonF.setEnabled(false);
+        buttonF.disable();
         buttonF.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonFActionPerformed
 
     private void buttonEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEActionPerformed
         checkGuess('e');
-        buttonE.setEnabled(false);
+        buttonE.disable();
         buttonE.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonEActionPerformed
 
     private void buttonDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDActionPerformed
         checkGuess('d');
-        buttonD.setEnabled(false);
+        buttonD.disable();
         buttonD.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonDActionPerformed
 
     private void buttonCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCActionPerformed
         checkGuess('c');
-        buttonC.setEnabled(false);
+        buttonC.disable();
         buttonC.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonCActionPerformed
 
     private void buttonBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBActionPerformed
         checkGuess('b');
-        buttonB.setEnabled(false);
+        buttonB.disable();
         buttonB.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonBActionPerformed
 
     private void buttonAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAActionPerformed
         checkGuess('a');
-        buttonA.setEnabled(false);
+        buttonA.disable();
         buttonA.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonAActionPerformed
 
@@ -753,60 +862,58 @@ public class PlayScreen extends javax.swing.JFrame{
         this.currWord = guessWord.getCurrentWord();
         this.displayedWord = guessWord.getCurrWordHidden();
         label_GuessWord.setText(displayedWord);
-        numRightAnswers = 0;
-        numWrongAnswers = 0;
 
-        buttonA.setEnabled(true);
+        buttonA.enable();
         buttonA.setBackground(java.awt.Color.WHITE);
-        buttonB.setEnabled(true);
+        buttonB.enable();
         buttonB.setBackground(java.awt.Color.WHITE);
-        buttonC.setEnabled(true);
+        buttonC.enable();
         buttonC.setBackground(java.awt.Color.WHITE);
-        buttonD.setEnabled(true);
+        buttonD.enable();
         buttonD.setBackground(java.awt.Color.WHITE);
-        buttonE.setEnabled(true);
+        buttonE.enable();
         buttonE.setBackground(java.awt.Color.WHITE);
-        buttonF.setEnabled(true);
+        buttonF.enable();
         buttonF.setBackground(java.awt.Color.WHITE);
-        buttonG.setEnabled(true);
+        buttonG.enable();
         buttonG.setBackground(java.awt.Color.WHITE);
-        buttonH.setEnabled(true);
+        buttonH.enable();
         buttonH.setBackground(java.awt.Color.WHITE);
-        buttonI.setEnabled(true);
+        buttonI.enable();
         buttonI.setBackground(java.awt.Color.WHITE);
-        buttonJ.setEnabled(true);
+        buttonJ.enable();
         buttonJ.setBackground(java.awt.Color.WHITE);
-        buttonK.setEnabled(true);
+        buttonK.enable();
         buttonK.setBackground(java.awt.Color.WHITE);
-        buttonL.setEnabled(true);
+        buttonL.enable();
         buttonL.setBackground(java.awt.Color.WHITE);
-        buttonM.setEnabled(true);
+        buttonM.enable();
         buttonM.setBackground(java.awt.Color.WHITE);
-        buttonN.setEnabled(true);
+        buttonN.enable();
         buttonN.setBackground(java.awt.Color.WHITE);
-        buttonO.setEnabled(true);
+        buttonO.enable();
         buttonO.setBackground(java.awt.Color.WHITE);
-        buttonP.setEnabled(true);
+        buttonP.enable();
         buttonP.setBackground(java.awt.Color.WHITE);
-        buttonQ.setEnabled(true);
+        buttonQ.enable();
         buttonQ.setBackground(java.awt.Color.WHITE);
-        buttonR.setEnabled(true);
+        buttonR.enable();
         buttonR.setBackground(java.awt.Color.WHITE);
-        buttonS.setEnabled(true);
+        buttonS.enable();
         buttonS.setBackground(java.awt.Color.WHITE);
-        buttonT.setEnabled(true);
+        buttonT.enable();
         buttonT.setBackground(java.awt.Color.WHITE);
-        buttonU.setEnabled(true);
+        buttonU.enable();
         buttonU.setBackground(java.awt.Color.WHITE);
-        buttonV.setEnabled(true);
+        buttonV.enable();
         buttonV.setBackground(java.awt.Color.WHITE);
-        buttonW.setEnabled(true);
+        buttonW.enable();
         buttonW.setBackground(java.awt.Color.WHITE);
-        buttonX.setEnabled(true);
+        buttonX.enable();
         buttonX.setBackground(java.awt.Color.WHITE);
-        buttonY.setEnabled(true);
+        buttonY.enable();
         buttonY.setBackground(java.awt.Color.WHITE);
-        buttonZ.setEnabled(true);
+        buttonZ.enable();
         buttonZ.setBackground(java.awt.Color.WHITE);
     }//GEN-LAST:event_btn_GetNewWordActionPerformed
 
@@ -904,6 +1011,7 @@ public class PlayScreen extends javax.swing.JFrame{
         } 
         else 
         {
+            JOptionPane.showMessageDialog(null, "Wrong Guess! -10 points", "Wrong!", JOptionPane.ERROR_MESSAGE);
             score = score - 10;
             scoreLabel.setText("Score: " + score);
             jLabel1.setIcon(this.hangManParts[numWrongAnswers]);

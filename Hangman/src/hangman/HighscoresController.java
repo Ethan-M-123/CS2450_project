@@ -40,7 +40,7 @@ public class HighscoresController {
     public void sortList(){
         Comparator c = new Comparator<Player>(){
             public int compare(Player o1, Player o2){
-                return o1.getScore() - o2.getScore();
+                return o2.getScore() - o1.getScore();
             }
         };
         playerList.sort(c);
@@ -81,5 +81,14 @@ public class HighscoresController {
             e.printStackTrace();
         }
         
+    }
+    
+    @Override
+    public String toString(){
+        String s = "";
+        for(int i = 0; i < playerList.size(); ++i){
+            s += playerList.get(i).getName() + " " + playerList.get(i).getScore() + "\n";
+        }
+        return s;
     }
 }

@@ -20,6 +20,7 @@ public class Highscores extends javax.swing.JFrame {
     public static String[] highscoreNames = {"ABC", "ABC", "ABC", "ABC", "ABC"}; 
     public Highscores() {
         initComponents();
+        setSize(600,400);
         HighscoresController hsc = new HighscoresController(new File(".\\src\\hangman\\highscores.txt"));
         hsc.sortList();
         Player[] temp = hsc.getList();
@@ -27,11 +28,11 @@ public class Highscores extends javax.swing.JFrame {
             highscoreNames[i] = temp[i].getName();
             highscores[i] = temp[i].getScore();
         }
-        scoreOne.setText(highscoreNames[4] + "....." + highscores[4]);
-        scoreTwo.setText(highscoreNames[3] + "....." + highscores[3]);
+        scoreOne.setText(highscoreNames[0] + "....." + highscores[0]);
+        scoreTwo.setText(highscoreNames[1] + "....." + highscores[1]);
         scoreThree.setText(highscoreNames[2] + "....." + highscores[2]);
-        scoreFour.setText(highscoreNames[1] + "....." + highscores[1]);
-        scoreFive.setText(highscoreNames[0] + "....." + highscores[0]);
+        scoreFour.setText(highscoreNames[3] + "....." + highscores[3]);
+        scoreFive.setText(highscoreNames[4] + "....." + highscores[4]);
     }
 
     /**
@@ -52,6 +53,8 @@ public class Highscores extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(600, 400));
+        setMinimumSize(new java.awt.Dimension(600, 400));
 
         highscoresTitle.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         highscoresTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -88,7 +91,7 @@ public class Highscores extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addGap(104, 104, 104)
                 .addComponent(highscoresTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(194, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
