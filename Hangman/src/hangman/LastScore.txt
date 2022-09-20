@@ -1,1 +1,1 @@
-lastScore 100
+lastScore 0
