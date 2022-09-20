@@ -703,157 +703,157 @@ public class PlayScreen extends javax.swing.JFrame{
 
     private void buttonZActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonZActionPerformed
         checkGuess('z');
-        buttonZ.disable();
+        buttonZ.setEnabled(false);
         buttonZ.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonZActionPerformed
 
     private void buttonYActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonYActionPerformed
         checkGuess('y');
-        buttonY.disable();
+        buttonY.setEnabled(false);
         buttonY.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonYActionPerformed
 
     private void buttonXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonXActionPerformed
         checkGuess('x');
-        buttonX.disable();
+        buttonX.setEnabled(false);
         buttonX.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonXActionPerformed
 
     private void buttonWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonWActionPerformed
         checkGuess('w');
-        buttonW.disable();
+        buttonW.setEnabled(false);
         buttonW.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonWActionPerformed
 
     private void buttonVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonVActionPerformed
         checkGuess('v');
-        buttonV.disable();
+        buttonV.setEnabled(false);
         buttonV.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonVActionPerformed
 
     private void buttonUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonUActionPerformed
         checkGuess('u');
-        buttonU.disable();
+        buttonU.setEnabled(false);
         buttonU.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonUActionPerformed
 
     private void buttonTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonTActionPerformed
         checkGuess('t');
-        buttonT.disable();
+        buttonT.setEnabled(false);
         buttonT.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonTActionPerformed
 
     private void buttonSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSActionPerformed
         checkGuess('s');
-        buttonS.disable();
+        buttonS.setEnabled(false);
         buttonS.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonSActionPerformed
 
     private void buttonRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRActionPerformed
         checkGuess('r');
-        buttonR.disable();
+        buttonR.setEnabled(false);
         buttonR.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonRActionPerformed
 
     private void buttonQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonQActionPerformed
         checkGuess('q');
-        buttonQ.disable();
+        buttonQ.setEnabled(false);
         buttonQ.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonQActionPerformed
 
     private void buttonPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPActionPerformed
         checkGuess('p');
-        buttonP.disable();
+        buttonP.setEnabled(false);
         buttonP.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonPActionPerformed
 
     private void buttonOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonOActionPerformed
         checkGuess('o');
-        buttonO.disable();
+        buttonO.setEnabled(false);
         buttonO.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonOActionPerformed
 
     private void buttonNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonNActionPerformed
         checkGuess('n');
-        buttonN.disable();
+        buttonN.setEnabled(false);
         buttonN.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonNActionPerformed
 
     private void buttonMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMActionPerformed
         checkGuess('m');
-        buttonM.disable();
+        buttonM.setEnabled(false);
         buttonM.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonMActionPerformed
 
     private void buttonLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLActionPerformed
         checkGuess('l');
-        buttonL.disable();
+        buttonL.setEnabled(false);
         buttonL.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonLActionPerformed
 
     private void buttonKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonKActionPerformed
         checkGuess('k');
-        buttonK.disable();
+        buttonK.setEnabled(false);
         buttonK.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonKActionPerformed
 
     private void buttonJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonJActionPerformed
         checkGuess('j');
-        buttonJ.disable();
+        buttonJ.setEnabled(false);
         buttonJ.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonJActionPerformed
 
     private void buttonIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonIActionPerformed
         checkGuess('i');
-        buttonI.disable();
+        buttonI.setEnabled(false);
         buttonI.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonIActionPerformed
 
     private void buttonHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonHActionPerformed
         checkGuess('h');
-        buttonH.disable();
+        buttonH.setEnabled(false);
         buttonH.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonHActionPerformed
 
     private void buttonGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGActionPerformed
         checkGuess('g');
-        buttonG.disable();
+        buttonG.setEnabled(false);
         buttonG.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonGActionPerformed
 
     private void buttonFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonFActionPerformed
         checkGuess('f');
-        buttonF.disable();
+        buttonF.setEnabled(false);
         buttonF.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonFActionPerformed
 
     private void buttonEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEActionPerformed
         checkGuess('e');
-        buttonE.disable();
+        buttonE.setEnabled(false);
         buttonE.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonEActionPerformed
 
     private void buttonDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDActionPerformed
         checkGuess('d');
-        buttonD.disable();
+        buttonD.setEnabled(false);
         buttonD.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonDActionPerformed
 
     private void buttonCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCActionPerformed
         checkGuess('c');
-        buttonC.disable();
+        buttonC.setEnabled(false);
         buttonC.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonCActionPerformed
 
     private void buttonBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBActionPerformed
         checkGuess('b');
-        buttonB.disable();
+        buttonB.setEnabled(false);
         buttonB.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonBActionPerformed
 
     private void buttonAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAActionPerformed
         checkGuess('a');
-        buttonA.disable();
+        buttonA.setEnabled(false);
         buttonA.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonAActionPerformed
 
@@ -862,58 +862,60 @@ public class PlayScreen extends javax.swing.JFrame{
         this.currWord = guessWord.getCurrentWord();
         this.displayedWord = guessWord.getCurrWordHidden();
         label_GuessWord.setText(displayedWord);
+        numRightAnswers = 0;
+        numWrongAnswers = 0;
 
-        buttonA.enable();
+        buttonA.setEnabled(true);
         buttonA.setBackground(java.awt.Color.WHITE);
-        buttonB.enable();
+        buttonB.setEnabled(true);
         buttonB.setBackground(java.awt.Color.WHITE);
-        buttonC.enable();
+        buttonC.setEnabled(true);
         buttonC.setBackground(java.awt.Color.WHITE);
-        buttonD.enable();
+        buttonD.setEnabled(true);
         buttonD.setBackground(java.awt.Color.WHITE);
-        buttonE.enable();
+        buttonE.setEnabled(true);
         buttonE.setBackground(java.awt.Color.WHITE);
-        buttonF.enable();
+        buttonF.setEnabled(true);
         buttonF.setBackground(java.awt.Color.WHITE);
-        buttonG.enable();
+        buttonG.setEnabled(true);
         buttonG.setBackground(java.awt.Color.WHITE);
-        buttonH.enable();
+        buttonH.setEnabled(true);
         buttonH.setBackground(java.awt.Color.WHITE);
-        buttonI.enable();
+        buttonI.setEnabled(true);
         buttonI.setBackground(java.awt.Color.WHITE);
-        buttonJ.enable();
+        buttonJ.setEnabled(true);
         buttonJ.setBackground(java.awt.Color.WHITE);
-        buttonK.enable();
+        buttonK.setEnabled(true);
         buttonK.setBackground(java.awt.Color.WHITE);
-        buttonL.enable();
+        buttonL.setEnabled(true);
         buttonL.setBackground(java.awt.Color.WHITE);
-        buttonM.enable();
+        buttonM.setEnabled(true);
         buttonM.setBackground(java.awt.Color.WHITE);
-        buttonN.enable();
+        buttonN.setEnabled(true);
         buttonN.setBackground(java.awt.Color.WHITE);
-        buttonO.enable();
+        buttonO.setEnabled(true);
         buttonO.setBackground(java.awt.Color.WHITE);
-        buttonP.enable();
+        buttonP.setEnabled(true);
         buttonP.setBackground(java.awt.Color.WHITE);
-        buttonQ.enable();
+        buttonQ.setEnabled(true);
         buttonQ.setBackground(java.awt.Color.WHITE);
-        buttonR.enable();
+        buttonR.setEnabled(true);
         buttonR.setBackground(java.awt.Color.WHITE);
-        buttonS.enable();
+        buttonS.setEnabled(true);
         buttonS.setBackground(java.awt.Color.WHITE);
-        buttonT.enable();
+        buttonT.setEnabled(true);
         buttonT.setBackground(java.awt.Color.WHITE);
-        buttonU.enable();
+        buttonU.setEnabled(true);
         buttonU.setBackground(java.awt.Color.WHITE);
-        buttonV.enable();
+        buttonV.setEnabled(true);
         buttonV.setBackground(java.awt.Color.WHITE);
-        buttonW.enable();
+        buttonW.setEnabled(true);
         buttonW.setBackground(java.awt.Color.WHITE);
-        buttonX.enable();
+        buttonX.setEnabled(true);
         buttonX.setBackground(java.awt.Color.WHITE);
-        buttonY.enable();
+        buttonY.setEnabled(true);
         buttonY.setBackground(java.awt.Color.WHITE);
-        buttonZ.enable();
+        buttonZ.setEnabled(true);
         buttonZ.setBackground(java.awt.Color.WHITE);
     }//GEN-LAST:event_btn_GetNewWordActionPerformed
 
