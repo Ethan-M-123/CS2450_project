@@ -46,8 +46,8 @@ public class PlayScreen extends javax.swing.JFrame{
             }
         }.start();
         
-        currWord = guessWord.getCurrentWord();
-        displayedWord = guessWord.getCurrWordHidden();
+        currWord = guessWord.getCurrentWord();          //the word to be guessed
+        displayedWord = guessWord.getCurrWordHidden();  //the dashes that indicate the number of letters in the word
         label_GuessWord.setText(displayedWord);
         score = 100;
         scoreLabel.setText("Score: " + score);
@@ -701,6 +701,10 @@ public class PlayScreen extends javax.swing.JFrame{
         this.dispose();
     }//GEN-LAST:event_btn_SkipActionPerformed
 
+    
+    //when a letter button is pressed it runs the checkGuess() method with the 
+    //corresponding letter as a paramater, disables the selected button, and 
+    //changes the color of the button to indicate it is disabled
     private void buttonZActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonZActionPerformed
         checkGuess('z');
         buttonZ.setEnabled(false);
@@ -857,6 +861,9 @@ public class PlayScreen extends javax.swing.JFrame{
         buttonA.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonAActionPerformed
 
+    //When the get new word button is pressed the word to be guessed is randomly
+    //chosen again, the displayed letter and hangman are reset, and all letter
+    //buttons are re-enabled and colored white again
     private void btn_GetNewWordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_GetNewWordActionPerformed
         guessWord.getNewWord();
         this.currWord = guessWord.getCurrentWord();
@@ -976,6 +983,12 @@ public class PlayScreen extends javax.swing.JFrame{
         });
     }
     
+    //Checks if the guessed letter is in the current word to be guessed, if the
+    //guess is correct the letter is displayed and replaces each dash that was 
+    //hiding it and the number of right answers is increased. If the player has
+    //finished the word then the end screen is displayed. If the guess is incorrect
+    //the player is notified that they made an incorrect guess and their score is
+    //decreased by 10.
     private void checkGuess(char guessedLetter){
         char[] correctChars = this.currWord.toCharArray();
         int[] correctGuessIndexes = new int[correctChars.length * 2];

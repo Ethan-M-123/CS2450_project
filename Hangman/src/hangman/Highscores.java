@@ -126,6 +126,7 @@ public class Highscores extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    //Takes user to the main menu if they press the back button
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         MainMenu temp = new MainMenu();
         temp.show();

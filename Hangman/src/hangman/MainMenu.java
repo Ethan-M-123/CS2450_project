@@ -94,7 +94,7 @@ public class MainMenu extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    
+    //Takes user to the highscore page from the main menu
     private void highscoreButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_highscoreButtonActionPerformed
         if(evt.getSource() == highscoreButton){
             Highscores scorePage = new Highscores();
@@ -103,6 +103,7 @@ public class MainMenu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_highscoreButtonActionPerformed
 
+    //Takes user to the hangman play screen from the main menu
     private void playButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playButtonActionPerformed
         if(evt.getSource()== playButton){
             PlayScreen gameScreen = new PlayScreen();
@@ -111,6 +112,7 @@ public class MainMenu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_playButtonActionPerformed
 
+    //takes user to the credits screen from the main menu
     private void creditsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_creditsButtonActionPerformed
         if(evt.getSource()== creditsButton){
             CreditsScreen credits = new CreditsScreen();
