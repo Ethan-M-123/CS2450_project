@@ -68,6 +68,7 @@ public class Highscores extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(600, 400));
         setMinimumSize(new java.awt.Dimension(600, 400));
+        setPreferredSize(new java.awt.Dimension(600, 400));
 
         highscoresTitle.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         highscoresTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -132,7 +133,7 @@ public class Highscores extends javax.swing.JFrame {
                 .addComponent(scoreFour)
                 .addGap(18, 18, 18)
                 .addComponent(scoreFive)
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(95, Short.MAX_VALUE))
         );
 
         pack();
