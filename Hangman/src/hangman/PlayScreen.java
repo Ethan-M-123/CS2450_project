@@ -7,7 +7,7 @@ package hangman;
 
 /***************************************************************  
 *  file: PlayScreen.java
-*  author: M. Sevilla; Shane
+*  author: M. Sevilla; Shane; Simon
 *  class: CS 2450.01  
 *  
 *  assignment: Project V1.0 
