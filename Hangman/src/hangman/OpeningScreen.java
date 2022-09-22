@@ -5,7 +5,7 @@
 
 /***************************************************************  
 *  file: OpeningScreen.java
-*  author: ...
+*  author: Shane
 *  class: CS 2450.01  
 *  
 *  assignment: Project V1.0 
