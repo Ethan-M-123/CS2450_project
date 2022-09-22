@@ -124,7 +124,6 @@ public class PlayScreen extends javax.swing.JFrame{
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
-        setPreferredSize(new java.awt.Dimension(600, 440));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 255, 204));
