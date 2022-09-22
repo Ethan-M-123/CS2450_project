@@ -6,10 +6,20 @@ package hangman;
 import java.io.*;
 import java.util.*;
 
-/**
- *
- * @author Raini
- */
+/***************************************************************  
+*  file: EndScreen.java  
+*  author: M. Sevilla, others 
+*  class: CS 2450.01  
+*  
+*  assignment: Project V1.0 
+*  date last modified: 9/21/2022
+*  
+*  purpose: Shows the user their final score after playing the game, allows them
+*  to name themselves, and records the user's score before exiting to the main
+*  menu
+*  
+****************************************************************/  
+
 public class EndScreen extends javax.swing.JFrame {
 
     /**
@@ -187,7 +197,7 @@ public class EndScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_EndActionPerformed
 
     private void playerNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playerNameFieldActionPerformed
-        // TODO add your handling code here:
+        // No action will be performed yet
     }//GEN-LAST:event_playerNameFieldActionPerformed
 
     /**

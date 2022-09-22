@@ -2,6 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+
+/***************************************************************  
+*  file: Highscores.java  
+*  author: ...
+*  class: CS 2450.01  
+*  
+*  assignment: Project V1.0 
+*  date last modified: 9/21/2022
+*  
+*  purpose: Displays an organized list of scores from highest (top) to lowest 
+*  (bottom)
+*  
+****************************************************************/  
 package hangman;
 
 import java.io.File;

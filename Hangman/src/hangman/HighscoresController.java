@@ -2,6 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+
+/***************************************************************  
+*  file: HighscoresController.java
+*  author: ...
+*  class: CS 2450.01  
+*  
+*  assignment: Project V1.0 
+*  date last modified: 9/21/2022
+*  
+*  purpose: Provides the methods and calls necessary to organize the list,
+*  update the list, and open or close the screen
+*  
+****************************************************************/  
+
 package hangman;
 import java.util.ArrayList;
 import java.io.File;

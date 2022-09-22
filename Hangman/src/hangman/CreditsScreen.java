@@ -4,6 +4,19 @@
  */
 package hangman;
 
+/***************************************************************  
+*  file: CreditsScreen.java  
+*  author: D. Dixon; S. Baxter; E. Melero; M. Sevilla; S. Nguyen 
+*  class: CS 2450.01  
+*  
+*  assignment: Project V1.0 
+*  date last modified: 9/21/2022
+*  
+*  purpose: Display all hard working members of the group who worked on this 
+*  project to make it playable. 
+*  
+****************************************************************/  
+
 import hangman.MainMenu;
 
 /**

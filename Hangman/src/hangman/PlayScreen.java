@@ -5,10 +5,20 @@ package hangman;
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
-/**
- *
- * @author Marvin Sevilla
- */
+/***************************************************************  
+*  file: PlayScreen.java
+*  author: M. Sevilla; Others 
+*  class: CS 2450.01  
+*  
+*  assignment: Project V1.0 
+*  date last modified: 9/21/2022
+*  
+*  purpose: Displays the controls for the user to play the game as well as the
+*  functions and calls necessary to record the player's score for displaying 
+*  later on the "end" screen
+*  
+****************************************************************/  
+
 import java.util.Date;
 import java.util.Calendar;
 import java.awt.event.*;
@@ -38,6 +48,8 @@ public class PlayScreen extends javax.swing.JFrame{
     public PlayScreen() {
         initComponents();
         this.setSize(600, 400);
+        
+        // Refreshes the displayed time and date on the top right of the screen
         new Thread(){
             public void run(){
                 while(true){
@@ -692,7 +704,10 @@ public class PlayScreen extends javax.swing.JFrame{
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    // method: btn_SkipActionPerformed()
+    // purpose: If the player presses the "Skip!" button, their score is set to 
+    // 0 and the "end" screen is displayed while the play screen is closed
     private void btn_SkipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SkipActionPerformed
         score = 0;
         recordPlayerScore();
@@ -926,6 +941,9 @@ public class PlayScreen extends javax.swing.JFrame{
         buttonZ.setBackground(java.awt.Color.WHITE);
     }//GEN-LAST:event_btn_GetNewWordActionPerformed
 
+    // method: recordPlayerScore()
+    // purpose: records the player's last score in the format of "lastScore <score>"
+    // to LastScore.txt which is later used by the Highscores screen
      private void recordPlayerScore()
     {
         try

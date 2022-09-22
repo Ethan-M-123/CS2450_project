@@ -2,6 +2,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+
+/***************************************************************  
+*  file: MainMenu.java
+*  author: ...
+*  class: CS 2450.01  
+*  
+*  assignment: Project V1.0 
+*  date last modified: 9/21/2022
+*  
+*  purpose: Is the main menu of the game, provides all inputs for the user to 
+*  navigate to the game, a record of scores, and game developers. Methods for 
+*  opening and closing menus to bring the player to he aforementioned parts of 
+*  the game are found here 
+*  
+****************************************************************/  
+
 package hangman;
 
 /**
