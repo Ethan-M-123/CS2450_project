@@ -11,7 +11,7 @@
 *  assignment: Project V1.0 
 *  date last modified: 9/21/2022
 *  
-*  purpose: drives the openening screen and main menu open and close operaitons
+*  purpose: drives the opening screen and main menu open and close operations
 *  
 ****************************************************************/  
 
