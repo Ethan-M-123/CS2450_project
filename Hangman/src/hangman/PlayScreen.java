@@ -124,6 +124,7 @@ public class PlayScreen extends javax.swing.JFrame{
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setPreferredSize(new java.awt.Dimension(600, 440));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 255, 204));
@@ -709,7 +710,8 @@ public class PlayScreen extends javax.swing.JFrame{
     // 0 and the "end" screen is displayed while the play screen is closed
     private void btn_SkipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SkipActionPerformed
         score = 0;
-        recordPlayerScore();
+        Player p = new Player("ABC", score);
+        p.recordPlayerScore();
         EndScreen endPage = new EndScreen();
         endPage.show();
         this.dispose();
@@ -943,20 +945,20 @@ public class PlayScreen extends javax.swing.JFrame{
     // method: recordPlayerScore()
     // purpose: records the player's last score in the format of "lastScore <score>"
     // to LastScore.txt which is later used by the Highscores screen
-     private void recordPlayerScore()
-    {
-        try
-        {
-            FileWriter write = new FileWriter(".\\src\\hangman\\LastScore.txt");
-
-            write.write("lastScore " + score);
-            write.close();
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-    } 
+//     private void recordPlayerScore()
+//    {
+//        try
+//        {
+//            FileWriter write = new FileWriter(".\\src\\hangman\\LastScore.txt");
+//
+//            write.write("lastScore " + score);
+//            write.close();
+//        }
+//        catch (IOException e)
+//        {
+//            e.printStackTrace();
+//        }
+//    } 
     
     /**
      * @param args the command line arguments
@@ -1035,9 +1037,11 @@ public class PlayScreen extends javax.swing.JFrame{
             
             if (numRightAnswers == currWord.length())
             {
-                recordPlayerScore();
-                EndScreen endPage = new EndScreen();
-                endPage.show();
+                //recordPlayerScore();
+                //EndScreen endPage = new EndScreen();
+                //endPage.show();
+                Player p = new Player("ABC", score);
+                ColorPickerGame colorGame = new ColorPickerGame(p);
                 this.dispose();
             }
         } 
@@ -1051,9 +1055,11 @@ public class PlayScreen extends javax.swing.JFrame{
             
             if((score<0) || (numWrongAnswers==6))
             {
-                recordPlayerScore();
-                EndScreen endPage = new EndScreen();
-                endPage.show();
+                //recordPlayerScore();
+                //EndScreen endPage = new EndScreen();
+                //endPage.show();
+                Player p = new Player("ABC", score);
+                ColorPickerGame colorGame = new ColorPickerGame(p);
                 this.dispose();
             }
         }

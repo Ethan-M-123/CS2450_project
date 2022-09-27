@@ -18,6 +18,9 @@
 
 package hangman;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 /**
  *
  * @author mrnoo
@@ -70,5 +73,20 @@ public class Player {
     */
     public void setScore(int score){
         this.score = score;
+    }
+    
+    public void recordPlayerScore()
+    {
+        try
+        {
+            FileWriter write = new FileWriter(".\\src\\hangman\\LastScore.txt");
+
+            write.write("lastScore " + this.score);
+            write.close();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
 }
