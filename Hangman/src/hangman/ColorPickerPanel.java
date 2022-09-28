@@ -47,7 +47,7 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
         cl.add(Color.green);
         cl.add(Color.blue);
         cl.add(Color.magenta);
-        cl.add(Color.orange);
+        cl.add(Color.yellow);
         
         addMouseListener(this);
         addMouseMotionListener(this);
@@ -65,7 +65,7 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
         cl.add(Color.green);
         cl.add(Color.blue);
         cl.add(Color.magenta);
-        cl.add(Color.orange);
+        cl.add(Color.yellow);
         
         addMouseListener(this);
         addMouseMotionListener(this);
@@ -93,7 +93,7 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
         cl.add(Color.green);
         cl.add(Color.blue);
         cl.add(Color.magenta);
-        cl.add(Color.orange);
+        cl.add(Color.yellow);
     }
     
     private void resetQuadrantList(){
@@ -164,8 +164,8 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
     @Override
     public void paintComponent(Graphics g){
         Graphics2D g2d = (Graphics2D) g;
-        Color[] colors = {Color.red, Color.green, Color.blue, Color.magenta, Color.orange};
-        String[] strings = {"Red", "Green", "Blue", "Magenta", "Orange"};
+        Color[] colors = {Color.red, Color.green, Color.blue, Color.magenta, Color.yellow};
+        String[] strings = {"Red", "Green", "Blue", "Magenta", "Yellow"};
         
         Color temp = new Color(74, 74, 74); //74, 74, 74 or 184, 174, 149
         g2d.setColor(temp);
