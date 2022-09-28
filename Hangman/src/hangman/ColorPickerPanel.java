@@ -14,7 +14,11 @@ import java.awt.event.MouseMotionListener;
 import java.awt.geom.Ellipse2D;
 import java.util.ArrayList;
 import javax.swing.*;
-
+import java.util.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+        
+        
 /**
  *
  * @author mrnoo
@@ -30,6 +34,8 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
     int roundNum = 0;
     Player p;
     
+    JLabel timeStamp;
+    
     Ellipse2D.Double q1;
     Ellipse2D.Double q2;
     Ellipse2D.Double q3;
@@ -43,6 +49,27 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
         ql = new ArrayList<Ellipse2D.Double>();
         qc = new Color[5];
         p = new Player();
+        
+        timeStamp = new JLabel("Month Day, Year");
+        timeStamp.setBounds(340, 10, 250, 17);
+        timeStamp.setBackground(Color.LIGHT_GRAY);
+        timeStamp.setOpaque(true);
+        
+        //Make it easier for the label placement
+        setLayout(null);
+        
+        //Updates the label for the seconds
+        new Thread(){
+            public void run(){
+                while(true){
+                    timeStamp.setText(Calendar.getInstance().getTime().toString());
+                }
+            }
+        }.start();
+        
+        //Add the timestamp
+        add(timeStamp);
+        
         
         cl.add(Color.red);
         cl.add(Color.green);
@@ -61,6 +88,26 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
         ql = new ArrayList<Ellipse2D.Double>();
         qc = new Color[5];
         this.p = p;
+        
+        timeStamp = new JLabel("Month Day, Year");
+        timeStamp.setBounds(340, 10, 250, 17);
+        timeStamp.setBackground(Color.LIGHT_GRAY);
+        timeStamp.setOpaque(true);
+        
+        //Make it easier for the label placement
+        setLayout(null);
+        
+        //Updates the label for the seconds
+        new Thread(){
+            public void run(){
+                while(true){
+                    timeStamp.setText(Calendar.getInstance().getTime().toString());
+                }
+            }
+        }.start();        
+        
+        //Add the timestamp
+        add(timeStamp);
         
         cl.add(Color.red);
         cl.add(Color.green);
@@ -233,6 +280,11 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
         q5 = new Ellipse2D.Double(x,y,w,h);
         g2d.fill(q5);
         ql.add(q5);
+        
+        
+        //Paint Label
+        timeStamp.setFont(new java.awt.Font("Tahoma", 0, 14));
+        timeStamp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         
         resetColorList();
     }
