@@ -10,7 +10,7 @@ import javax.swing.*;
 
 /**
  *
- * @author mrnoo
+ * @author mrnoo, Simon
  */
 public class ColorPickerGame{
     static Player p = new Player("test",0); //FIXME: replace with real player info
