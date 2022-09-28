@@ -24,6 +24,7 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
     ArrayList<Color> cl;
     ArrayList<Ellipse2D.Double> ql;
     Color[] qc;
+    Color purple = new Color(102,0,153);
     Color correct;
     static int NUM_OF_ROUNDS = 5;
     int roundNum = 0;
@@ -46,7 +47,7 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
         cl.add(Color.red);
         cl.add(Color.green);
         cl.add(Color.blue);
-        cl.add(Color.magenta);
+        cl.add(purple);
         cl.add(Color.yellow);
         
         addMouseListener(this);
@@ -64,7 +65,7 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
         cl.add(Color.red);
         cl.add(Color.green);
         cl.add(Color.blue);
-        cl.add(Color.magenta);
+        cl.add(purple);
         cl.add(Color.yellow);
         
         addMouseListener(this);
@@ -92,7 +93,7 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
         cl.add(Color.red);
         cl.add(Color.green);
         cl.add(Color.blue);
-        cl.add(Color.magenta);
+        cl.add(purple);
         cl.add(Color.yellow);
     }
     
@@ -164,8 +165,8 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
     @Override
     public void paintComponent(Graphics g){
         Graphics2D g2d = (Graphics2D) g;
-        Color[] colors = {Color.red, Color.green, Color.blue, Color.magenta, Color.yellow};
-        String[] strings = {"Red", "Green", "Blue", "Magenta", "Yellow"};
+        Color[] colors = {Color.red, Color.green, Color.blue, purple, Color.yellow};
+        String[] strings = {"Red", "Green", "Blue", "Purple", "Yellow"};
         
         Color temp = new Color(74, 74, 74); //74, 74, 74 or 184, 174, 149
         g2d.setColor(temp);
