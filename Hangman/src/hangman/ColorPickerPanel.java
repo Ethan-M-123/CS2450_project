@@ -21,7 +21,7 @@ import java.util.GregorianCalendar;
         
 /**
  *
- * @author mrnoo
+ * @author mrnoo, Simon
  */
 public class ColorPickerPanel extends JPanel implements MouseListener, MouseMotionListener{
     
@@ -51,9 +51,6 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
         p = new Player();
         
         timeStamp = new JLabel("Month Day, Year");
-        timeStamp.setBounds(340, 10, 250, 17);
-        timeStamp.setBackground(Color.LIGHT_GRAY);
-        timeStamp.setOpaque(true);
         
         //Make it easier for the label placement
         setLayout(null);
@@ -90,9 +87,6 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
         this.p = p;
         
         timeStamp = new JLabel("Month Day, Year");
-        timeStamp.setBounds(340, 10, 250, 17);
-        timeStamp.setBackground(Color.LIGHT_GRAY);
-        timeStamp.setOpaque(true);
         
         //Make it easier for the label placement
         setLayout(null);
@@ -277,12 +271,20 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
         w = 150;
         h = 150;
         x += 400;
+        // Prevents button from overlapping label
+        if (y <= 22)
+        {
+            y += (32 - y); // Adds 10 or more pixels of buffer if overlap
+        }
         q5 = new Ellipse2D.Double(x,y,w,h);
         g2d.fill(q5);
         ql.add(q5);
         
         
         //Paint Label
+        timeStamp.setBounds(340, 5, 250, 17);
+        timeStamp.setBackground(Color.LIGHT_GRAY);
+        timeStamp.setOpaque(true);
         timeStamp.setFont(new java.awt.Font("Tahoma", 0, 14));
         timeStamp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         
