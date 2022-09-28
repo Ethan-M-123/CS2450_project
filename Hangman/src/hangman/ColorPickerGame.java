@@ -32,7 +32,7 @@ public class ColorPickerGame{
         System.out.println("Gui on EDT? " + SwingUtilities.isEventDispatchThread());
         JFrame f = new JFrame("Color Picker Game");
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        f.setSize(640, 440);
+        f.setSize(600, 400);
         
         ColorPickerPanel cpp = new ColorPickerPanel(p);
         cpp.addComponentListener(new ComponentListener() {

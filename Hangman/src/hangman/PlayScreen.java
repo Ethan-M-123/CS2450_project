@@ -711,9 +711,11 @@ public class PlayScreen extends javax.swing.JFrame{
     private void btn_SkipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SkipActionPerformed
         score = 0;
         Player p = new Player("ABC", score);
-        p.recordPlayerScore();
-        EndScreen endPage = new EndScreen();
-        endPage.show();
+        //p.recordPlayerScore();
+        //EndScreen endPage = new EndScreen();
+        //endPage.show();
+        
+        ColorPickerGame colorGame = new ColorPickerGame(p);
         this.dispose();
     }//GEN-LAST:event_btn_SkipActionPerformed
 
