@@ -10,12 +10,12 @@ package hangman;
 *  author: M. Sevilla; Shane; Simon
 *  class: CS 2450.01  
 *  
-*  assignment: Project V1.0 
-*  date last modified: 9/21/2022
+*  assignment: Project V1.1 
+*  date last modified: 9/28/2022
 *  
 *  purpose: Displays the controls for the user to play the game as well as the
-*  functions and calls necessary to record the player's score for displaying 
-*  later on the "end" screen
+*  functions and calls necessary to pass on the player's score onto the 
+*  color picker game.
 *  
 ****************************************************************/  
 

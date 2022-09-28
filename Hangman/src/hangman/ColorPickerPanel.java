@@ -19,16 +19,23 @@ import java.util.Date;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-/**
- *
+/***************************************************************  
+*  file: ColorPickerPanel.java
  * @author mrnoo, Simon
- */
+*  class: CS 2450.01  
+*  
+*  assignment: Project V1.1 
+*  date last modified: 9/28/2022
+*  
+*  purpose: 
+*  
+****************************************************************/
 public class ColorPickerPanel extends JPanel implements MouseListener, MouseMotionListener {
 
     ArrayList<Color> cl;
     ArrayList<Ellipse2D.Double> ql;
     Color[] qc;
-    Color purple = new Color(102, 0, 153);
+    Color purple;
     Color correct;
     static int NUM_OF_ROUNDS = 5;
     int roundNum = 0;
@@ -50,9 +57,10 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
         ql = new ArrayList<Ellipse2D.Double>();
         qc = new Color[5];
         p = new Player();
+        purple = new Color(102, 0, 153);
 
         timeStamp = new JLabel("Month Day, Year");
-        roundNumber = new JLabel("Round " + roundNum + "/5");
+        roundNumber = new JLabel("Round " + (roundNum + 1) + "/5");
 
         //Make it easier for the label placement
         setLayout(null);
@@ -62,7 +70,7 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
             public void run() {
                 while (true) {
                     timeStamp.setText(Calendar.getInstance().getTime().toString());
-                    roundNumber.setText("Round " + roundNum +"/5");
+                    roundNumber.setText("Round " + (roundNum + 1) +"/5");
 
                 }
             }
@@ -90,9 +98,10 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
         ql = new ArrayList<Ellipse2D.Double>();
         qc = new Color[5];
         this.p = p;
+        purple = new Color(102, 0, 153);
 
         timeStamp = new JLabel("Month Day, Year");
-        roundNumber = new JLabel("Round " + roundNum + "/5");
+        roundNumber = new JLabel("Round " + (roundNum + 1) + "/5");
 
         //Make it easier for the label placement
         setLayout(null);
@@ -102,7 +111,7 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
             public void run() {
                 while (true) {
                     timeStamp.setText(Calendar.getInstance().getTime().toString());
-                    roundNumber.setText("Round " + roundNum + "/5");
+                    roundNumber.setText("Round " + (roundNum + 1) + "/5");
                 }
             }
         }.start();
