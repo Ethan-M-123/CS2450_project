@@ -34,7 +34,7 @@ public class MainMenu extends javax.swing.JFrame {
      */
     public MainMenu() {
         initComponents();
-        hsc = new HighscoresController(new File(".\\src\\hangman\\highscores.txt"));
+        hsc = new HighscoresController(new File("./src/hangman/highscores.txt"));
     }
 
     /**
