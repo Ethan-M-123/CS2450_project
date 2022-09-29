@@ -36,8 +36,9 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
     ArrayList<Ellipse2D.Double> ql;
     Color[] qc;
     Color purple;
+    Color background = new Color(240,185,0);
     Color correct;
-    static int NUM_OF_ROUNDS = 5;
+    static int NUM_OF_ROUNDS = 50;
     int roundNum = 0;
     Player p;
 
@@ -60,7 +61,7 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
         purple = new Color(102, 0, 153);
 
         timeStamp = new JLabel("Month Day, Year");
-        roundNumber = new JLabel("Round " + (roundNum + 1) + "/5");
+        roundNumber = new JLabel("Round " + (roundNum + 1) + "/" + NUM_OF_ROUNDS);
 
         //Make it easier for the label placement
         setLayout(null);
@@ -70,7 +71,7 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
             public void run() {
                 while (true) {
                     timeStamp.setText(Calendar.getInstance().getTime().toString());
-                    roundNumber.setText("Round " + (roundNum + 1) +"/5");
+                    roundNumber.setText("Round " + (roundNum + 1) +"/" + NUM_OF_ROUNDS);
 
                 }
             }
@@ -101,7 +102,7 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
         purple = new Color(102, 0, 153);
 
         timeStamp = new JLabel("Month Day, Year");
-        roundNumber = new JLabel("Round " + (roundNum + 1) + "/5");
+        roundNumber = new JLabel("Round " + (roundNum + 1) + "/" + NUM_OF_ROUNDS);
 
         //Make it easier for the label placement
         setLayout(null);
@@ -111,7 +112,7 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
             public void run() {
                 while (true) {
                     timeStamp.setText(Calendar.getInstance().getTime().toString());
-                    roundNumber.setText("Round " + (roundNum + 1) + "/5");
+                    roundNumber.setText("Round " + (roundNum + 1) + "/" + NUM_OF_ROUNDS);
                 }
             }
         }.start();
@@ -230,9 +231,8 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
         Graphics2D g2d = (Graphics2D) g;
         Color[] colors = {Color.red, Color.green, Color.blue, purple, Color.yellow};
         String[] strings = {"Red", "Green", "Blue", "Purple", "Yellow"};
-
-        Color temp = new Color(74, 74, 74); //74, 74, 74 or 184, 174, 149
-        g2d.setColor(temp);
+        
+        g2d.setColor(background);
         g2d.fillRect(0, 0, 600, 400);
 
         correct = colors[(int) (Math.random() * colors.length)];
