@@ -46,7 +46,7 @@ public class EndScreen extends javax.swing.JFrame {
         
         try
         {
-            File scores = new File (".\\src\\hangman\\LastScore.txt");
+            File scores = new File ("./src/hangman/LastScore.txt");
             Scanner reader = new Scanner(scores);
 
             while(!Objects.equals(playerName, "lastScore"))
@@ -86,7 +86,7 @@ public class EndScreen extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(600, 400));
         setResizable(false);
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(636, 400));
+        jPanel1.setPreferredSize(new java.awt.Dimension(600, 400));
         jPanel1.setRequestFocusEnabled(false);
 
         label_YourScore.setFont(new java.awt.Font("Showcard Gothic", 0, 24)); // NOI18N
@@ -97,6 +97,7 @@ public class EndScreen extends javax.swing.JFrame {
         label_ScoreDisplay.setForeground(new java.awt.Color(255, 0, 0));
         label_ScoreDisplay.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         label_ScoreDisplay.setText("0");
+        label_ScoreDisplay.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         btn_End.setFont(new java.awt.Font("SWIsot3", 0, 18)); // NOI18N
         btn_End.setText("END");
@@ -129,15 +130,14 @@ public class EndScreen extends javax.swing.JFrame {
                         .addGap(258, 258, 258)
                         .addComponent(btn_End))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(292, 292, 292)
+                        .addGap(256, 256, 256)
+                        .addComponent(playerNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(280, 280, 280)
                         .addComponent(label_ScoreDisplay))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(250, 250, 250)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(playerNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel1))))
+                        .addGap(241, 241, 241)
+                        .addComponent(jLabel1)))
                 .addContainerGap(208, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -162,7 +162,7 @@ public class EndScreen extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -183,7 +183,7 @@ public class EndScreen extends javax.swing.JFrame {
         */
         try
         { 
-            FileWriter file = new FileWriter(".\\src\\hangman\\highscores.txt", true);
+            FileWriter file = new FileWriter("./src/hangman/highscores.txt", true);
             file.append("\n" + playerNameField.getText() + " " + String.valueOf(retrieveLatestScore()));
             file.close();
         }
