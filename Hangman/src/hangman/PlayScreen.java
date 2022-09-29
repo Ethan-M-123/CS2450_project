@@ -44,10 +44,12 @@ public class PlayScreen extends javax.swing.JFrame{
     int numWrongAnswers;
     int numRightAnswers;
     ImageIcon[] hangManParts;
+    static HighscoresController hsc;
     
-    public PlayScreen() {
+    public PlayScreen(HighscoresController hsc) {
         initComponents();
         this.setSize(600, 400);
+        this.hsc = hsc;
         
         // Refreshes the displayed time and date on the top right of the screen
         new Thread(){
@@ -715,7 +717,7 @@ public class PlayScreen extends javax.swing.JFrame{
         //EndScreen endPage = new EndScreen();
         //endPage.show();
         
-        ColorPickerGame colorGame = new ColorPickerGame(p);
+        ColorPickerGame colorGame = new ColorPickerGame(p,hsc);
         this.dispose();
     }//GEN-LAST:event_btn_SkipActionPerformed
 
@@ -994,7 +996,7 @@ public class PlayScreen extends javax.swing.JFrame{
         java.awt.EventQueue.invokeLater(new Runnable() {
             
             public void run() {
-                PlayScreen s = new PlayScreen();
+                PlayScreen s = new PlayScreen(hsc);
                 s.setVisible(true);
                 
                 
@@ -1043,7 +1045,7 @@ public class PlayScreen extends javax.swing.JFrame{
                 //EndScreen endPage = new EndScreen();
                 //endPage.show();
                 Player p = new Player("ABC", score);
-                ColorPickerGame colorGame = new ColorPickerGame(p);
+                ColorPickerGame colorGame = new ColorPickerGame(p,hsc);
                 this.dispose();
             }
         } 
@@ -1061,7 +1063,7 @@ public class PlayScreen extends javax.swing.JFrame{
                 //EndScreen endPage = new EndScreen();
                 //endPage.show();
                 Player p = new Player("ABC", score);
-                ColorPickerGame colorGame = new ColorPickerGame(p);
+                ColorPickerGame colorGame = new ColorPickerGame(p,hsc);
                 this.dispose();
             }
         }

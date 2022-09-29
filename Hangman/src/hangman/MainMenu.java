@@ -20,17 +20,21 @@
 
 package hangman;
 
+import java.io.File;
+
 /**
  *
  * @author Shane
  */
 public class MainMenu extends javax.swing.JFrame {
+    HighscoresController hsc;
 
     /**
      * Creates new form MainMenu
      */
     public MainMenu() {
         initComponents();
+        hsc = new HighscoresController(new File(".\\src\\hangman\\highscores.txt"));
     }
 
     /**
@@ -122,7 +126,7 @@ public class MainMenu extends javax.swing.JFrame {
     //Takes user to the hangman play screen from the main menu
     private void playButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playButtonActionPerformed
         if(evt.getSource()== playButton){
-            PlayScreen gameScreen = new PlayScreen();
+            PlayScreen gameScreen = new PlayScreen(hsc);
             gameScreen.show();
             this.dispose();
         }

@@ -122,6 +122,15 @@ public class HighscoresController {
         
     }
     
+    public int[] giveTopXScores(int x){
+        int[] temp = new int[x];
+        
+        for(int i = 0; i < x; ++i){
+            temp[i] = playerList.get(i).getScore();
+        }
+        return temp;
+    }
+    
     /*
     * overrided toString so you can simply print the list to the command line
     */

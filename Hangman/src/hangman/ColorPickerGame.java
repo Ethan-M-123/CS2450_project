@@ -14,9 +14,11 @@ import javax.swing.*;
  */
 public class ColorPickerGame{
     static Player p = new Player("test",0); //FIXME: replace with real player info
+    static HighscoresController hsc;
     
-    public ColorPickerGame(Player p){
+    public ColorPickerGame(Player p, HighscoresController hsc){
         this.p = p;
+        this.hsc = hsc;
         startGui();
     }
     
@@ -57,9 +59,16 @@ public class ColorPickerGame{
                 System.out.println("End Game");
                 p.recordPlayerScore();
                 
-                EndScreen endPage = new EndScreen();
-                endPage.show();
+                int[] temp = hsc.giveTopXScores(5);
                 
+                if (temp[4] > p.getScore()){
+                    MainMenu mm = new MainMenu();
+                    mm.show();
+                }
+                else{
+                    EndScreen endPage = new EndScreen();
+                    endPage.show();
+                }
                 
                 f.dispose();
             }
