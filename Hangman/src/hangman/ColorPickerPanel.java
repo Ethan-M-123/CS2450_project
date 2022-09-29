@@ -38,7 +38,7 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
     Color purple;
     Color background = new Color(240,185,0);
     Color correct;
-    static int NUM_OF_ROUNDS = 50;
+    static int NUM_OF_ROUNDS = 5;
     int roundNum = 0;
     Player p;
 
