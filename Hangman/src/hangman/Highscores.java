@@ -34,7 +34,7 @@ public class Highscores extends javax.swing.JFrame {
     public Highscores() {
         initComponents();
         setSize(600,400);
-        HighscoresController hsc = new HighscoresController(new File(".\\src\\hangman\\highscores.txt"));
+        HighscoresController hsc = new HighscoresController(new File("./src/hangman/highscores.txt"));
         hsc.sortList();
         Player[] temp = hsc.getList();
         for(int i = 0; i < highscoreNames.length; ++i){
