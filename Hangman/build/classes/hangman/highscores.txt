@@ -9,3 +9,5 @@ low 40
 shan 90
 ABC 40
 myname 590
+shane 550
+Jeff 580
