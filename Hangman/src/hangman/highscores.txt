@@ -11,3 +11,5 @@ ABC 40
 myname 590
 shane 550
 Jeff 580
+JEJ 590
+ABC 580

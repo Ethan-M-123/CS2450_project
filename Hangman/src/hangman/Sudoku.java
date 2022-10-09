@@ -4,19 +4,44 @@
  */
 package hangman;
 import java.util.HashSet;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 /**
  *
  * @author Shane
  */
-public class Sodoku extends javax.swing.JFrame {
+public class Sudoku extends javax.swing.JFrame {
 
     /**
-     * Creates new form Sodoku
+     * Creates new form Sudoku
      */
-    public Sodoku() {
+    public Sudoku() {
         initComponents();
+        
+        JTextField[] a = {square0_0,square0_1,square0_2,square0_3,square0_4,square0_5,square0_6,square0_7,square0_8};
+        JTextField[] b = {square1_0,square1_1,square1_2,square1_3,square1_4,square1_5,square1_6,square1_7,square1_8};
+        JTextField[] c = {square2_0,square2_1,square2_2,square2_3,square2_4,square2_5,square2_6,square2_7,square2_8};
+        JTextField[] d = {square3_0,square3_1,square3_2,square3_3,square3_4,square3_5,square3_6,square3_7,square3_8};
+        JTextField[] e = {square4_0,square4_1,square4_2,square4_3,square4_4,square4_5,square4_6,square4_7,square4_8};      
+        JTextField[] f = {square5_0,square5_1,square5_2,square5_3,square5_4,square5_5,square5_6,square5_7,square5_8};
+        JTextField[] g = {square6_0,square6_1,square6_2,square6_3,square6_4,square6_5,square6_6,square6_7,square6_8};
+        JTextField[] h = {square7_0,square7_1,square7_2,square7_3,square7_4,square7_5,square7_6,square7_7,square7_8};
+        JTextField[] i = {square8_0,square8_1,square8_2,square8_3,square8_4,square8_5,square8_6,square8_7,square8_8};
+        gameBoard = new JTextField[9][9];
+        gameBoard[0] = a;
+        gameBoard[1] = b;
+        gameBoard[2] = c;
+        gameBoard[3] = d;
+        gameBoard[4] = e;
+        gameBoard[5] = f;
+        gameBoard[6] = g;
+        gameBoard[7] = h;
+        gameBoard[8] = i;
+        
+        
         setResizable(false);
+        this.setLocationRelativeTo(null);
         
     }
 
@@ -111,11 +136,11 @@ public class Sodoku extends javax.swing.JFrame {
         square7_6 = new javax.swing.JTextField();
         square7_7 = new javax.swing.JTextField();
         square2_7 = new javax.swing.JTextField();
+        submitButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(600, 400));
         setMinimumSize(new java.awt.Dimension(600, 400));
-        setPreferredSize(new java.awt.Dimension(600, 440));
+        setResizable(false);
         setSize(new java.awt.Dimension(600, 400));
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
@@ -1013,12 +1038,21 @@ public class Sodoku extends javax.swing.JFrame {
         });
         jPanel1.add(square2_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 80, 40, 40));
 
+        submitButton.setText("Submit");
+        submitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(122, Short.MAX_VALUE)
+                .addGap(19, 19, 19)
+                .addComponent(submitButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(99, 99, 99))
         );
@@ -1027,334 +1061,585 @@ public class Sodoku extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 15, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(submitButton)
+                .addGap(55, 55, 55))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void square6_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square6_2ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square6_2.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square6_2.setText("");
+        }
     }//GEN-LAST:event_square6_2ActionPerformed
 
     private void square0_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square0_7ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square0_7.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square0_7.setText("");
+        }
     }//GEN-LAST:event_square0_7ActionPerformed
 
     private void square3_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square3_8ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square3_8.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square3_8.setText("");
+        }
     }//GEN-LAST:event_square3_8ActionPerformed
 
     private void square0_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square0_2ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square0_2.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square0_2.setText("");
+        }
     }//GEN-LAST:event_square0_2ActionPerformed
 
     private void square5_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square5_8ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square5_8.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square5_8.setText("");
+        }
     }//GEN-LAST:event_square5_8ActionPerformed
 
     private void square3_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square3_4ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square3_4.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square3_4.setText("");
+        }
     }//GEN-LAST:event_square3_4ActionPerformed
 
     private void square0_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square0_4ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square0_4.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square0_4.setText("");
+        }
     }//GEN-LAST:event_square0_4ActionPerformed
 
     private void square0_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square0_6ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square0_6.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square0_6.setText("");
+        }
     }//GEN-LAST:event_square0_6ActionPerformed
 
     private void square0_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square0_5ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square0_5.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square0_5.setText("");
+        }
     }//GEN-LAST:event_square0_5ActionPerformed
 
     private void square0_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square0_1ActionPerformed
-        // TODO add your handling code here:
+         if(!isGuessAcceptable(square0_1.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square0_1.setText("");
+        }
     }//GEN-LAST:event_square0_1ActionPerformed
 
     private void square8_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square8_2ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square8_2.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square8_2.setText("");
+        }
     }//GEN-LAST:event_square8_2ActionPerformed
 
     private void square1_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square1_1ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square1_1.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square1_1.setText("");
+        }
     }//GEN-LAST:event_square1_1ActionPerformed
 
     private void square2_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square2_5ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square2_5.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square2_5.setText("");
+        }
     }//GEN-LAST:event_square2_5ActionPerformed
 
     private void square1_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square1_3ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square1_3.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square1_3.setText("");
+        }
     }//GEN-LAST:event_square1_3ActionPerformed
 
     private void square1_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square1_4ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square1_4.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square1_4.setText("");
+        }
     }//GEN-LAST:event_square1_4ActionPerformed
 
     private void square5_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square5_1ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square5_1.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square5_1.setText("");
+        }
     }//GEN-LAST:event_square5_1ActionPerformed
 
     private void square1_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square1_5ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square1_5.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square1_5.setText("");
+        }
     }//GEN-LAST:event_square1_5ActionPerformed
 
     private void square1_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square1_7ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square1_7.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square1_7.setText("");
+        }
     }//GEN-LAST:event_square1_7ActionPerformed
 
     private void square1_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square1_0ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square1_0.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square1_0.setText("");
+        }
     }//GEN-LAST:event_square1_0ActionPerformed
 
     private void square3_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square3_7ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square3_7.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square3_7.setText("");
+        }
     }//GEN-LAST:event_square3_7ActionPerformed
 
     private void square1_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square1_2ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square1_2.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square1_2.setText("");
+        }
     }//GEN-LAST:event_square1_2ActionPerformed
 
     private void square2_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square2_2ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square2_2.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square2_2.setText("");
+        }
     }//GEN-LAST:event_square2_2ActionPerformed
 
     private void square2_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square2_3ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square2_3.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square2_3.setText("");
+        }
     }//GEN-LAST:event_square2_3ActionPerformed
 
     private void square2_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square2_4ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square2_4.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square2_4.setText("");
+        }
     }//GEN-LAST:event_square2_4ActionPerformed
 
     private void square1_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square1_6ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square1_6.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square1_6.setText("");
+        }
     }//GEN-LAST:event_square1_6ActionPerformed
 
     private void square2_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square2_6ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square2_6.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square2_6.setText("");
+        }
     }//GEN-LAST:event_square2_6ActionPerformed
 
     private void square1_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square1_8ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square1_8.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square1_8.setText("");
+        }
     }//GEN-LAST:event_square1_8ActionPerformed
 
     private void square6_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square6_1ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square6_1.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square6_1.setText("");
+        }
     }//GEN-LAST:event_square6_1ActionPerformed
 
     private void square2_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square2_0ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square2_0.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square2_0.setText("");
+        }
     }//GEN-LAST:event_square2_0ActionPerformed
 
     private void square3_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square3_1ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square3_1.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square3_1.setText("");
+        }
     }//GEN-LAST:event_square3_1ActionPerformed
 
     private void square5_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square5_0ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square5_0.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square5_0.setText("");
+        }
     }//GEN-LAST:event_square5_0ActionPerformed
 
     private void square6_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square6_0ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square6_0.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square6_0.setText("");
+        }
     }//GEN-LAST:event_square6_0ActionPerformed
 
     private void square7_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square7_2ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square7_2.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square7_2.setText("");
+        }
     }//GEN-LAST:event_square7_2ActionPerformed
 
     private void square3_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square3_5ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square3_5.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square3_5.setText("");
+        }
     }//GEN-LAST:event_square3_5ActionPerformed
 
     private void square3_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square3_0ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square3_0.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square3_0.setText("");
+        }
     }//GEN-LAST:event_square3_0ActionPerformed
 
     private void square4_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square4_8ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square4_8.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square4_8.setText("");
+        }
     }//GEN-LAST:event_square4_8ActionPerformed
 
     private void square8_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square8_3ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square8_3.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square8_3.setText("");
+        }
     }//GEN-LAST:event_square8_3ActionPerformed
 
     private void square3_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square3_3ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square3_3.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square3_3.setText("");
+        }
     }//GEN-LAST:event_square3_3ActionPerformed
 
     private void square0_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square0_8ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square0_8.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square0_8.setText("");
+        }
     }//GEN-LAST:event_square0_8ActionPerformed
 
     private void square5_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square5_2ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square5_2.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square5_2.setText("");
+        }
     }//GEN-LAST:event_square5_2ActionPerformed
 
     private void square2_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square2_8ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square2_8.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square2_8.setText("");
+        }
     }//GEN-LAST:event_square2_8ActionPerformed
 
     private void square4_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square4_0ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square4_0.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square4_0.setText("");
+        }
     }//GEN-LAST:event_square4_0ActionPerformed
 
     private void square4_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square4_1ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square4_1.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square4_1.setText("");
+        }
     }//GEN-LAST:event_square4_1ActionPerformed
 
     private void square4_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square4_2ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square4_2.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square4_2.setText("");
+        }
     }//GEN-LAST:event_square4_2ActionPerformed
 
     private void square3_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square3_6ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square3_6.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square3_6.setText("");
+        }
     }//GEN-LAST:event_square3_6ActionPerformed
 
     private void square5_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square5_5ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square5_5.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square5_5.setText("");
+        }
     }//GEN-LAST:event_square5_5ActionPerformed
 
     private void square4_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square4_5ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square4_5.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square4_5.setText("");
+        }
     }//GEN-LAST:event_square4_5ActionPerformed
 
     private void square4_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square4_6ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square4_6.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square4_6.setText("");
+        }
     }//GEN-LAST:event_square4_6ActionPerformed
 
     private void square5_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square5_7ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square5_7.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square5_7.setText("");
+        }
     }//GEN-LAST:event_square5_7ActionPerformed
 
     private void square0_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square0_3ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square0_3.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square0_3.setText("");
+        }
     }//GEN-LAST:event_square0_3ActionPerformed
 
     private void square0_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square0_0ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square0_0.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square0_0.setText("");
+        }
     }//GEN-LAST:event_square0_0ActionPerformed
 
     private void square4_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square4_3ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square4_3.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square4_3.setText("");
+        }
     }//GEN-LAST:event_square4_3ActionPerformed
 
     private void square4_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square4_4ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square4_4.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square4_4.setText("");
+        }
     }//GEN-LAST:event_square4_4ActionPerformed
 
     private void square6_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square6_8ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square6_8.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square6_8.setText("");
+        }
     }//GEN-LAST:event_square6_8ActionPerformed
 
     private void square2_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square2_1ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square2_1.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square2_1.setText("");
+        }
     }//GEN-LAST:event_square2_1ActionPerformed
 
     private void square8_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square8_0ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square8_0.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square8_0.setText("");
+        }
     }//GEN-LAST:event_square8_0ActionPerformed
 
     private void square4_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square4_7ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square4_7.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square4_7.setText("");
+        }
     }//GEN-LAST:event_square4_7ActionPerformed
 
     private void square8_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square8_8ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square8_8.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square8_8.setText("");
+        }
     }//GEN-LAST:event_square8_8ActionPerformed
 
     private void square8_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square8_5ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square8_5.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square8_5.setText("");
+        }
     }//GEN-LAST:event_square8_5ActionPerformed
 
     private void square5_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square5_3ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square5_3.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square5_3.setText("");
+        }
     }//GEN-LAST:event_square5_3ActionPerformed
 
     private void square7_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square7_3ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square7_3.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square7_3.setText("");
+        }
     }//GEN-LAST:event_square7_3ActionPerformed
 
     private void square8_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square8_4ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square8_4.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square8_4.setText("");
+        }
     }//GEN-LAST:event_square8_4ActionPerformed
 
     private void square7_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square7_5ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square7_5.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square7_5.setText("");
+        }
     }//GEN-LAST:event_square7_5ActionPerformed
 
     private void square3_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square3_2ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square3_2.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square3_2.setText("");
+        }
     }//GEN-LAST:event_square3_2ActionPerformed
 
     private void square7_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square7_8ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square7_8.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square7_8.setText("");
+        }
     }//GEN-LAST:event_square7_8ActionPerformed
 
     private void square7_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square7_0ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square7_0.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square7_0.setText("");
+        }
     }//GEN-LAST:event_square7_0ActionPerformed
 
     private void square5_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square5_6ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square5_6.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square5_6.setText("");
+        }
     }//GEN-LAST:event_square5_6ActionPerformed
 
     private void square6_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square6_3ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square6_3.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square6_3.setText("");
+        }
     }//GEN-LAST:event_square6_3ActionPerformed
 
     private void square6_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square6_4ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square6_4.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square6_4.setText("");
+        }
     }//GEN-LAST:event_square6_4ActionPerformed
 
     private void square6_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square6_5ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square6_5.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square6_5.setText("");
+        }
     }//GEN-LAST:event_square6_5ActionPerformed
 
     private void square6_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square6_6ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square6_6.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square6_6.setText("");
+        }
     }//GEN-LAST:event_square6_6ActionPerformed
 
     private void square8_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square8_6ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square8_6.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square8_6.setText("");
+        }
     }//GEN-LAST:event_square8_6ActionPerformed
 
     private void square8_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square8_7ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square8_7.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square8_7.setText("");
+        }
     }//GEN-LAST:event_square8_7ActionPerformed
 
     private void square7_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square7_1ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square7_1.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square7_1.setText("");
+        }
     }//GEN-LAST:event_square7_1ActionPerformed
 
     private void square8_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square8_1ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square8_1.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square8_1.setText("");
+        }
     }//GEN-LAST:event_square8_1ActionPerformed
 
     private void square6_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square6_7ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square6_7.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square6_7.setText("");
+        }
     }//GEN-LAST:event_square6_7ActionPerformed
 
     private void square7_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square7_4ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square7_4.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square7_4.setText("");
+        }
     }//GEN-LAST:event_square7_4ActionPerformed
 
     private void square5_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square5_4ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square5_4.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square5_4.setText("");
+        }
     }//GEN-LAST:event_square5_4ActionPerformed
 
     private void square7_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square7_6ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square7_6.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square7_6.setText("");
+        }
     }//GEN-LAST:event_square7_6ActionPerformed
 
     private void square7_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square7_7ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square7_7.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square7_7.setText("");
+        }
     }//GEN-LAST:event_square7_7ActionPerformed
 
     private void square2_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square2_7ActionPerformed
-        // TODO add your handling code here:
+        if(!isGuessAcceptable(square2_7.getText())){
+            JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
+            square2_7.setText("");
+        }
     }//GEN-LAST:event_square2_7ActionPerformed
+
+    private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
+        boolean b = checkGameBoard();
+    }//GEN-LAST:event_submitButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1373,25 +1658,25 @@ public class Sodoku extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Sodoku.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sudoku.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Sodoku.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sudoku.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Sodoku.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sudoku.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Sodoku.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sudoku.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Sodoku().setVisible(true);
+                new Sudoku().setVisible(true);
             }
         });
     }
     
-    private boolean checkGuess(String guess, int yPos, int xPos){
+    private boolean isGuessAcceptable(String guess){
         HashSet<String> acceptableInputs = new HashSet<String>(9);
         acceptableInputs.add("1");
         acceptableInputs.add("2");
@@ -1403,21 +1688,41 @@ public class Sodoku extends javax.swing.JFrame {
         acceptableInputs.add("8");
         acceptableInputs.add("9");
         
-        return false;
+        return acceptableInputs.contains(guess);
         
     }
+    
+    private boolean checkGameBoard(){
+        int numCorrectSquares = 0;
+        
+        for(int i=0;i<9;i++){
+            for(int j=0;j<9;j++){
+                if(gameBoard[i][j].getText().equals(sudokuKey[i][j])){
+                    System.out.println("correct");
+                    numCorrectSquares++;
+                } else{
+                    sudokuScore = sudokuScore - 10;
+                }
+            }
+        }
+        
+        return numCorrectSquares == 81;
+    }
 
-    private int[][] sodokuKey = 
-    {{8,3,5,4,1,6,9,2,7},
-     {2,9,6,8,5,7,4,3,1},
-     {4,1,7,2,9,3,6,5,8},
-     {5,6,9,1,3,4,7,8,2},
-     {1,2,3,6,7,8,5,4,9},
-     {7,4,8,5,2,9,1,6,3},
-     {6,5,2,7,8,1,3,9,4},
-     {9,8,1,3,4,5,2,7,6},
-     {3,7,4,9,6,2,8,1,5}
+    private static String[][] sudokuKey = 
+    {{"8","3","5","4","1","6","9","2","7"},
+     {"2","9","6","8","5","7","4","3","1"},
+     {"4","1","7","2","9","3","6","5","8"},
+     {"5","6","9","1","3","4","7","8","2"},
+     {"1","2","3","6","7","8","5","4","9"},
+     {"7","4","8","5","2","9","1","6","3"},
+     {"6","5","2","7","8","1","3","9","4"},
+     {"9","8","1","3","4","5","2","7","6"},
+     {"3","7","4","9","6","2","8","1","5"}
     };
+    
+    private JTextField[][] gameBoard;
+    private int sudokuScore = 540;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
@@ -1502,5 +1807,6 @@ public class Sodoku extends javax.swing.JFrame {
     private javax.swing.JTextField square8_6;
     private javax.swing.JTextField square8_7;
     private javax.swing.JTextField square8_8;
+    private javax.swing.JButton submitButton;
     // End of variables declaration//GEN-END:variables
 }
