@@ -7,7 +7,6 @@ package hangman;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 import javax.swing.*;
-import static javax.swing.JComponent.WHEN_IN_FOCUSED_WINDOW;
 
 /**
  *

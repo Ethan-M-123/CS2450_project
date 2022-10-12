@@ -74,6 +74,12 @@ public class PlayScreen extends javax.swing.JFrame{
                .put(KeyStroke.getKeyStroke("ESCAPE"), "escapeGame");
         label_HANGMAN.getActionMap().put("escapeGame", new LeaveGame());
         
+        //F1 key display
+        label_HANGMAN.getInputMap(WHEN_IN_FOCUSED_WINDOW)
+                .put(KeyStroke.getKeyStroke("F1"), "displayInfo");
+        label_HANGMAN.getActionMap().put("displayInfo", new DisplayInfo());
+
+        
         
         ImageIcon empty = new ImageIcon("src/HangmanPictures/hangEmpty.png");
         ImageIcon oneLimb = new ImageIcon("src/HangmanPictures/hang1.png");

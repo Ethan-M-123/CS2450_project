@@ -1,8 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-
 /***************************************************************  
 *  file: OpeningScreen.java
 *  author: Shane
@@ -15,6 +10,9 @@
 *  
 ****************************************************************/  
 package hangman;
+import static javax.swing.JComponent.WHEN_IN_FOCUSED_WINDOW;
+import javax.swing.*;
+
 
 /**
  *
@@ -28,6 +26,17 @@ public class OpeningScreen extends javax.swing.JFrame {
     public OpeningScreen() {
         initComponents();
         setSize(600,400);
+        
+        // Escape Key Exit
+        projectTitle.getInputMap(WHEN_IN_FOCUSED_WINDOW)
+                .put(KeyStroke.getKeyStroke("ESCAPE"), "leaveGame");
+        projectTitle.getActionMap().put("leaveGame", new LeaveGame());
+        
+        //F1 key display
+        projectTitle.getInputMap(WHEN_IN_FOCUSED_WINDOW)
+                .put(KeyStroke.getKeyStroke("F1"), "displayInfo");
+        projectTitle.getActionMap().put("displayInfo", new DisplayInfo());
+
     }
 
     /**
