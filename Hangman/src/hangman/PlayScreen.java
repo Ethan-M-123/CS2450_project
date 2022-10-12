@@ -10,8 +10,8 @@ package hangman;
 *  author: M. Sevilla; Shane; Simon
 *  class: CS 2450.01  
 *  
-*  assignment: Project V1.1 
-*  date last modified: 9/28/2022
+*  assignment: Project V1.2 
+*  date last modified: 10/10/2022
 *  
 *  purpose: Displays the controls for the user to play the game as well as the
 *  functions and calls necessary to pass on the player's score onto the 
@@ -28,7 +28,9 @@ import javax.swing.ImageIcon;
 import java.io.File;
 import java.io.*;
 import java.util.*;
+import static javax.swing.JComponent.WHEN_IN_FOCUSED_WINDOW;
 import javax.swing.JOptionPane;
+import javax.swing.KeyStroke;
 
 public class PlayScreen extends javax.swing.JFrame{
 
@@ -65,6 +67,12 @@ public class PlayScreen extends javax.swing.JFrame{
         label_GuessWord.setText(displayedWord);
         score = 100;
         scoreLabel.setText("Score: " + score);
+        
+
+        // Add code to exit game
+        label_HANGMAN.getInputMap(WHEN_IN_FOCUSED_WINDOW)
+               .put(KeyStroke.getKeyStroke("ESCAPE"), "escapeGame");
+        label_HANGMAN.getActionMap().put("escapeGame", new LeaveGame());
         
         
         ImageIcon empty = new ImageIcon("src/HangmanPictures/hangEmpty.png");
@@ -713,9 +721,6 @@ public class PlayScreen extends javax.swing.JFrame{
     private void btn_SkipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SkipActionPerformed
         score = 0;
         Player p = new Player("ABC", score);
-        //p.recordPlayerScore();
-        //EndScreen endPage = new EndScreen();
-        //endPage.show();
         
         ColorPickerGame colorGame = new ColorPickerGame(p,hsc);
         this.dispose();

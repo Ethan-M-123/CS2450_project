@@ -5,7 +5,7 @@
 
 /***************************************************************  
 *  file: MainMenu.java
-*  author: Shane
+*  author: Shane, Simon
 *  class: CS 2450.01  
 *  
 *  assignment: Project V1.0 
@@ -21,6 +21,8 @@
 package hangman;
 
 import java.io.File;
+import static javax.swing.JComponent.WHEN_IN_FOCUSED_WINDOW;
+import javax.swing.*;
 
 /**
  *
@@ -34,6 +36,17 @@ public class MainMenu extends javax.swing.JFrame {
      */
     public MainMenu() {
         initComponents();
+        
+        // Escape Key Exit
+        jLabel2.getInputMap(WHEN_IN_FOCUSED_WINDOW)
+                .put(KeyStroke.getKeyStroke("ESCAPE"), "leaveGame");
+        jLabel2.getActionMap().put("leaveGame", new LeaveGame());
+        
+        //F1 key display
+        jLabel2.getInputMap(WHEN_IN_FOCUSED_WINDOW)
+                .put(KeyStroke.getKeyStroke("F1"), "displayInfo");
+        jLabel2.getActionMap().put("displayInfo", new DisplayInfo());
+        
         hsc = new HighscoresController(new File("./src/hangman/highscores.txt"));
     }
 
@@ -174,6 +187,7 @@ public class MainMenu extends javax.swing.JFrame {
                 new MainMenu().setVisible(true);
             }
         });
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

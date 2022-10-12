@@ -15,6 +15,7 @@ import java.awt.event.MouseMotionListener;
 import java.awt.geom.Ellipse2D;
 import java.util.ArrayList;
 import javax.swing.*;
+import java.awt.event.ActionEvent;
 import java.util.Date;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -44,7 +45,7 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
 
     JLabel timeStamp;
     JLabel roundNumber;
-
+        
     Ellipse2D.Double q1;
     Ellipse2D.Double q2;
     Ellipse2D.Double q3;
@@ -52,6 +53,11 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
     Ellipse2D.Double q5;
 
     public ColorPickerPanel() {
+        
+        this(new Player());
+        
+        // Could delete stuff under since it does the same thing?
+        /*
         super();
         setPreferredSize(new Dimension(600, 400));
         cl = new ArrayList<Color>();
@@ -90,6 +96,7 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
 
         addMouseListener(this);
         addMouseMotionListener(this);
+        */
     }
 
     public ColorPickerPanel(Player p) {
@@ -104,11 +111,18 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
         timeStamp = new JLabel("Month Day, Year");
         roundNumber = new JLabel("Round " + (roundNum + 1) + "/" + NUM_OF_ROUNDS);
 
+        //Code to exit from the game
+        timeStamp.getInputMap(WHEN_IN_FOCUSED_WINDOW)
+                .put(KeyStroke.getKeyStroke("ESCAPE"), "escapeGame");
+        timeStamp.getActionMap().put("escapeGame", new LeaveGame());
+        
+
         //Make it easier for the label placement
         setLayout(null);
 
         //Updates the label for the seconds
         new Thread() {
+            @Override
             public void run() {
                 while (true) {
                     timeStamp.setText(Calendar.getInstance().getTime().toString());
@@ -132,6 +146,7 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
         addMouseMotionListener(this);
     }
 
+    
     public int getRoundNum() {
         return roundNum;
     }
@@ -317,7 +332,8 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
         roundNumber.setOpaque(true);
         roundNumber.setFont(new java.awt.Font("Tahoma", 0, 14));
         roundNumber.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-
+        
+        
         resetColorList();
     }
 
