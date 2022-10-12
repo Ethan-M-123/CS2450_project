@@ -18,6 +18,8 @@ package hangman;
 ****************************************************************/  
 
 import hangman.MainMenu;
+import static javax.swing.JComponent.WHEN_IN_FOCUSED_WINDOW;
+import javax.swing.*;
 
 /**
  *
@@ -31,6 +33,16 @@ public class CreditsScreen extends javax.swing.JFrame {
     public CreditsScreen() {
         initComponents();
         setSize(600,400);
+
+        // Escape Key Exit
+        jLabel1.getInputMap(WHEN_IN_FOCUSED_WINDOW)
+                .put(KeyStroke.getKeyStroke("ESCAPE"), "leaveGame");
+        jLabel1.getActionMap().put("leaveGame", new LeaveGame());
+        
+        //F1 key display
+        jLabel1.getInputMap(WHEN_IN_FOCUSED_WINDOW)
+                .put(KeyStroke.getKeyStroke("F1"), "displayInfo");
+        jLabel1.getActionMap().put("displayInfo", new DisplayInfo());
     }
 
     /**

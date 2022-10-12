@@ -7,6 +7,7 @@ package hangman;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 import javax.swing.*;
+import static javax.swing.JComponent.WHEN_IN_FOCUSED_WINDOW;
 
 /**
  *
@@ -37,6 +38,8 @@ public class ColorPickerGame{
         f.setSize(600, 400);
         
         ColorPickerPanel cpp = new ColorPickerPanel(p);
+        
+        
         cpp.addComponentListener(new ComponentListener() {
             @Override
             public void componentResized(ComponentEvent e) {

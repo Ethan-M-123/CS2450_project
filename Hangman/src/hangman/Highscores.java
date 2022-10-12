@@ -18,6 +18,8 @@
 package hangman;
 
 import java.io.File;
+import static javax.swing.JComponent.WHEN_IN_FOCUSED_WINDOW;
+import javax.swing.*;
 
 /**
  *
@@ -34,6 +36,18 @@ public class Highscores extends javax.swing.JFrame {
     public Highscores() {
         initComponents();
         setSize(600,400);
+        
+// Escape Key Exit
+        highscoresTitle.getInputMap(WHEN_IN_FOCUSED_WINDOW)
+                .put(KeyStroke.getKeyStroke("ESCAPE"), "leaveGame");
+        highscoresTitle.getActionMap().put("leaveGame", new LeaveGame());
+        
+        //F1 key display
+        highscoresTitle.getInputMap(WHEN_IN_FOCUSED_WINDOW)
+                .put(KeyStroke.getKeyStroke("F1"), "displayInfo");
+        highscoresTitle.getActionMap().put("displayInfo", new DisplayInfo());
+        
+        
         HighscoresController hsc = new HighscoresController(new File("./src/hangman/highscores.txt"));
         hsc.sortList();
         Player[] temp = hsc.getList();

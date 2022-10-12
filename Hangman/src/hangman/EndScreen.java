@@ -5,13 +5,15 @@
 package hangman;
 import java.io.*;
 import java.util.*;
+import static javax.swing.JComponent.WHEN_IN_FOCUSED_WINDOW;
+import javax.swing.*;
 
 /***************************************************************  
 *  file: EndScreen.java  
-*  author: M. Sevilla, others 
+*  author: M. Sevilla, Simon, others 
 *  class: CS 2450.01  
 *  
-*  assignment: Project V1.0 
+*  assignment: Project V1.2 
 *  date last modified: 9/21/2022
 *  
 *  purpose: Shows the user their final score after playing the game, allows them
@@ -30,6 +32,16 @@ public class EndScreen extends javax.swing.JFrame {
         setSize(600,400);
         setLocationRelativeTo(null);
         setScore(retrieveLatestScore());
+        
+        // Escape Key Exit
+        btn_End.getInputMap(WHEN_IN_FOCUSED_WINDOW)
+                .put(KeyStroke.getKeyStroke("ESCAPE"), "leaveGame");
+        btn_End.getActionMap().put("leaveGame", new LeaveGame());
+        
+        //F1 key display
+        btn_End.getInputMap(WHEN_IN_FOCUSED_WINDOW)
+                .put(KeyStroke.getKeyStroke("F1"), "displayInfo");
+        btn_End.getActionMap().put("displayInfo", new DisplayInfo());
     }
 
     /**
