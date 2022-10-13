@@ -116,6 +116,11 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
                 .put(KeyStroke.getKeyStroke("ESCAPE"), "escapeGame");
         timeStamp.getActionMap().put("escapeGame", new LeaveGame());
         
+        //F1 key display
+        timeStamp.getInputMap(WHEN_IN_FOCUSED_WINDOW)
+                .put(KeyStroke.getKeyStroke("F1"), "displayInfo");
+        timeStamp.getActionMap().put("displayInfo", new DisplayInfo());
+        
 
         //Make it easier for the label placement
         setLayout(null);

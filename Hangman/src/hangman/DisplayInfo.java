@@ -24,8 +24,8 @@ public class DisplayInfo extends AbstractAction {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
-        System.out.println("eggo waffle");
+        
+        InfoScreen temp = new InfoScreen();
+        temp.show();
     }
-    
 }
