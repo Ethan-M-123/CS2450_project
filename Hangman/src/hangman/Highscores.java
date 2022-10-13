@@ -60,6 +60,9 @@ public class Highscores extends javax.swing.JFrame {
         scoreThree.setText(highscoreNames[2] + "....." + highscores[2]);
         scoreFour.setText(highscoreNames[3] + "....." + highscores[3]);
         scoreFive.setText(highscoreNames[4] + "....." + highscores[4]);
+        
+        /* Set tool tip text for all interactive elements */
+        jButton1.setToolTipText("Return to the Main Menu");
     }
 
     /**

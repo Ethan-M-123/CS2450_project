@@ -92,6 +92,36 @@ public class PlayScreen extends javax.swing.JFrame{
         jLabel1.setIcon(empty);
         
         hangManParts = new ImageIcon[]{oneLimb, twoLimbs, threeLimbs, fourLimbs, fiveLimbs, sixLimbs};
+        
+        /* Set the tool tip text for all relevant interactive elements */ 
+        btn_GetNewWord.setToolTipText("Change the current word you're guessing without penalty");
+        btn_Skip.setToolTipText("Skip to the color guessing game with 0 points awarded");
+        buttonA.setToolTipText("Guess there's a letter \"A\" in the current word");
+        buttonB.setToolTipText("Guess there's a letter \"B\" in the current word");
+        buttonC.setToolTipText("Guess there's a letter \"C\" in the current word");
+        buttonD.setToolTipText("Guess there's a letter \"D\" in the current word");
+        buttonE.setToolTipText("Guess there's a letter \"E\" in the current word");
+        buttonF.setToolTipText("Guess there's a letter \"F\" in the current word");
+        buttonG.setToolTipText("Guess there's a letter \"G\" in the current word");
+        buttonH.setToolTipText("Guess there's a letter \"H\" in the current word");
+        buttonI.setToolTipText("Guess there's a letter \"I\" in the current word");
+        buttonJ.setToolTipText("Guess there's a letter \"J\" in the current word");
+        buttonK.setToolTipText("Guess there's a letter \"K\" in the current word");
+        buttonL.setToolTipText("Guess there's a letter \"L\" in the current word");
+        buttonM.setToolTipText("Guess there's a letter \"M\" in the current word");
+        buttonN.setToolTipText("Guess there's a letter \"N\" in the current word");
+        buttonO.setToolTipText("Guess there's a letter \"O\" in the current word");
+        buttonP.setToolTipText("Guess there's a letter \"P\" in the current word");
+        buttonQ.setToolTipText("Guess there's a letter \"Q\" in the current word");
+        buttonR.setToolTipText("Guess there's a letter \"R\" in the current word");
+        buttonS.setToolTipText("Guess there's a letter \"S\" in the current word");
+        buttonT.setToolTipText("Guess there's a letter \"T\" in the current word");
+        buttonU.setToolTipText("Guess there's a letter \"U\" in the current word");
+        buttonV.setToolTipText("Guess there's a letter \"V\" in the current word");
+        buttonW.setToolTipText("Guess there's a letter \"W\" in the current word");
+        buttonX.setToolTipText("Guess there's a letter \"X\" in the current word");
+        buttonY.setToolTipText("Guess there's a letter \"Y\" in the current word");
+        buttonZ.setToolTipText("Guess there's a letter \"Z\" in the current word");
     }
 
     /**

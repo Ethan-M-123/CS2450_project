@@ -43,6 +43,9 @@ public class CreditsScreen extends javax.swing.JFrame {
         jLabel1.getInputMap(WHEN_IN_FOCUSED_WINDOW)
                 .put(KeyStroke.getKeyStroke("F1"), "displayInfo");
         jLabel1.getActionMap().put("displayInfo", new DisplayInfo());
+        
+        /*Set tool tip text for all interactive elements*/
+        jButton1.setToolTipText("Return to the Main Menu");
     }
 
     /**

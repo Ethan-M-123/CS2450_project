@@ -5,7 +5,7 @@
 
 /***************************************************************  
 *  file: MainMenu.java
-*  author: Shane, Simon
+*  author: Shane, Simon, Marvin
 *  class: CS 2450.01  
 *  
 *  assignment: Project V1.0 
@@ -48,6 +48,12 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel2.getActionMap().put("displayInfo", new DisplayInfo());
         
         hsc = new HighscoresController(new File("./src/hangman/highscores.txt"));
+        
+        
+        /* Set the tool tip text of all interactive components */
+        playButton.setToolTipText("Play a game of Hangman");
+        highscoreButton.setToolTipText("View top 5 players' highscores");
+        creditsButton.setToolTipText("View the developers of this game");
     }
 
     /**

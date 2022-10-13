@@ -42,6 +42,10 @@ public class EndScreen extends javax.swing.JFrame {
         btn_End.getInputMap(WHEN_IN_FOCUSED_WINDOW)
                 .put(KeyStroke.getKeyStroke("F1"), "displayInfo");
         btn_End.getActionMap().put("displayInfo", new DisplayInfo());
+        
+        /* Set the tool tip texts for all reasonable interactive elements on this panel */
+        btn_End.setToolTipText("Save your score in the game system and return to the Main Menu");
+        playerNameField.setToolTipText("Enter the name you want to be known by on the Highscores screen");
     }
 
     /**
