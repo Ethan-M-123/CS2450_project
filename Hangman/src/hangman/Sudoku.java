@@ -7,7 +7,6 @@ package hangman;
 import java.util.HashSet;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-
 /**
  *
  * @author Shane
@@ -160,7 +159,7 @@ public class Sudoku extends javax.swing.JFrame {
         square6_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square6_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square6_2.setText("2");
-        square6_2.setBorder(null);
+        square6_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square6_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square6_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,7 +170,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square0_7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square0_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square0_7.setBorder(null);
+        square0_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square0_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square0_7ActionPerformed(evt);
@@ -181,7 +180,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square3_8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square3_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square3_8.setBorder(null);
+        square3_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square3_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square3_8ActionPerformed(evt);
@@ -191,7 +190,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square0_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square0_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square0_2.setBorder(null);
+        square0_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square0_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square0_2ActionPerformed(evt);
@@ -203,7 +202,7 @@ public class Sudoku extends javax.swing.JFrame {
         square5_8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square5_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square5_8.setText("3");
-        square5_8.setBorder(null);
+        square5_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square5_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square5_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -216,7 +215,7 @@ public class Sudoku extends javax.swing.JFrame {
         square3_4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square3_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square3_4.setText("3");
-        square3_4.setBorder(null);
+        square3_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square3_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square3_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -227,7 +226,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square0_4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square0_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square0_4.setBorder(null);
+        square0_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square0_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square0_4ActionPerformed(evt);
@@ -237,7 +236,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square0_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square0_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square0_6.setBorder(null);
+        square0_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square0_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square0_6ActionPerformed(evt);
@@ -249,7 +248,7 @@ public class Sudoku extends javax.swing.JFrame {
         square0_5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square0_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square0_5.setText("6");
-        square0_5.setBorder(null);
+        square0_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square0_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square0_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -260,7 +259,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square0_1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square0_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square0_1.setBorder(null);
+        square0_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square0_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square0_1ActionPerformed(evt);
@@ -270,7 +269,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square8_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square8_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square8_2.setBorder(null);
+        square8_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square8_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square8_2ActionPerformed(evt);
@@ -280,7 +279,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square1_1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square1_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square1_1.setBorder(null);
+        square1_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square1_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square1_1ActionPerformed(evt);
@@ -290,7 +289,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square2_5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square2_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square2_5.setBorder(null);
+        square2_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square2_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square2_5ActionPerformed(evt);
@@ -300,7 +299,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square1_3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square1_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square1_3.setBorder(null);
+        square1_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square1_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square1_3ActionPerformed(evt);
@@ -310,7 +309,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square1_4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square1_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square1_4.setBorder(null);
+        square1_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square1_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square1_4ActionPerformed(evt);
@@ -322,7 +321,7 @@ public class Sudoku extends javax.swing.JFrame {
         square5_1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square5_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square5_1.setText("4");
-        square5_1.setBorder(null);
+        square5_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square5_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square5_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -333,7 +332,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square1_5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square1_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square1_5.setBorder(null);
+        square1_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square1_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square1_5ActionPerformed(evt);
@@ -343,7 +342,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square1_7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square1_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square1_7.setBorder(null);
+        square1_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square1_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square1_7ActionPerformed(evt);
@@ -353,7 +352,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square1_0.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square1_0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square1_0.setBorder(null);
+        square1_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square1_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square1_0ActionPerformed(evt);
@@ -365,7 +364,7 @@ public class Sudoku extends javax.swing.JFrame {
         square3_7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square3_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square3_7.setText("8");
-        square3_7.setBorder(null);
+        square3_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square3_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square3_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -376,7 +375,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square1_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square1_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square1_2.setBorder(null);
+        square1_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square1_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square1_2ActionPerformed(evt);
@@ -386,7 +385,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square2_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square2_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square2_2.setBorder(null);
+        square2_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square2_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square2_2ActionPerformed(evt);
@@ -396,7 +395,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square2_3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square2_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square2_3.setBorder(null);
+        square2_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square2_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square2_3ActionPerformed(evt);
@@ -406,7 +405,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square2_4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square2_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square2_4.setBorder(null);
+        square2_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square2_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square2_4ActionPerformed(evt);
@@ -418,7 +417,7 @@ public class Sudoku extends javax.swing.JFrame {
         square1_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square1_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square1_6.setText("4");
-        square1_6.setBorder(null);
+        square1_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square1_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square1_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -431,7 +430,7 @@ public class Sudoku extends javax.swing.JFrame {
         square2_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square2_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square2_6.setText("6");
-        square2_6.setBorder(null);
+        square2_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square2_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square2_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -442,7 +441,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square1_8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square1_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square1_8.setBorder(null);
+        square1_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square1_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square1_8ActionPerformed(evt);
@@ -454,7 +453,7 @@ public class Sudoku extends javax.swing.JFrame {
         square6_1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square6_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square6_1.setText("5");
-        square6_1.setBorder(null);
+        square6_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square6_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square6_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -465,7 +464,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square2_0.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square2_0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square2_0.setBorder(null);
+        square2_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square2_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square2_0ActionPerformed(evt);
@@ -475,7 +474,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square3_1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square3_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square3_1.setBorder(null);
+        square3_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square3_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square3_1ActionPerformed(evt);
@@ -485,7 +484,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square5_0.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square5_0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square5_0.setBorder(null);
+        square5_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square5_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square5_0ActionPerformed(evt);
@@ -495,7 +494,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square6_0.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square6_0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square6_0.setBorder(null);
+        square6_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square6_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square6_0ActionPerformed(evt);
@@ -507,7 +506,7 @@ public class Sudoku extends javax.swing.JFrame {
         square7_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square7_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square7_2.setText("1");
-        square7_2.setBorder(null);
+        square7_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square7_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square7_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -518,7 +517,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square3_5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square3_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square3_5.setBorder(null);
+        square3_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square3_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square3_5ActionPerformed(evt);
@@ -530,7 +529,7 @@ public class Sudoku extends javax.swing.JFrame {
         square3_0.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square3_0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square3_0.setText("5");
-        square3_0.setBorder(null);
+        square3_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square3_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square3_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -541,7 +540,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square4_8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square4_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square4_8.setBorder(null);
+        square4_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square4_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square4_8ActionPerformed(evt);
@@ -553,7 +552,7 @@ public class Sudoku extends javax.swing.JFrame {
         square8_3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square8_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square8_3.setText("9");
-        square8_3.setBorder(null);
+        square8_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square8_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square8_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -564,7 +563,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square3_3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square3_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square3_3.setBorder(null);
+        square3_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square3_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square3_3ActionPerformed(evt);
@@ -576,7 +575,7 @@ public class Sudoku extends javax.swing.JFrame {
         square0_8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square0_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square0_8.setText("7");
-        square0_8.setBorder(null);
+        square0_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square0_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square0_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -589,7 +588,7 @@ public class Sudoku extends javax.swing.JFrame {
         square5_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square5_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square5_2.setText("8");
-        square5_2.setBorder(null);
+        square5_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square5_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square5_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -600,7 +599,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square2_8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square2_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square2_8.setBorder(null);
+        square2_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square2_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square2_8ActionPerformed(evt);
@@ -610,7 +609,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square4_0.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square4_0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square4_0.setBorder(null);
+        square4_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square4_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square4_0ActionPerformed(evt);
@@ -620,7 +619,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square4_1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square4_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square4_1.setBorder(null);
+        square4_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square4_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square4_1ActionPerformed(evt);
@@ -630,7 +629,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square4_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square4_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square4_2.setBorder(null);
+        square4_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square4_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square4_2ActionPerformed(evt);
@@ -642,7 +641,7 @@ public class Sudoku extends javax.swing.JFrame {
         square3_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square3_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square3_6.setText("7");
-        square3_6.setBorder(null);
+        square3_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square3_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square3_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -653,7 +652,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square5_5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square5_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square5_5.setBorder(null);
+        square5_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square5_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square5_5ActionPerformed(evt);
@@ -663,7 +662,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square4_5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square4_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square4_5.setBorder(null);
+        square4_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square4_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square4_5ActionPerformed(evt);
@@ -673,7 +672,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square4_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square4_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square4_6.setBorder(null);
+        square4_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square4_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square4_6ActionPerformed(evt);
@@ -683,7 +682,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square5_7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square5_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square5_7.setBorder(null);
+        square5_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square5_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square5_7ActionPerformed(evt);
@@ -695,7 +694,7 @@ public class Sudoku extends javax.swing.JFrame {
         square0_3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square0_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square0_3.setText("4");
-        square0_3.setBorder(null);
+        square0_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square0_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square0_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -708,7 +707,7 @@ public class Sudoku extends javax.swing.JFrame {
         square0_0.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square0_0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square0_0.setText("8");
-        square0_0.setBorder(null);
+        square0_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square0_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square0_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -719,7 +718,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square4_3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square4_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square4_3.setBorder(null);
+        square4_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square4_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square4_3ActionPerformed(evt);
@@ -731,7 +730,7 @@ public class Sudoku extends javax.swing.JFrame {
         square4_4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square4_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square4_4.setText("7");
-        square4_4.setBorder(null);
+        square4_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square4_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square4_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -742,7 +741,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square6_8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square6_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square6_8.setBorder(null);
+        square6_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square6_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square6_8ActionPerformed(evt);
@@ -754,7 +753,7 @@ public class Sudoku extends javax.swing.JFrame {
         square2_1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square2_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square2_1.setText("1");
-        square2_1.setBorder(null);
+        square2_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square2_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square2_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -767,7 +766,7 @@ public class Sudoku extends javax.swing.JFrame {
         square8_0.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square8_0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square8_0.setText("3");
-        square8_0.setBorder(null);
+        square8_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square8_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square8_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -778,7 +777,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square4_7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square4_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square4_7.setBorder(null);
+        square4_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square4_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square4_7ActionPerformed(evt);
@@ -790,7 +789,7 @@ public class Sudoku extends javax.swing.JFrame {
         square8_8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square8_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square8_8.setText("5");
-        square8_8.setBorder(null);
+        square8_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square8_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square8_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -803,7 +802,7 @@ public class Sudoku extends javax.swing.JFrame {
         square8_5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square8_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square8_5.setText("2");
-        square8_5.setBorder(null);
+        square8_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square8_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square8_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -814,7 +813,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square5_3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square5_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square5_3.setBorder(null);
+        square5_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square5_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square5_3ActionPerformed(evt);
@@ -824,7 +823,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square7_3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square7_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square7_3.setBorder(null);
+        square7_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square7_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square7_3ActionPerformed(evt);
@@ -834,7 +833,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square8_4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square8_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square8_4.setBorder(null);
+        square8_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square8_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square8_4ActionPerformed(evt);
@@ -844,7 +843,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square7_5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square7_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square7_5.setBorder(null);
+        square7_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square7_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square7_5ActionPerformed(evt);
@@ -856,7 +855,7 @@ public class Sudoku extends javax.swing.JFrame {
         square3_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square3_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square3_2.setText("9");
-        square3_2.setBorder(null);
+        square3_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square3_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square3_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -867,7 +866,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square7_8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square7_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square7_8.setBorder(null);
+        square7_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square7_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square7_8ActionPerformed(evt);
@@ -877,7 +876,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square7_0.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square7_0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square7_0.setBorder(null);
+        square7_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square7_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square7_0ActionPerformed(evt);
@@ -889,7 +888,7 @@ public class Sudoku extends javax.swing.JFrame {
         square5_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square5_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square5_6.setText("1");
-        square5_6.setBorder(null);
+        square5_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square5_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square5_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -900,7 +899,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square6_3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square6_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square6_3.setBorder(null);
+        square6_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square6_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square6_3ActionPerformed(evt);
@@ -910,7 +909,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square6_4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square6_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square6_4.setBorder(null);
+        square6_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square6_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square6_4ActionPerformed(evt);
@@ -920,7 +919,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square6_5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square6_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square6_5.setBorder(null);
+        square6_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square6_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square6_5ActionPerformed(evt);
@@ -930,7 +929,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square6_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square6_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square6_6.setBorder(null);
+        square6_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square6_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square6_6ActionPerformed(evt);
@@ -940,7 +939,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square8_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square8_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square8_6.setBorder(null);
+        square8_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square8_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square8_6ActionPerformed(evt);
@@ -950,7 +949,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square8_7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square8_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square8_7.setBorder(null);
+        square8_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square8_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square8_7ActionPerformed(evt);
@@ -960,7 +959,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square7_1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square7_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square7_1.setBorder(null);
+        square7_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square7_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square7_1ActionPerformed(evt);
@@ -970,7 +969,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square8_1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square8_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square8_1.setBorder(null);
+        square8_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square8_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square8_1ActionPerformed(evt);
@@ -982,7 +981,7 @@ public class Sudoku extends javax.swing.JFrame {
         square6_7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square6_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square6_7.setText("9");
-        square6_7.setBorder(null);
+        square6_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square6_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square6_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -993,7 +992,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square7_4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square7_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square7_4.setBorder(null);
+        square7_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square7_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square7_4ActionPerformed(evt);
@@ -1005,7 +1004,7 @@ public class Sudoku extends javax.swing.JFrame {
         square5_4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square5_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square5_4.setText("2");
-        square5_4.setBorder(null);
+        square5_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square5_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square5_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1016,7 +1015,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square7_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square7_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square7_6.setBorder(null);
+        square7_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square7_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square7_6ActionPerformed(evt);
@@ -1026,7 +1025,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square7_7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square7_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square7_7.setBorder(null);
+        square7_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square7_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square7_7ActionPerformed(evt);
@@ -1038,7 +1037,7 @@ public class Sudoku extends javax.swing.JFrame {
         square2_7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square2_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square2_7.setText("5");
-        square2_7.setBorder(null);
+        square2_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square2_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square2_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1665,12 +1664,15 @@ public class Sudoku extends javax.swing.JFrame {
         if (b == true) { // if game is won, give an option to enter high score
             System.out.print("Correct solution");
             int[] temp = hsc.giveTopXScores(5);
-            if (temp[4] > p.getScore()) {
+            if (temp[4] > p.getScore()) { // if 5th ranking is greater than player score show MainMenu
                 MainMenu mm = new MainMenu();
                 mm.show();
-            } else {
+                this.dispose();
+
+            } else { // else allow user to enter own score
                 EndScreen endPage = new EndScreen();
                 endPage.show();
+                this.dispose();
             }
         } else { // solution is wrong
             System.out.print("Incorrect solution");
@@ -1680,6 +1682,7 @@ public class Sudoku extends javax.swing.JFrame {
             //show a new Sudoku game
             Sudoku s = new Sudoku(p, hsc);
             s.show();
+            this.dispose();
         }
     }//GEN-LAST:event_submitButtonActionPerformed
 
