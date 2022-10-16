@@ -3,31 +3,36 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package hangman;
+
 import java.util.HashSet;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-
 /**
  *
  * @author Shane
  */
 public class Sudoku extends javax.swing.JFrame {
 
+    static Player p = new Player("test", 0);
+    static HighscoresController hsc;
+
     /**
      * Creates new form Sudoku
      */
-    public Sudoku() {
+    public Sudoku(Player p, HighscoresController hsc) {
+        this.p = p;
+        this.hsc = hsc;
         initComponents();
-        
-        JTextField[] a = {square0_0,square0_1,square0_2,square0_3,square0_4,square0_5,square0_6,square0_7,square0_8};
-        JTextField[] b = {square1_0,square1_1,square1_2,square1_3,square1_4,square1_5,square1_6,square1_7,square1_8};
-        JTextField[] c = {square2_0,square2_1,square2_2,square2_3,square2_4,square2_5,square2_6,square2_7,square2_8};
-        JTextField[] d = {square3_0,square3_1,square3_2,square3_3,square3_4,square3_5,square3_6,square3_7,square3_8};
-        JTextField[] e = {square4_0,square4_1,square4_2,square4_3,square4_4,square4_5,square4_6,square4_7,square4_8};      
-        JTextField[] f = {square5_0,square5_1,square5_2,square5_3,square5_4,square5_5,square5_6,square5_7,square5_8};
-        JTextField[] g = {square6_0,square6_1,square6_2,square6_3,square6_4,square6_5,square6_6,square6_7,square6_8};
-        JTextField[] h = {square7_0,square7_1,square7_2,square7_3,square7_4,square7_5,square7_6,square7_7,square7_8};
-        JTextField[] i = {square8_0,square8_1,square8_2,square8_3,square8_4,square8_5,square8_6,square8_7,square8_8};
+
+        JTextField[] a = {square0_0, square0_1, square0_2, square0_3, square0_4, square0_5, square0_6, square0_7, square0_8};
+        JTextField[] b = {square1_0, square1_1, square1_2, square1_3, square1_4, square1_5, square1_6, square1_7, square1_8};
+        JTextField[] c = {square2_0, square2_1, square2_2, square2_3, square2_4, square2_5, square2_6, square2_7, square2_8};
+        JTextField[] d = {square3_0, square3_1, square3_2, square3_3, square3_4, square3_5, square3_6, square3_7, square3_8};
+        JTextField[] e = {square4_0, square4_1, square4_2, square4_3, square4_4, square4_5, square4_6, square4_7, square4_8};
+        JTextField[] f = {square5_0, square5_1, square5_2, square5_3, square5_4, square5_5, square5_6, square5_7, square5_8};
+        JTextField[] g = {square6_0, square6_1, square6_2, square6_3, square6_4, square6_5, square6_6, square6_7, square6_8};
+        JTextField[] h = {square7_0, square7_1, square7_2, square7_3, square7_4, square7_5, square7_6, square7_7, square7_8};
+        JTextField[] i = {square8_0, square8_1, square8_2, square8_3, square8_4, square8_5, square8_6, square8_7, square8_8};
         gameBoard = new JTextField[9][9];
         gameBoard[0] = a;
         gameBoard[1] = b;
@@ -38,11 +43,10 @@ public class Sudoku extends javax.swing.JFrame {
         gameBoard[6] = g;
         gameBoard[7] = h;
         gameBoard[8] = i;
-        
-        
+
         setResizable(false);
         this.setLocationRelativeTo(null);
-        
+
     }
 
     /**
@@ -54,6 +58,7 @@ public class Sudoku extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         square6_2 = new javax.swing.JTextField();
         square0_7 = new javax.swing.JTextField();
@@ -137,6 +142,9 @@ public class Sudoku extends javax.swing.JFrame {
         square7_7 = new javax.swing.JTextField();
         square2_7 = new javax.swing.JTextField();
         submitButton = new javax.swing.JButton();
+        quitButton = new javax.swing.JButton();
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(600, 400));
@@ -151,7 +159,7 @@ public class Sudoku extends javax.swing.JFrame {
         square6_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square6_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square6_2.setText("2");
-        square6_2.setBorder(null);
+        square6_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square6_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square6_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,7 +170,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square0_7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square0_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square0_7.setBorder(null);
+        square0_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square0_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square0_7ActionPerformed(evt);
@@ -172,7 +180,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square3_8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square3_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square3_8.setBorder(null);
+        square3_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square3_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square3_8ActionPerformed(evt);
@@ -182,7 +190,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square0_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square0_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square0_2.setBorder(null);
+        square0_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square0_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square0_2ActionPerformed(evt);
@@ -194,7 +202,7 @@ public class Sudoku extends javax.swing.JFrame {
         square5_8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square5_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square5_8.setText("3");
-        square5_8.setBorder(null);
+        square5_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square5_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square5_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -207,7 +215,7 @@ public class Sudoku extends javax.swing.JFrame {
         square3_4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square3_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square3_4.setText("3");
-        square3_4.setBorder(null);
+        square3_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square3_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square3_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -218,7 +226,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square0_4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square0_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square0_4.setBorder(null);
+        square0_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square0_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square0_4ActionPerformed(evt);
@@ -228,7 +236,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square0_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square0_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square0_6.setBorder(null);
+        square0_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square0_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square0_6ActionPerformed(evt);
@@ -240,7 +248,7 @@ public class Sudoku extends javax.swing.JFrame {
         square0_5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square0_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square0_5.setText("6");
-        square0_5.setBorder(null);
+        square0_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square0_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square0_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -251,7 +259,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square0_1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square0_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square0_1.setBorder(null);
+        square0_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square0_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square0_1ActionPerformed(evt);
@@ -261,7 +269,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square8_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square8_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square8_2.setBorder(null);
+        square8_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square8_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square8_2ActionPerformed(evt);
@@ -271,7 +279,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square1_1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square1_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square1_1.setBorder(null);
+        square1_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square1_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square1_1ActionPerformed(evt);
@@ -281,7 +289,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square2_5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square2_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square2_5.setBorder(null);
+        square2_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square2_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square2_5ActionPerformed(evt);
@@ -291,7 +299,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square1_3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square1_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square1_3.setBorder(null);
+        square1_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square1_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square1_3ActionPerformed(evt);
@@ -301,7 +309,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square1_4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square1_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square1_4.setBorder(null);
+        square1_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square1_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square1_4ActionPerformed(evt);
@@ -313,7 +321,7 @@ public class Sudoku extends javax.swing.JFrame {
         square5_1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square5_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square5_1.setText("4");
-        square5_1.setBorder(null);
+        square5_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square5_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square5_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -324,7 +332,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square1_5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square1_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square1_5.setBorder(null);
+        square1_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square1_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square1_5ActionPerformed(evt);
@@ -334,7 +342,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square1_7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square1_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square1_7.setBorder(null);
+        square1_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square1_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square1_7ActionPerformed(evt);
@@ -344,7 +352,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square1_0.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square1_0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square1_0.setBorder(null);
+        square1_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square1_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square1_0ActionPerformed(evt);
@@ -356,7 +364,7 @@ public class Sudoku extends javax.swing.JFrame {
         square3_7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square3_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square3_7.setText("8");
-        square3_7.setBorder(null);
+        square3_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square3_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square3_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -367,7 +375,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square1_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square1_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square1_2.setBorder(null);
+        square1_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square1_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square1_2ActionPerformed(evt);
@@ -377,7 +385,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square2_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square2_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square2_2.setBorder(null);
+        square2_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square2_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square2_2ActionPerformed(evt);
@@ -387,7 +395,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square2_3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square2_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square2_3.setBorder(null);
+        square2_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square2_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square2_3ActionPerformed(evt);
@@ -397,7 +405,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square2_4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square2_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square2_4.setBorder(null);
+        square2_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square2_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square2_4ActionPerformed(evt);
@@ -409,7 +417,7 @@ public class Sudoku extends javax.swing.JFrame {
         square1_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square1_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square1_6.setText("4");
-        square1_6.setBorder(null);
+        square1_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square1_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square1_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -422,7 +430,7 @@ public class Sudoku extends javax.swing.JFrame {
         square2_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square2_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square2_6.setText("6");
-        square2_6.setBorder(null);
+        square2_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square2_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square2_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -433,7 +441,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square1_8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square1_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square1_8.setBorder(null);
+        square1_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square1_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square1_8ActionPerformed(evt);
@@ -445,7 +453,7 @@ public class Sudoku extends javax.swing.JFrame {
         square6_1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square6_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square6_1.setText("5");
-        square6_1.setBorder(null);
+        square6_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square6_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square6_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -456,7 +464,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square2_0.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square2_0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square2_0.setBorder(null);
+        square2_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square2_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square2_0ActionPerformed(evt);
@@ -466,7 +474,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square3_1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square3_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square3_1.setBorder(null);
+        square3_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square3_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square3_1ActionPerformed(evt);
@@ -476,7 +484,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square5_0.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square5_0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square5_0.setBorder(null);
+        square5_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square5_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square5_0ActionPerformed(evt);
@@ -486,7 +494,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square6_0.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square6_0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square6_0.setBorder(null);
+        square6_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square6_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square6_0ActionPerformed(evt);
@@ -498,7 +506,7 @@ public class Sudoku extends javax.swing.JFrame {
         square7_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square7_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square7_2.setText("1");
-        square7_2.setBorder(null);
+        square7_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square7_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square7_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -509,7 +517,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square3_5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square3_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square3_5.setBorder(null);
+        square3_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square3_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square3_5ActionPerformed(evt);
@@ -521,7 +529,7 @@ public class Sudoku extends javax.swing.JFrame {
         square3_0.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square3_0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square3_0.setText("5");
-        square3_0.setBorder(null);
+        square3_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square3_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square3_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -532,7 +540,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square4_8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square4_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square4_8.setBorder(null);
+        square4_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square4_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square4_8ActionPerformed(evt);
@@ -544,7 +552,7 @@ public class Sudoku extends javax.swing.JFrame {
         square8_3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square8_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square8_3.setText("9");
-        square8_3.setBorder(null);
+        square8_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square8_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square8_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -555,7 +563,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square3_3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square3_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square3_3.setBorder(null);
+        square3_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square3_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square3_3ActionPerformed(evt);
@@ -567,7 +575,7 @@ public class Sudoku extends javax.swing.JFrame {
         square0_8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square0_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square0_8.setText("7");
-        square0_8.setBorder(null);
+        square0_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square0_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square0_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -580,7 +588,7 @@ public class Sudoku extends javax.swing.JFrame {
         square5_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square5_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square5_2.setText("8");
-        square5_2.setBorder(null);
+        square5_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square5_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square5_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -591,7 +599,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square2_8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square2_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square2_8.setBorder(null);
+        square2_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square2_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square2_8ActionPerformed(evt);
@@ -601,7 +609,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square4_0.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square4_0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square4_0.setBorder(null);
+        square4_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square4_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square4_0ActionPerformed(evt);
@@ -611,7 +619,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square4_1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square4_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square4_1.setBorder(null);
+        square4_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square4_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square4_1ActionPerformed(evt);
@@ -621,7 +629,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square4_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square4_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square4_2.setBorder(null);
+        square4_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square4_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square4_2ActionPerformed(evt);
@@ -633,7 +641,7 @@ public class Sudoku extends javax.swing.JFrame {
         square3_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square3_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square3_6.setText("7");
-        square3_6.setBorder(null);
+        square3_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square3_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square3_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -644,7 +652,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square5_5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square5_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square5_5.setBorder(null);
+        square5_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square5_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square5_5ActionPerformed(evt);
@@ -654,7 +662,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square4_5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square4_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square4_5.setBorder(null);
+        square4_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square4_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square4_5ActionPerformed(evt);
@@ -664,7 +672,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square4_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square4_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square4_6.setBorder(null);
+        square4_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square4_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square4_6ActionPerformed(evt);
@@ -674,7 +682,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square5_7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square5_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square5_7.setBorder(null);
+        square5_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square5_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square5_7ActionPerformed(evt);
@@ -686,7 +694,7 @@ public class Sudoku extends javax.swing.JFrame {
         square0_3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square0_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square0_3.setText("4");
-        square0_3.setBorder(null);
+        square0_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square0_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square0_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -699,7 +707,7 @@ public class Sudoku extends javax.swing.JFrame {
         square0_0.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square0_0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square0_0.setText("8");
-        square0_0.setBorder(null);
+        square0_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square0_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square0_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -710,7 +718,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square4_3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square4_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square4_3.setBorder(null);
+        square4_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square4_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square4_3ActionPerformed(evt);
@@ -722,7 +730,7 @@ public class Sudoku extends javax.swing.JFrame {
         square4_4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square4_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square4_4.setText("7");
-        square4_4.setBorder(null);
+        square4_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square4_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square4_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -733,7 +741,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square6_8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square6_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square6_8.setBorder(null);
+        square6_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square6_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square6_8ActionPerformed(evt);
@@ -745,7 +753,7 @@ public class Sudoku extends javax.swing.JFrame {
         square2_1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square2_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square2_1.setText("1");
-        square2_1.setBorder(null);
+        square2_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square2_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square2_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -758,7 +766,7 @@ public class Sudoku extends javax.swing.JFrame {
         square8_0.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square8_0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square8_0.setText("3");
-        square8_0.setBorder(null);
+        square8_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square8_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square8_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -769,7 +777,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square4_7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square4_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square4_7.setBorder(null);
+        square4_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square4_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square4_7ActionPerformed(evt);
@@ -781,7 +789,7 @@ public class Sudoku extends javax.swing.JFrame {
         square8_8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square8_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square8_8.setText("5");
-        square8_8.setBorder(null);
+        square8_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square8_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square8_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -794,7 +802,7 @@ public class Sudoku extends javax.swing.JFrame {
         square8_5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square8_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square8_5.setText("2");
-        square8_5.setBorder(null);
+        square8_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square8_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square8_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -805,7 +813,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square5_3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square5_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square5_3.setBorder(null);
+        square5_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square5_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square5_3ActionPerformed(evt);
@@ -815,7 +823,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square7_3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square7_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square7_3.setBorder(null);
+        square7_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square7_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square7_3ActionPerformed(evt);
@@ -825,7 +833,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square8_4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square8_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square8_4.setBorder(null);
+        square8_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square8_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square8_4ActionPerformed(evt);
@@ -835,7 +843,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square7_5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square7_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square7_5.setBorder(null);
+        square7_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square7_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square7_5ActionPerformed(evt);
@@ -847,7 +855,7 @@ public class Sudoku extends javax.swing.JFrame {
         square3_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square3_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square3_2.setText("9");
-        square3_2.setBorder(null);
+        square3_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square3_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square3_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -858,7 +866,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square7_8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square7_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square7_8.setBorder(null);
+        square7_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square7_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square7_8ActionPerformed(evt);
@@ -868,7 +876,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square7_0.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square7_0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square7_0.setBorder(null);
+        square7_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square7_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square7_0ActionPerformed(evt);
@@ -880,7 +888,7 @@ public class Sudoku extends javax.swing.JFrame {
         square5_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square5_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square5_6.setText("1");
-        square5_6.setBorder(null);
+        square5_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square5_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square5_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -891,7 +899,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square6_3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square6_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square6_3.setBorder(null);
+        square6_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square6_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square6_3ActionPerformed(evt);
@@ -901,7 +909,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square6_4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square6_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square6_4.setBorder(null);
+        square6_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square6_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square6_4ActionPerformed(evt);
@@ -911,7 +919,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square6_5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square6_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square6_5.setBorder(null);
+        square6_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square6_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square6_5ActionPerformed(evt);
@@ -921,7 +929,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square6_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square6_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square6_6.setBorder(null);
+        square6_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square6_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square6_6ActionPerformed(evt);
@@ -931,7 +939,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square8_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square8_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square8_6.setBorder(null);
+        square8_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square8_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square8_6ActionPerformed(evt);
@@ -941,7 +949,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square8_7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square8_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square8_7.setBorder(null);
+        square8_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square8_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square8_7ActionPerformed(evt);
@@ -951,7 +959,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square7_1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square7_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square7_1.setBorder(null);
+        square7_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square7_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square7_1ActionPerformed(evt);
@@ -961,7 +969,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square8_1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square8_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square8_1.setBorder(null);
+        square8_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square8_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square8_1ActionPerformed(evt);
@@ -973,7 +981,7 @@ public class Sudoku extends javax.swing.JFrame {
         square6_7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square6_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square6_7.setText("9");
-        square6_7.setBorder(null);
+        square6_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square6_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square6_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -984,7 +992,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square7_4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square7_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square7_4.setBorder(null);
+        square7_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square7_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square7_4ActionPerformed(evt);
@@ -996,7 +1004,7 @@ public class Sudoku extends javax.swing.JFrame {
         square5_4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square5_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square5_4.setText("2");
-        square5_4.setBorder(null);
+        square5_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square5_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square5_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1007,7 +1015,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square7_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square7_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square7_6.setBorder(null);
+        square7_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square7_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square7_6ActionPerformed(evt);
@@ -1017,7 +1025,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square7_7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square7_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        square7_7.setBorder(null);
+        square7_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square7_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 square7_7ActionPerformed(evt);
@@ -1029,7 +1037,7 @@ public class Sudoku extends javax.swing.JFrame {
         square2_7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         square2_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square2_7.setText("5");
-        square2_7.setBorder(null);
+        square2_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         square2_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
         square2_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1045,6 +1053,13 @@ public class Sudoku extends javax.swing.JFrame {
             }
         });
 
+        quitButton.setText("Quit");
+        quitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quitButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -1054,7 +1069,9 @@ public class Sudoku extends javax.swing.JFrame {
                 .addComponent(submitButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(99, 99, 99))
+                .addGap(18, 18, 18)
+                .addComponent(quitButton)
+                .addGap(9, 9, 9))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1063,575 +1080,580 @@ public class Sudoku extends javax.swing.JFrame {
                 .addGap(0, 15, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(submitButton)
-                .addGap(55, 55, 55))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(submitButton)
+                        .addGap(55, 55, 55))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(quitButton)
+                        .addGap(57, 57, 57))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void square6_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square6_2ActionPerformed
-        if(!isGuessAcceptable(square6_2.getText())){
+        if (!isGuessAcceptable(square6_2.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square6_2.setText("");
         }
     }//GEN-LAST:event_square6_2ActionPerformed
 
     private void square0_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square0_7ActionPerformed
-        if(!isGuessAcceptable(square0_7.getText())){
+        if (!isGuessAcceptable(square0_7.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square0_7.setText("");
         }
     }//GEN-LAST:event_square0_7ActionPerformed
 
     private void square3_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square3_8ActionPerformed
-        if(!isGuessAcceptable(square3_8.getText())){
+        if (!isGuessAcceptable(square3_8.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square3_8.setText("");
         }
     }//GEN-LAST:event_square3_8ActionPerformed
 
     private void square0_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square0_2ActionPerformed
-        if(!isGuessAcceptable(square0_2.getText())){
+        if (!isGuessAcceptable(square0_2.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square0_2.setText("");
         }
     }//GEN-LAST:event_square0_2ActionPerformed
 
     private void square5_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square5_8ActionPerformed
-        if(!isGuessAcceptable(square5_8.getText())){
+        if (!isGuessAcceptable(square5_8.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square5_8.setText("");
         }
     }//GEN-LAST:event_square5_8ActionPerformed
 
     private void square3_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square3_4ActionPerformed
-        if(!isGuessAcceptable(square3_4.getText())){
+        if (!isGuessAcceptable(square3_4.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square3_4.setText("");
         }
     }//GEN-LAST:event_square3_4ActionPerformed
 
     private void square0_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square0_4ActionPerformed
-        if(!isGuessAcceptable(square0_4.getText())){
+        if (!isGuessAcceptable(square0_4.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square0_4.setText("");
         }
     }//GEN-LAST:event_square0_4ActionPerformed
 
     private void square0_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square0_6ActionPerformed
-        if(!isGuessAcceptable(square0_6.getText())){
+        if (!isGuessAcceptable(square0_6.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square0_6.setText("");
         }
     }//GEN-LAST:event_square0_6ActionPerformed
 
     private void square0_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square0_5ActionPerformed
-        if(!isGuessAcceptable(square0_5.getText())){
+        if (!isGuessAcceptable(square0_5.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square0_5.setText("");
         }
     }//GEN-LAST:event_square0_5ActionPerformed
 
     private void square0_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square0_1ActionPerformed
-         if(!isGuessAcceptable(square0_1.getText())){
+        if (!isGuessAcceptable(square0_1.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square0_1.setText("");
         }
     }//GEN-LAST:event_square0_1ActionPerformed
 
     private void square8_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square8_2ActionPerformed
-        if(!isGuessAcceptable(square8_2.getText())){
+        if (!isGuessAcceptable(square8_2.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square8_2.setText("");
         }
     }//GEN-LAST:event_square8_2ActionPerformed
 
     private void square1_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square1_1ActionPerformed
-        if(!isGuessAcceptable(square1_1.getText())){
+        if (!isGuessAcceptable(square1_1.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square1_1.setText("");
         }
     }//GEN-LAST:event_square1_1ActionPerformed
 
     private void square2_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square2_5ActionPerformed
-        if(!isGuessAcceptable(square2_5.getText())){
+        if (!isGuessAcceptable(square2_5.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square2_5.setText("");
         }
     }//GEN-LAST:event_square2_5ActionPerformed
 
     private void square1_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square1_3ActionPerformed
-        if(!isGuessAcceptable(square1_3.getText())){
+        if (!isGuessAcceptable(square1_3.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square1_3.setText("");
         }
     }//GEN-LAST:event_square1_3ActionPerformed
 
     private void square1_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square1_4ActionPerformed
-        if(!isGuessAcceptable(square1_4.getText())){
+        if (!isGuessAcceptable(square1_4.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square1_4.setText("");
         }
     }//GEN-LAST:event_square1_4ActionPerformed
 
     private void square5_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square5_1ActionPerformed
-        if(!isGuessAcceptable(square5_1.getText())){
+        if (!isGuessAcceptable(square5_1.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square5_1.setText("");
         }
     }//GEN-LAST:event_square5_1ActionPerformed
 
     private void square1_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square1_5ActionPerformed
-        if(!isGuessAcceptable(square1_5.getText())){
+        if (!isGuessAcceptable(square1_5.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square1_5.setText("");
         }
     }//GEN-LAST:event_square1_5ActionPerformed
 
     private void square1_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square1_7ActionPerformed
-        if(!isGuessAcceptable(square1_7.getText())){
+        if (!isGuessAcceptable(square1_7.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square1_7.setText("");
         }
     }//GEN-LAST:event_square1_7ActionPerformed
 
     private void square1_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square1_0ActionPerformed
-        if(!isGuessAcceptable(square1_0.getText())){
+        if (!isGuessAcceptable(square1_0.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square1_0.setText("");
         }
     }//GEN-LAST:event_square1_0ActionPerformed
 
     private void square3_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square3_7ActionPerformed
-        if(!isGuessAcceptable(square3_7.getText())){
+        if (!isGuessAcceptable(square3_7.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square3_7.setText("");
         }
     }//GEN-LAST:event_square3_7ActionPerformed
 
     private void square1_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square1_2ActionPerformed
-        if(!isGuessAcceptable(square1_2.getText())){
+        if (!isGuessAcceptable(square1_2.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square1_2.setText("");
         }
     }//GEN-LAST:event_square1_2ActionPerformed
 
     private void square2_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square2_2ActionPerformed
-        if(!isGuessAcceptable(square2_2.getText())){
+        if (!isGuessAcceptable(square2_2.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square2_2.setText("");
         }
     }//GEN-LAST:event_square2_2ActionPerformed
 
     private void square2_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square2_3ActionPerformed
-        if(!isGuessAcceptable(square2_3.getText())){
+        if (!isGuessAcceptable(square2_3.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square2_3.setText("");
         }
     }//GEN-LAST:event_square2_3ActionPerformed
 
     private void square2_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square2_4ActionPerformed
-        if(!isGuessAcceptable(square2_4.getText())){
+        if (!isGuessAcceptable(square2_4.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square2_4.setText("");
         }
     }//GEN-LAST:event_square2_4ActionPerformed
 
     private void square1_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square1_6ActionPerformed
-        if(!isGuessAcceptable(square1_6.getText())){
+        if (!isGuessAcceptable(square1_6.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square1_6.setText("");
         }
     }//GEN-LAST:event_square1_6ActionPerformed
 
     private void square2_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square2_6ActionPerformed
-        if(!isGuessAcceptable(square2_6.getText())){
+        if (!isGuessAcceptable(square2_6.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square2_6.setText("");
         }
     }//GEN-LAST:event_square2_6ActionPerformed
 
     private void square1_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square1_8ActionPerformed
-        if(!isGuessAcceptable(square1_8.getText())){
+        if (!isGuessAcceptable(square1_8.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square1_8.setText("");
         }
     }//GEN-LAST:event_square1_8ActionPerformed
 
     private void square6_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square6_1ActionPerformed
-        if(!isGuessAcceptable(square6_1.getText())){
+        if (!isGuessAcceptable(square6_1.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square6_1.setText("");
         }
     }//GEN-LAST:event_square6_1ActionPerformed
 
     private void square2_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square2_0ActionPerformed
-        if(!isGuessAcceptable(square2_0.getText())){
+        if (!isGuessAcceptable(square2_0.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square2_0.setText("");
         }
     }//GEN-LAST:event_square2_0ActionPerformed
 
     private void square3_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square3_1ActionPerformed
-        if(!isGuessAcceptable(square3_1.getText())){
+        if (!isGuessAcceptable(square3_1.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square3_1.setText("");
         }
     }//GEN-LAST:event_square3_1ActionPerformed
 
     private void square5_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square5_0ActionPerformed
-        if(!isGuessAcceptable(square5_0.getText())){
+        if (!isGuessAcceptable(square5_0.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square5_0.setText("");
         }
     }//GEN-LAST:event_square5_0ActionPerformed
 
     private void square6_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square6_0ActionPerformed
-        if(!isGuessAcceptable(square6_0.getText())){
+        if (!isGuessAcceptable(square6_0.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square6_0.setText("");
         }
     }//GEN-LAST:event_square6_0ActionPerformed
 
     private void square7_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square7_2ActionPerformed
-        if(!isGuessAcceptable(square7_2.getText())){
+        if (!isGuessAcceptable(square7_2.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square7_2.setText("");
         }
     }//GEN-LAST:event_square7_2ActionPerformed
 
     private void square3_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square3_5ActionPerformed
-        if(!isGuessAcceptable(square3_5.getText())){
+        if (!isGuessAcceptable(square3_5.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square3_5.setText("");
         }
     }//GEN-LAST:event_square3_5ActionPerformed
 
     private void square3_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square3_0ActionPerformed
-        if(!isGuessAcceptable(square3_0.getText())){
+        if (!isGuessAcceptable(square3_0.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square3_0.setText("");
         }
     }//GEN-LAST:event_square3_0ActionPerformed
 
     private void square4_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square4_8ActionPerformed
-        if(!isGuessAcceptable(square4_8.getText())){
+        if (!isGuessAcceptable(square4_8.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square4_8.setText("");
         }
     }//GEN-LAST:event_square4_8ActionPerformed
 
     private void square8_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square8_3ActionPerformed
-        if(!isGuessAcceptable(square8_3.getText())){
+        if (!isGuessAcceptable(square8_3.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square8_3.setText("");
         }
     }//GEN-LAST:event_square8_3ActionPerformed
 
     private void square3_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square3_3ActionPerformed
-        if(!isGuessAcceptable(square3_3.getText())){
+        if (!isGuessAcceptable(square3_3.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square3_3.setText("");
         }
     }//GEN-LAST:event_square3_3ActionPerformed
 
     private void square0_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square0_8ActionPerformed
-        if(!isGuessAcceptable(square0_8.getText())){
+        if (!isGuessAcceptable(square0_8.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square0_8.setText("");
         }
     }//GEN-LAST:event_square0_8ActionPerformed
 
     private void square5_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square5_2ActionPerformed
-        if(!isGuessAcceptable(square5_2.getText())){
+        if (!isGuessAcceptable(square5_2.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square5_2.setText("");
         }
     }//GEN-LAST:event_square5_2ActionPerformed
 
     private void square2_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square2_8ActionPerformed
-        if(!isGuessAcceptable(square2_8.getText())){
+        if (!isGuessAcceptable(square2_8.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square2_8.setText("");
         }
     }//GEN-LAST:event_square2_8ActionPerformed
 
     private void square4_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square4_0ActionPerformed
-        if(!isGuessAcceptable(square4_0.getText())){
+        if (!isGuessAcceptable(square4_0.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square4_0.setText("");
         }
     }//GEN-LAST:event_square4_0ActionPerformed
 
     private void square4_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square4_1ActionPerformed
-        if(!isGuessAcceptable(square4_1.getText())){
+        if (!isGuessAcceptable(square4_1.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square4_1.setText("");
         }
     }//GEN-LAST:event_square4_1ActionPerformed
 
     private void square4_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square4_2ActionPerformed
-        if(!isGuessAcceptable(square4_2.getText())){
+        if (!isGuessAcceptable(square4_2.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square4_2.setText("");
         }
     }//GEN-LAST:event_square4_2ActionPerformed
 
     private void square3_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square3_6ActionPerformed
-        if(!isGuessAcceptable(square3_6.getText())){
+        if (!isGuessAcceptable(square3_6.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square3_6.setText("");
         }
     }//GEN-LAST:event_square3_6ActionPerformed
 
     private void square5_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square5_5ActionPerformed
-        if(!isGuessAcceptable(square5_5.getText())){
+        if (!isGuessAcceptable(square5_5.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square5_5.setText("");
         }
     }//GEN-LAST:event_square5_5ActionPerformed
 
     private void square4_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square4_5ActionPerformed
-        if(!isGuessAcceptable(square4_5.getText())){
+        if (!isGuessAcceptable(square4_5.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square4_5.setText("");
         }
     }//GEN-LAST:event_square4_5ActionPerformed
 
     private void square4_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square4_6ActionPerformed
-        if(!isGuessAcceptable(square4_6.getText())){
+        if (!isGuessAcceptable(square4_6.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square4_6.setText("");
         }
     }//GEN-LAST:event_square4_6ActionPerformed
 
     private void square5_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square5_7ActionPerformed
-        if(!isGuessAcceptable(square5_7.getText())){
+        if (!isGuessAcceptable(square5_7.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square5_7.setText("");
         }
     }//GEN-LAST:event_square5_7ActionPerformed
 
     private void square0_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square0_3ActionPerformed
-        if(!isGuessAcceptable(square0_3.getText())){
+        if (!isGuessAcceptable(square0_3.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square0_3.setText("");
         }
     }//GEN-LAST:event_square0_3ActionPerformed
 
     private void square0_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square0_0ActionPerformed
-        if(!isGuessAcceptable(square0_0.getText())){
+        if (!isGuessAcceptable(square0_0.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square0_0.setText("");
         }
     }//GEN-LAST:event_square0_0ActionPerformed
 
     private void square4_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square4_3ActionPerformed
-        if(!isGuessAcceptable(square4_3.getText())){
+        if (!isGuessAcceptable(square4_3.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square4_3.setText("");
         }
     }//GEN-LAST:event_square4_3ActionPerformed
 
     private void square4_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square4_4ActionPerformed
-        if(!isGuessAcceptable(square4_4.getText())){
+        if (!isGuessAcceptable(square4_4.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square4_4.setText("");
         }
     }//GEN-LAST:event_square4_4ActionPerformed
 
     private void square6_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square6_8ActionPerformed
-        if(!isGuessAcceptable(square6_8.getText())){
+        if (!isGuessAcceptable(square6_8.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square6_8.setText("");
         }
     }//GEN-LAST:event_square6_8ActionPerformed
 
     private void square2_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square2_1ActionPerformed
-        if(!isGuessAcceptable(square2_1.getText())){
+        if (!isGuessAcceptable(square2_1.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square2_1.setText("");
         }
     }//GEN-LAST:event_square2_1ActionPerformed
 
     private void square8_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square8_0ActionPerformed
-        if(!isGuessAcceptable(square8_0.getText())){
+        if (!isGuessAcceptable(square8_0.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square8_0.setText("");
         }
     }//GEN-LAST:event_square8_0ActionPerformed
 
     private void square4_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square4_7ActionPerformed
-        if(!isGuessAcceptable(square4_7.getText())){
+        if (!isGuessAcceptable(square4_7.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square4_7.setText("");
         }
     }//GEN-LAST:event_square4_7ActionPerformed
 
     private void square8_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square8_8ActionPerformed
-        if(!isGuessAcceptable(square8_8.getText())){
+        if (!isGuessAcceptable(square8_8.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square8_8.setText("");
         }
     }//GEN-LAST:event_square8_8ActionPerformed
 
     private void square8_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square8_5ActionPerformed
-        if(!isGuessAcceptable(square8_5.getText())){
+        if (!isGuessAcceptable(square8_5.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square8_5.setText("");
         }
     }//GEN-LAST:event_square8_5ActionPerformed
 
     private void square5_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square5_3ActionPerformed
-        if(!isGuessAcceptable(square5_3.getText())){
+        if (!isGuessAcceptable(square5_3.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square5_3.setText("");
         }
     }//GEN-LAST:event_square5_3ActionPerformed
 
     private void square7_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square7_3ActionPerformed
-        if(!isGuessAcceptable(square7_3.getText())){
+        if (!isGuessAcceptable(square7_3.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square7_3.setText("");
         }
     }//GEN-LAST:event_square7_3ActionPerformed
 
     private void square8_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square8_4ActionPerformed
-        if(!isGuessAcceptable(square8_4.getText())){
+        if (!isGuessAcceptable(square8_4.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square8_4.setText("");
         }
     }//GEN-LAST:event_square8_4ActionPerformed
 
     private void square7_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square7_5ActionPerformed
-        if(!isGuessAcceptable(square7_5.getText())){
+        if (!isGuessAcceptable(square7_5.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square7_5.setText("");
         }
     }//GEN-LAST:event_square7_5ActionPerformed
 
     private void square3_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square3_2ActionPerformed
-        if(!isGuessAcceptable(square3_2.getText())){
+        if (!isGuessAcceptable(square3_2.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square3_2.setText("");
         }
     }//GEN-LAST:event_square3_2ActionPerformed
 
     private void square7_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square7_8ActionPerformed
-        if(!isGuessAcceptable(square7_8.getText())){
+        if (!isGuessAcceptable(square7_8.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square7_8.setText("");
         }
     }//GEN-LAST:event_square7_8ActionPerformed
 
     private void square7_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square7_0ActionPerformed
-        if(!isGuessAcceptable(square7_0.getText())){
+        if (!isGuessAcceptable(square7_0.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square7_0.setText("");
         }
     }//GEN-LAST:event_square7_0ActionPerformed
 
     private void square5_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square5_6ActionPerformed
-        if(!isGuessAcceptable(square5_6.getText())){
+        if (!isGuessAcceptable(square5_6.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square5_6.setText("");
         }
     }//GEN-LAST:event_square5_6ActionPerformed
 
     private void square6_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square6_3ActionPerformed
-        if(!isGuessAcceptable(square6_3.getText())){
+        if (!isGuessAcceptable(square6_3.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square6_3.setText("");
         }
     }//GEN-LAST:event_square6_3ActionPerformed
 
     private void square6_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square6_4ActionPerformed
-        if(!isGuessAcceptable(square6_4.getText())){
+        if (!isGuessAcceptable(square6_4.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square6_4.setText("");
         }
     }//GEN-LAST:event_square6_4ActionPerformed
 
     private void square6_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square6_5ActionPerformed
-        if(!isGuessAcceptable(square6_5.getText())){
+        if (!isGuessAcceptable(square6_5.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square6_5.setText("");
         }
     }//GEN-LAST:event_square6_5ActionPerformed
 
     private void square6_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square6_6ActionPerformed
-        if(!isGuessAcceptable(square6_6.getText())){
+        if (!isGuessAcceptable(square6_6.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square6_6.setText("");
         }
     }//GEN-LAST:event_square6_6ActionPerformed
 
     private void square8_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square8_6ActionPerformed
-        if(!isGuessAcceptable(square8_6.getText())){
+        if (!isGuessAcceptable(square8_6.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square8_6.setText("");
         }
     }//GEN-LAST:event_square8_6ActionPerformed
 
     private void square8_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square8_7ActionPerformed
-        if(!isGuessAcceptable(square8_7.getText())){
+        if (!isGuessAcceptable(square8_7.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square8_7.setText("");
         }
     }//GEN-LAST:event_square8_7ActionPerformed
 
     private void square7_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square7_1ActionPerformed
-        if(!isGuessAcceptable(square7_1.getText())){
+        if (!isGuessAcceptable(square7_1.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square7_1.setText("");
         }
     }//GEN-LAST:event_square7_1ActionPerformed
 
     private void square8_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square8_1ActionPerformed
-        if(!isGuessAcceptable(square8_1.getText())){
+        if (!isGuessAcceptable(square8_1.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square8_1.setText("");
         }
     }//GEN-LAST:event_square8_1ActionPerformed
 
     private void square6_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square6_7ActionPerformed
-        if(!isGuessAcceptable(square6_7.getText())){
+        if (!isGuessAcceptable(square6_7.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square6_7.setText("");
         }
     }//GEN-LAST:event_square6_7ActionPerformed
 
     private void square7_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square7_4ActionPerformed
-        if(!isGuessAcceptable(square7_4.getText())){
+        if (!isGuessAcceptable(square7_4.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square7_4.setText("");
         }
     }//GEN-LAST:event_square7_4ActionPerformed
 
     private void square5_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square5_4ActionPerformed
-        if(!isGuessAcceptable(square5_4.getText())){
+        if (!isGuessAcceptable(square5_4.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square5_4.setText("");
         }
     }//GEN-LAST:event_square5_4ActionPerformed
 
     private void square7_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square7_6ActionPerformed
-        if(!isGuessAcceptable(square7_6.getText())){
+        if (!isGuessAcceptable(square7_6.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square7_6.setText("");
         }
     }//GEN-LAST:event_square7_6ActionPerformed
 
     private void square7_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square7_7ActionPerformed
-        if(!isGuessAcceptable(square7_7.getText())){
+        if (!isGuessAcceptable(square7_7.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square7_7.setText("");
         }
     }//GEN-LAST:event_square7_7ActionPerformed
 
     private void square2_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square2_7ActionPerformed
-        if(!isGuessAcceptable(square2_7.getText())){
+        if (!isGuessAcceptable(square2_7.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
             square2_7.setText("");
         }
@@ -1639,7 +1661,36 @@ public class Sudoku extends javax.swing.JFrame {
 
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
         boolean b = checkGameBoard();
+        if (b == true) { // if game is won, give an option to enter high score
+            System.out.print("Correct solution");
+            int[] temp = hsc.giveTopXScores(5);
+            if (temp[4] > p.getScore()) { // if 5th ranking is greater than player score show MainMenu
+                MainMenu mm = new MainMenu();
+                mm.show();
+                this.dispose();
+
+            } else { // else allow user to enter own score
+                EndScreen endPage = new EndScreen();
+                endPage.show();
+                this.dispose();
+            }
+        } else { // solution is wrong
+            System.out.print("Incorrect solution");
+            // alert user submitted solution is wrong
+            JOptionPane.showMessageDialog(null, "Incorrection solution, please try again.", "Incorrect!", JOptionPane.ERROR_MESSAGE);
+
+            //show a new Sudoku game
+            Sudoku s = new Sudoku(p, hsc);
+            s.show();
+            this.dispose();
+        }
     }//GEN-LAST:event_submitButtonActionPerformed
+
+    private void quitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitButtonActionPerformed
+        MainMenu mm = new MainMenu();
+        mm.show();
+        this.dispose();
+    }//GEN-LAST:event_quitButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1671,12 +1722,12 @@ public class Sudoku extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Sudoku().setVisible(true);
+                new Sudoku(p, hsc).setVisible(true);
             }
         });
     }
-    
-    private boolean isGuessAcceptable(String guess){
+
+    private boolean isGuessAcceptable(String guess) {
         HashSet<String> acceptableInputs = new HashSet<String>(9);
         acceptableInputs.add("1");
         acceptableInputs.add("2");
@@ -1687,45 +1738,47 @@ public class Sudoku extends javax.swing.JFrame {
         acceptableInputs.add("7");
         acceptableInputs.add("8");
         acceptableInputs.add("9");
-        
+
         return acceptableInputs.contains(guess);
-        
+
     }
-    
-    private boolean checkGameBoard(){
+
+    private boolean checkGameBoard() {
         int numCorrectSquares = 0;
-        
-        for(int i=0;i<9;i++){
-            for(int j=0;j<9;j++){
-                if(gameBoard[i][j].getText().equals(sudokuKey[i][j])){
+
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (gameBoard[i][j].getText().equals(sudokuKey[i][j])) {
                     System.out.println("correct");
                     numCorrectSquares++;
-                } else{
+                } else {
                     sudokuScore = sudokuScore - 10;
                 }
             }
         }
-        
+
         return numCorrectSquares == 81;
     }
 
-    private static String[][] sudokuKey = 
-    {{"8","3","5","4","1","6","9","2","7"},
-     {"2","9","6","8","5","7","4","3","1"},
-     {"4","1","7","2","9","3","6","5","8"},
-     {"5","6","9","1","3","4","7","8","2"},
-     {"1","2","3","6","7","8","5","4","9"},
-     {"7","4","8","5","2","9","1","6","3"},
-     {"6","5","2","7","8","1","3","9","4"},
-     {"9","8","1","3","4","5","2","7","6"},
-     {"3","7","4","9","6","2","8","1","5"}
-    };
-    
+    private static String[][] sudokuKey
+            = {{"8", "3", "5", "4", "1", "6", "9", "2", "7"},
+            {"2", "9", "6", "8", "5", "7", "4", "3", "1"},
+            {"4", "1", "7", "2", "9", "3", "6", "5", "8"},
+            {"5", "6", "9", "1", "3", "4", "7", "8", "2"},
+            {"1", "2", "3", "6", "7", "8", "5", "4", "9"},
+            {"7", "4", "8", "5", "2", "9", "1", "6", "3"},
+            {"6", "5", "2", "7", "8", "1", "3", "9", "4"},
+            {"9", "8", "1", "3", "4", "5", "2", "7", "6"},
+            {"3", "7", "4", "9", "6", "2", "8", "1", "5"}
+            };
+
     private JTextField[][] gameBoard;
     private int sudokuScore = 540;
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton quitButton;
     private javax.swing.JTextField square0_0;
     private javax.swing.JTextField square0_1;
     private javax.swing.JTextField square0_2;
