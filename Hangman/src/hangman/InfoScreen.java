@@ -18,6 +18,8 @@ import javax.swing.*;
 
 
 public class InfoScreen extends javax.swing.JFrame {
+    
+    
 
     /**
      * Creates new form InfoScreen when the class is called
@@ -32,6 +34,9 @@ public class InfoScreen extends javax.swing.JFrame {
         jLabel1.getActionMap().put("leaveGame", new LeaveGame());
         
         jButton1.setToolTipText("Return to previous screen");
+        
+        //JOptionPane.showMessageDialog(new InfoScreen(), "test Test");
+        
 
     }
 
@@ -172,6 +177,7 @@ public class InfoScreen extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
+        
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {

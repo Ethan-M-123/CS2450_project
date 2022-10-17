@@ -18,19 +18,20 @@ import javax.swing.AbstractAction;
 import javax.swing.JOptionPane;
 import javax.swing.JFrame;
 
-/**
- *
- * @author Simon Nguyen
- */
+
 public class DisplayInfo extends AbstractAction {
     //InfoScreen temp;
     JFrame frame;
 
+    /** Creates an dialog box that displays
+     *  Information about the game
+     * 
+     * @param e ActionEvent that is received from 
+     *          the caller
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
-        
-        //temp = new InfoScreen();
-        
+                
         frame = new JFrame();
         
         String [] names = { "Term: Fall 2022\n\nCredits:",
@@ -41,9 +42,6 @@ public class DisplayInfo extends AbstractAction {
                             "Simon Nguyen, 016372824"};
         String title = "Project: Point and Click Game - v1.2";
 
-        //Test Later
         JOptionPane.showMessageDialog(frame, names, title, JOptionPane.PLAIN_MESSAGE);
-        
-        //temp.setVisible(true);
     }
 }

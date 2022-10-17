@@ -5,8 +5,10 @@
 package hangman;
 
 import java.util.HashSet;
+import static javax.swing.JComponent.WHEN_IN_FOCUSED_WINDOW;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+import javax.swing.KeyStroke;
 /**
  *
  * @author Shane
@@ -43,6 +45,17 @@ public class Sudoku extends javax.swing.JFrame {
         gameBoard[6] = g;
         gameBoard[7] = h;
         gameBoard[8] = i;
+        
+        // Escape Key Exit
+        square0_0.getInputMap(WHEN_IN_FOCUSED_WINDOW)
+                .put(KeyStroke.getKeyStroke("ESCAPE"), "leaveGame");
+        square0_0.getActionMap().put("leaveGame", new LeaveGame());
+        
+        //F1 key display
+        square0_0.getInputMap(WHEN_IN_FOCUSED_WINDOW)
+                .put(KeyStroke.getKeyStroke("F1"), "displayInfo");
+        square0_0.getActionMap().put("displayInfo", new DisplayInfo());
+        
 
         setResizable(false);
         this.setLocationRelativeTo(null);
