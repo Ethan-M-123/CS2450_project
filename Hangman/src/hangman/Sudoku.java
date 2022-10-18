@@ -59,7 +59,7 @@ public class Sudoku extends javax.swing.JFrame {
         }.start();
         
         //Paint the timeStamp
-        timeStamp.setBounds(540, 5, 73, 50);
+        timeStamp.setBounds(15, 70, 75, 50); 
         timeStamp.setEditable(false);
         timeStamp.setBackground(Color.LIGHT_GRAY);
         timeStamp.setFont(new java.awt.Font("Times New Roman", java.awt.Font.PLAIN, 12));
