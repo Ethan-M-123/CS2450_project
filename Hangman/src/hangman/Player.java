@@ -79,7 +79,7 @@ public class Player {
     {
         try
         {
-            FileWriter write = new FileWriter("./src/hangman/LastScore.txt");
+            FileWriter write = new FileWriter("./src/hangman/LastScore.txt", false);
 
             write.write("lastScore " + this.score);
             write.close();

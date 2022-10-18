@@ -34,6 +34,22 @@ public class Sudoku extends javax.swing.JFrame {
     static HighscoresController hsc;
     private HighscoresController temp;
     private int lowestHS;
+    
+    private static String[][] sudokuKey
+        = {{"8", "3", "5", "4", "1", "6", "9", "2", "7"},
+        {"2", "9", "6", "8", "5", "7", "4", "3", "1"},
+        {"4", "1", "7", "2", "9", "3", "6", "5", "8"},
+        {"5", "6", "9", "1", "3", "4", "7", "8", "2"},
+        {"1", "2", "3", "6", "7", "8", "5", "4", "9"},
+        {"7", "4", "8", "5", "2", "9", "1", "6", "3"},
+        {"6", "5", "2", "7", "8", "1", "3", "9", "4"},
+        {"9", "8", "1", "3", "4", "5", "2", "7", "6"},
+        {"3", "7", "4", "9", "6", "2", "8", "1", "5"}
+        };
+    private static boolean[][] hasSquareBeenGuessed = new boolean[9][9];
+    private JTextField[][] gameBoard;
+    private static int sudokuScore = 540;
+    private static boolean isFirstRun = true;
 
     JTextArea timeStamp;
     JLabel title;
@@ -45,7 +61,7 @@ public class Sudoku extends javax.swing.JFrame {
         this.p = p;
         this.hsc = hsc;
         temp = hsc;
-
+        
         temp.sortList();
         lowestHS = temp.getList()[4].getScore();
 
@@ -1160,6 +1176,15 @@ public class Sudoku extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    /** Each ActionPerformed checks that the given
+     * input for the Box is correct for the Sudoku puzzle
+     * 
+     * displays a dialog box if the 
+     * input is not right
+     * 
+     * @param evt The action that caused the method
+     */
     private void square6_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square6_2ActionPerformed
         if (!isGuessAcceptable(square6_2.getText())) {
             JOptionPane.showMessageDialog(null, "You must input a number from 1 to 9", "Incorrect Input", JOptionPane.ERROR_MESSAGE);
@@ -1727,6 +1752,14 @@ public class Sudoku extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_square2_7ActionPerformed
 
+    /** The actions of after the submit button is pressed:
+     * checks that the board is correct, and if not, 
+     * recreates the puzzle board. 
+     * Also checks that the runs is first or not, and if the 
+     * high score is high enough to be added
+     * 
+     * @param evt the action event that causes the method
+     */
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
         isFirstRun = false; 
         boolean b = checkGameBoard();
@@ -1754,6 +1787,12 @@ public class Sudoku extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_submitButtonActionPerformed
 
+    /**Method called when quit button is pressed. 
+     * sets sudoku game score to 0 if first run, 
+     * but gives remaining points in next rounds
+     * 
+     * @param evt action that causes method to be called
+     */
     private void quitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitButtonActionPerformed
 
         if (isFirstRun) { // if they first run, no points given if they quit
@@ -1805,6 +1844,11 @@ public class Sudoku extends javax.swing.JFrame {
         });
     }
 
+    /** Checks that the guess given into a text area 
+     * is correct
+     * @param guess A string that contains the input guess
+     * @return True if the string is acceptable, false if not
+     */
     private boolean isGuessAcceptable(String guess) {
         HashSet<String> acceptableInputs = new HashSet<String>(9);
         acceptableInputs.add("1");
@@ -1821,6 +1865,12 @@ public class Sudoku extends javax.swing.JFrame {
 
     }
 
+    /** Checks the inputs that the user made
+     * in the sudoku game if it is correct!
+     * keeps track of the boxes that are already guessed
+     * 
+     * @return false if the board is not correct, true if it is
+     */
     private boolean checkGameBoard() {
         int numCorrectSquares = 0;
 
@@ -1841,24 +1891,7 @@ public class Sudoku extends javax.swing.JFrame {
         return numCorrectSquares == 81;
     }
 
-    private static String[][] sudokuKey
-            = {{"8", "3", "5", "4", "1", "6", "9", "2", "7"},
-            {"2", "9", "6", "8", "5", "7", "4", "3", "1"},
-            {"4", "1", "7", "2", "9", "3", "6", "5", "8"},
-            {"5", "6", "9", "1", "3", "4", "7", "8", "2"},
-            {"1", "2", "3", "6", "7", "8", "5", "4", "9"},
-            {"7", "4", "8", "5", "2", "9", "1", "6", "3"},
-            {"6", "5", "2", "7", "8", "1", "3", "9", "4"},
-            {"9", "8", "1", "3", "4", "5", "2", "7", "6"},
-            {"3", "7", "4", "9", "6", "2", "8", "1", "5"}
-            };
-
-    private static boolean[][] hasSquareBeenGuessed = new boolean[9][9];
-
-    private JTextField[][] gameBoard;
-    private static int sudokuScore = 540;
-    private static boolean isFirstRun = true;
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
