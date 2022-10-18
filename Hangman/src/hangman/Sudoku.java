@@ -1,15 +1,13 @@
-/***************************************************************  
-*  file: Sudoku.java
- * @author Shane, Simon, Dixon
-*  class: CS 2450.01  
-*  
-*  assignment: Project V1.2 
-*  date last modified: 10/17/2022
-*  
-*  purpose: 
-*  ...
-****************************************************************/
-
+/** *************************************************************
+ *  file: Sudoku.java
+ *
+ * @author Shane, Simon, Dixon class: CS 2450.01
+ *
+ * assignment: Project V1.2 date last modified: 10/17/2022
+ *
+ * purpose: ...
+***************************************************************
+ */
 package hangman;
 
 import java.awt.Color;
@@ -21,6 +19,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.KeyStroke;
+
 /**
  *
  * @author Shane
@@ -31,7 +30,7 @@ public class Sudoku extends javax.swing.JFrame {
     static HighscoresController hsc;
     private HighscoresController temp;
     private int lowestHS;
-    
+
     JTextArea timeStamp;
     JLabel title;
 
@@ -42,24 +41,24 @@ public class Sudoku extends javax.swing.JFrame {
         this.p = p;
         this.hsc = hsc;
         temp = hsc;
-        
+
         temp.sortList();
         lowestHS = temp.getList()[4].getScore();
-        
+
         timeStamp = new JTextArea();
         title = new JLabel("Sudoku");
-        
+
         new Thread() {
             @Override
             public void run() {
-                while (true) {                  
+                while (true) {
                     timeStamp.setText(Calendar.getInstance().getTime().toString());
                 }
             }
         }.start();
-        
+
         //Paint the timeStamp
-        timeStamp.setBounds(15, 70, 75, 50); 
+        timeStamp.setBounds(15, 70, 75, 50);
         timeStamp.setEditable(false);
         timeStamp.setBackground(Color.LIGHT_GRAY);
         timeStamp.setFont(new java.awt.Font("Times New Roman", java.awt.Font.PLAIN, 12));
@@ -67,11 +66,11 @@ public class Sudoku extends javax.swing.JFrame {
         timeStamp.setLineWrap(true);
         timeStamp.setWrapStyleWord(true);
         add(timeStamp);
-        
+
         title.setFont(new java.awt.Font("Chiller", 0, 30));
         title.setBounds(20, 20, 120, 25);
         add(title);
-        
+
         initComponents();
 
         JTextField[] a = {square0_0, square0_1, square0_2, square0_3, square0_4, square0_5, square0_6, square0_7, square0_8};
@@ -93,18 +92,17 @@ public class Sudoku extends javax.swing.JFrame {
         gameBoard[6] = g;
         gameBoard[7] = h;
         gameBoard[8] = i;
-        
+
         // Escape Key Exit
         square0_0.getInputMap(WHEN_IN_FOCUSED_WINDOW)
                 .put(KeyStroke.getKeyStroke("ESCAPE"), "leaveGame");
         square0_0.getActionMap().put("leaveGame", new LeaveGame());
-        
+
         //F1 key display
         square0_0.getInputMap(WHEN_IN_FOCUSED_WINDOW)
                 .put(KeyStroke.getKeyStroke("F1"), "displayInfo");
         square0_0.getActionMap().put("displayInfo", new DisplayInfo());
-        
-        
+
         submitButton.setToolTipText("Submit Sudoku Answer");
         quitButton.setToolTipText("Quit Sudoku Game");
 
@@ -1726,22 +1724,23 @@ public class Sudoku extends javax.swing.JFrame {
     }//GEN-LAST:event_square2_7ActionPerformed
 
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
+        isFirstRun = false; 
         boolean b = checkGameBoard();
         if (b == true) { // if game is won, give an option to enter high score
- 
-            JOptionPane.showMessageDialog(null, "Correct solution!!!", 
+
+            JOptionPane.showMessageDialog(null, "Correct solution!!!",
                     "Correct", JOptionPane.INFORMATION_MESSAGE);
-            
-            p.setScore(p.getScore()+sudokuScore);
+
+            p.setScore(p.getScore() + sudokuScore);
             p.recordPlayerScore();
-            
+
             EndScreen end = new EndScreen((p.getScore() > lowestHS));
             end.show();
             this.dispose();
-            
+
         } else { // solution is wrong
             // alert user submitted solution is wrong
-            JOptionPane.showMessageDialog(null, "Incorrect solution, please try again.", 
+            JOptionPane.showMessageDialog(null, "Incorrect solution, please try again.",
                     "Incorrect!", JOptionPane.ERROR_MESSAGE);
 
             //show a new Sudoku game
@@ -1752,15 +1751,17 @@ public class Sudoku extends javax.swing.JFrame {
     }//GEN-LAST:event_submitButtonActionPerformed
 
     private void quitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitButtonActionPerformed
-        
-        sudokuScore = 0;
-        p.setScore(p.getScore()+sudokuScore);
+
+        if (isFirstRun = true) { // if they first run, no points given if they quit
+            sudokuScore =0;
+        }
+        p.setScore(p.getScore() + sudokuScore);
         p.recordPlayerScore();
-        
+
         EndScreen end = new EndScreen((p.getScore() > lowestHS));
         end.show();
         this.dispose();
-        
+
     }//GEN-LAST:event_quitButtonActionPerformed
 
     /**
@@ -1794,7 +1795,7 @@ public class Sudoku extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Sudoku(p, hsc).setVisible(true);
-                
+
             }
         });
     }
@@ -1824,7 +1825,7 @@ public class Sudoku extends javax.swing.JFrame {
                     System.out.println("correct");
                     numCorrectSquares++;
                 } else {
-                    if(!hasSquareBeenGuessed[i][j]){
+                    if (!hasSquareBeenGuessed[i][j]) {
                         sudokuScore = sudokuScore - 10;
                         hasSquareBeenGuessed[i][j] = true;
                     }
@@ -1846,11 +1847,12 @@ public class Sudoku extends javax.swing.JFrame {
             {"9", "8", "1", "3", "4", "5", "2", "7", "6"},
             {"3", "7", "4", "9", "6", "2", "8", "1", "5"}
             };
-    
+
     private static boolean[][] hasSquareBeenGuessed = new boolean[9][9];
 
     private JTextField[][] gameBoard;
     private static int sudokuScore = 540;
+    private boolean isFirstRun = true;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
