@@ -62,7 +62,7 @@ public class EndScreen extends javax.swing.JFrame {
         if (addScore == false) {
             
             btn_End.setToolTipText("Return to the Main Menu");
-            playerNameField.setToolTipText("Default name");
+            playerNameField.setToolTipText("Default name - Cannot add score");
             playerNameField.setEditable(false);
         }
         else{
