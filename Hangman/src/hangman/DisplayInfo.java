@@ -40,7 +40,7 @@ public class DisplayInfo extends AbstractAction {
                             "Ethan Melero, 014669369",
                             "Marvin Sevilla, 014646346",
                             "Simon Nguyen, 016372824"};
-        String title = "Project: Point and Click Game - v1.2";
+        String title = "Point and Click Game v1.2";
 
         JOptionPane.showMessageDialog(frame, names, title, JOptionPane.PLAIN_MESSAGE);
     }
