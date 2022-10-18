@@ -1100,6 +1100,7 @@ public class Sudoku extends javax.swing.JFrame {
         jPanel1.add(square2_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 80, 40, 40));
 
         submitButton.setText("Submit");
+        submitButton.setToolTipText("Submit your solution");
         submitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 submitButtonActionPerformed(evt);
@@ -1107,6 +1108,7 @@ public class Sudoku extends javax.swing.JFrame {
         });
 
         quitButton.setText("Quit");
+        quitButton.setToolTipText("Quit Sudoku game");
         quitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 quitButtonActionPerformed(evt);
@@ -1734,7 +1736,7 @@ public class Sudoku extends javax.swing.JFrame {
 
     private void quitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitButtonActionPerformed
         
-        p.setScore(p.getScore()+sudokuScore);
+        p.setScore(p.getScore());
         p.recordPlayerScore();
         EndScreen end = new EndScreen();
         end.show();
