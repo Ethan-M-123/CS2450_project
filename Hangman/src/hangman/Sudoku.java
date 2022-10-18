@@ -1826,9 +1826,7 @@ public class Sudoku extends javax.swing.JFrame {
                 } else {
                     if(!hasSquareBeenGuessed[i][j]){
                         sudokuScore = sudokuScore - 10;
-                        hasSquareBeenGuessed[i][j] = false;
-                    } else {
-                        hasSquareBeenGuessed[i][j] = false;
+                        hasSquareBeenGuessed[i][j] = true;
                     }
                 }
             }
