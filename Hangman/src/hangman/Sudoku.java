@@ -1,12 +1,24 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+/***************************************************************  
+*  file: Sudoku.java
+ * @author Shane, Simon, Dixon
+*  class: CS 2450.01  
+*  
+*  assignment: Project V1.2 
+*  date last modified: 10/17/2022
+*  
+*  purpose: 
+*  ...
+****************************************************************/
+
 package hangman;
 
+import java.awt.Color;
+import java.util.Calendar;
 import java.util.HashSet;
 import static javax.swing.JComponent.WHEN_IN_FOCUSED_WINDOW;
 import javax.swing.JOptionPane;
+import javax.swing.JLabel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.KeyStroke;
 /**
@@ -17,6 +29,8 @@ public class Sudoku extends javax.swing.JFrame {
 
     static Player p = new Player("test", 0);
     static HighscoresController hsc;
+    JTextArea timeStamp;
+    JLabel title;
 
     /**
      * Creates new form Sudoku
@@ -24,6 +38,32 @@ public class Sudoku extends javax.swing.JFrame {
     public Sudoku(Player p, HighscoresController hsc) {
         this.p = p;
         this.hsc = hsc;
+        timeStamp = new JTextArea();
+        title = new JLabel("Sudoku");
+        
+        new Thread() {
+            @Override
+            public void run() {
+                while (true) {                  
+                    timeStamp.setText(Calendar.getInstance().getTime().toString());
+                }
+            }
+        }.start();
+        
+        //Paint the timeStamp
+        timeStamp.setBounds(510, 5, 73, 50);
+        timeStamp.setEditable(false);
+        timeStamp.setBackground(Color.LIGHT_GRAY);
+        timeStamp.setFont(new java.awt.Font("Times New Roman", java.awt.Font.PLAIN, 12));
+        timeStamp.setOpaque(true);
+        timeStamp.setLineWrap(true);
+        timeStamp.setWrapStyleWord(true);
+        add(timeStamp);
+        
+        title.setFont(new java.awt.Font("Chiller", 0, 30));
+        title.setBounds(15, 20, 120, 20);
+        add(title);
+        
         initComponents();
 
         JTextField[] a = {square0_0, square0_1, square0_2, square0_3, square0_4, square0_5, square0_6, square0_7, square0_8};
@@ -1678,12 +1718,12 @@ public class Sudoku extends javax.swing.JFrame {
             System.out.print("Correct solution");
             int[] temp = hsc.giveTopXScores(5);
             if (temp[4] > p.getScore()) { // if 5th ranking is greater than player score show MainMenu
-                MainMenu mm = new MainMenu();
-                mm.show();
+                EndScreen end = new EndScreen(false);
+                end.show();
                 this.dispose();
 
             } else { // else allow user to enter own score
-                EndScreen endPage = new EndScreen();
+                EndScreen endPage = new EndScreen(true);
                 endPage.show();
                 this.dispose();
             }
@@ -1700,9 +1740,20 @@ public class Sudoku extends javax.swing.JFrame {
     }//GEN-LAST:event_submitButtonActionPerformed
 
     private void quitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitButtonActionPerformed
-        MainMenu mm = new MainMenu();
-        mm.show();
-        this.dispose();
+        int temp[] = hsc.giveTopXScores(5);
+        System.out.println(temp[4]);
+        
+        if (temp[4] > p.getScore()) { // if 5th ranking is greater than player score show MainMenu
+            EndScreen end = new EndScreen(false);
+            System.out.println("No");
+            end.show();
+            this.dispose();
+        } else { // else allow user to enter own score
+            EndScreen endPage = new EndScreen(true);
+            System.out.println("yes");
+            endPage.show();
+            this.dispose();
+        }
     }//GEN-LAST:event_quitButtonActionPerformed
 
     /**
@@ -1736,6 +1787,7 @@ public class Sudoku extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Sudoku(p, hsc).setVisible(true);
+                
             }
         });
     }

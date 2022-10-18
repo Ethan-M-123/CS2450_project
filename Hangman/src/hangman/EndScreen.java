@@ -1,33 +1,34 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-package hangman;
-import java.io.*;
-import java.util.*;
-import static javax.swing.JComponent.WHEN_IN_FOCUSED_WINDOW;
-import javax.swing.*;
-
 /***************************************************************  
 *  file: EndScreen.java  
 *  author: M. Sevilla, Simon, others 
 *  class: CS 2450.01  
 *  
 *  assignment: Project V1.2 
-*  date last modified: 9/21/2022
+*  date last modified: 10/17/2022
 *  
 *  purpose: Shows the user their final score after playing the game, allows them
 *  to name themselves, and records the user's score before exiting to the main
 *  menu
 *  
-****************************************************************/  
+****************************************************************/
+
+
+package hangman;
+import java.io.*;
+import java.util.*;
+import static javax.swing.JComponent.WHEN_IN_FOCUSED_WINDOW;
+import javax.swing.*;
+
 
 public class EndScreen extends javax.swing.JFrame {
 
+    private boolean addScore;
+    
     /**
      * Creates new form EndScreen
      */
     public EndScreen() {
+        addScore = true;
         initComponents();
         setSize(600,400);
         setLocationRelativeTo(null);
@@ -47,7 +48,29 @@ public class EndScreen extends javax.swing.JFrame {
         btn_End.setToolTipText("Save your score in the game system and return to the Main Menu");
         playerNameField.setToolTipText("Enter the name you want to be known by on the Highscores screen");
     }
-
+    
+    
+    /** Creates EndScreen for users that cannot add their code to 
+     * the high score list
+     * 
+     * @param test True if the score can be added, False if not.
+     */
+    public EndScreen(boolean test){
+        this();
+        addScore = test;
+        
+        if (addScore == false) {
+            
+            btn_End.setToolTipText("Return to the Main Menu");
+            playerNameField.setToolTipText("Default name");
+            playerNameField.setEditable(false);
+        }
+        else{
+         
+        }
+        
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -197,14 +220,18 @@ public class EndScreen extends javax.swing.JFrame {
         HighscoresController hsCtrl = new HighscoresController(new File(".\\src\\hangman\\highscores.txt"));
         hsCtrl.addPlayer(newPlayer);
         */
-        try
-        { 
-            FileWriter file = new FileWriter("./src/hangman/highscores.txt", true);
-            file.append("\n" + playerNameField.getText() + " " + String.valueOf(retrieveLatestScore()));
-            file.close();
+        if (addScore == true){
+            try
+            { 
+                FileWriter file = new FileWriter("./src/hangman/highscores.txt", true);
+                file.append("\n" + playerNameField.getText() + " " + String.valueOf(retrieveLatestScore()));
+                file.close();
+            }
+            catch(IOException e){
+                e.printStackTrace();
+            }
         }
-        catch(IOException e){
-            e.printStackTrace();
+        else{
         }
         
         MainMenu mainScreen = new MainMenu();

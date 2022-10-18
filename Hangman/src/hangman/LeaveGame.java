@@ -19,6 +19,11 @@ import java.awt.event.ActionEvent;
  
 public class LeaveGame extends AbstractAction {
     
+    /**Method: actionPerformed 
+     * Ends program when action is performed
+     * 
+     * @param e ActionEvent that triggers the action
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         System.exit(0);
