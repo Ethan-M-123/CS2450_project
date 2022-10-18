@@ -29,6 +29,9 @@ public class Sudoku extends javax.swing.JFrame {
 
     static Player p = new Player("test", 0);
     static HighscoresController hsc;
+    private HighscoresController temp;
+    private int lowestHS;
+    
     JTextArea timeStamp;
     JLabel title;
 
@@ -38,6 +41,11 @@ public class Sudoku extends javax.swing.JFrame {
     public Sudoku(Player p, HighscoresController hsc) {
         this.p = p;
         this.hsc = hsc;
+        temp = hsc;
+        
+        temp.sortList();
+        lowestHS = temp.getList()[4].getScore();
+        
         timeStamp = new JTextArea();
         title = new JLabel("Sudoku");
         
@@ -96,6 +104,9 @@ public class Sudoku extends javax.swing.JFrame {
                 .put(KeyStroke.getKeyStroke("F1"), "displayInfo");
         square0_0.getActionMap().put("displayInfo", new DisplayInfo());
         
+        
+        submitButton.setToolTipText("Submit Sudoku Answer");
+        quitButton.setToolTipText("Quit Sudoku Game");
 
         setResizable(false);
         this.setLocationRelativeTo(null);
@@ -1717,15 +1728,21 @@ public class Sudoku extends javax.swing.JFrame {
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
         boolean b = checkGameBoard();
         if (b == true) { // if game is won, give an option to enter high score
-            JOptionPane.showMessageDialog(null, "Correct solution!!!", "Correct", JOptionPane.INFORMATION_MESSAGE);
+ 
+            JOptionPane.showMessageDialog(null, "Correct solution!!!", 
+                    "Correct", JOptionPane.INFORMATION_MESSAGE);
+            
             p.setScore(p.getScore()+sudokuScore);
             p.recordPlayerScore();
-            EndScreen end = new EndScreen();
+            
+            EndScreen end = new EndScreen((p.getScore() > lowestHS));
             end.show();
             this.dispose();
+            
         } else { // solution is wrong
             // alert user submitted solution is wrong
-            JOptionPane.showMessageDialog(null, "Incorrect solution, please try again.", "Incorrect!", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Incorrect solution, please try again.", 
+                    "Incorrect!", JOptionPane.ERROR_MESSAGE);
 
             //show a new Sudoku game
             Sudoku s = new Sudoku(p, hsc);
@@ -1736,9 +1753,11 @@ public class Sudoku extends javax.swing.JFrame {
 
     private void quitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitButtonActionPerformed
         
-        p.setScore(p.getScore());
+        sudokuScore = 0;
+        p.setScore(p.getScore()+sudokuScore);
         p.recordPlayerScore();
-        EndScreen end = new EndScreen();
+        
+        EndScreen end = new EndScreen((p.getScore() > lowestHS));
         end.show();
         this.dispose();
         
@@ -1805,8 +1824,12 @@ public class Sudoku extends javax.swing.JFrame {
                     System.out.println("correct");
                     numCorrectSquares++;
                 } else {
-                    if(!hasSquareBeenGuessed[i][j])
+                    if(!hasSquareBeenGuessed[i][j]){
                         sudokuScore = sudokuScore - 10;
+                        hasSquareBeenGuessed[i][j] = false;
+                    } else {
+                        hasSquareBeenGuessed[i][j] = false;
+                    }
                 }
             }
         }

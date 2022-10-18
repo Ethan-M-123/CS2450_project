@@ -145,7 +145,7 @@ public class MainMenu extends javax.swing.JFrame {
     //Takes user to the hangman play screen from the main menu
     private void playButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playButtonActionPerformed
         if(evt.getSource()== playButton){
-            PlayScreen gameScreen = new PlayScreen(hsc);
+            HangmanPlayScreen gameScreen = new HangmanPlayScreen(hsc);
             gameScreen.show();
             this.dispose();
         }
