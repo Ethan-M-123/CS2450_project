@@ -59,7 +59,7 @@ public class ColorPickerGame {
             public void componentHidden(ComponentEvent e) {
                 System.out.println(p.getName() + " - Total Score: " + p.getScore());
                 System.out.println("End Game");
-                p.recordPlayerScore();
+                //p.recordPlayerScore();
 
 //                int[] temp = hsc.giveTopXScores(5);
 //                if (temp[4] > p.getScore()){
