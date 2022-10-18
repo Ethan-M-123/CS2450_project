@@ -1752,10 +1752,11 @@ public class Sudoku extends javax.swing.JFrame {
 
     private void quitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitButtonActionPerformed
 
-        if (isFirstRun = true) { // if they first run, no points given if they quit
-            sudokuScore =0;
+        if (isFirstRun) { // if they first run, no points given if they quit
+            sudokuScore = 0;
         }
         p.setScore(p.getScore() + sudokuScore);
+        sudokuScore = 540;
         p.recordPlayerScore();
 
         EndScreen end = new EndScreen((p.getScore() > lowestHS));
@@ -1852,7 +1853,7 @@ public class Sudoku extends javax.swing.JFrame {
 
     private JTextField[][] gameBoard;
     private static int sudokuScore = 540;
-    private boolean isFirstRun = true;
+    private static boolean isFirstRun = true;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
