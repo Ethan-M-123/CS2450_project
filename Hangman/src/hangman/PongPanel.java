@@ -11,6 +11,8 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.Random;
 import javax.swing.JPanel;
+import javax.swing.JOptionPane;
+import javax.swing.JButton;
 
 /**
  *
@@ -33,8 +35,10 @@ public class PongPanel extends JPanel implements Runnable{
     PongPaddle paddle2;
     PongBall ball;
     PongScore score;
+    PongFrame parent;
+    JButton quitButton;
     
-    public PongPanel(){
+    public PongPanel(PongFrame parent){
         newPaddles();
         newBall();
         score = new PongScore(PANEL_WIDTH, PANEL_HEIGHT);
@@ -44,6 +48,8 @@ public class PongPanel extends JPanel implements Runnable{
         
         gameThread = new Thread(this);
         gameThread.start();
+        
+        this.parent = parent;
     }
     
     public void newBall(){
@@ -133,15 +139,32 @@ public class PongPanel extends JPanel implements Runnable{
         //give a player 1 point and creates new paddles and ball
         if(ball.x <= 0){
             score.player2+=10;
-            newPaddles();
-            newBall();
-            System.out.println(score.player1 + " " + score.player2);
+            if(score.player2 < 100){
+                newPaddles();
+                newBall();
+                System.out.println(score.player1 + " " + score.player2);
+            } else {
+                JOptionPane.showMessageDialog(null, "Player 2 Wins!",
+                    "GAME OVER", JOptionPane.INFORMATION_MESSAGE);
+                parent.gameOver();
+                score.player1 = 0;
+                score.player2 = 0;
+            }
         }
         if(ball.x >= PANEL_WIDTH-BALL_DIAMETER){
             score.player1+=10;
-            newPaddles();
-            newBall();
-            System.out.println(score.player1 + " " + score.player2);
+            if(score.player1 < 100){
+                newPaddles();
+                newBall();
+                System.out.println(score.player1 + " " + score.player2);
+            } else {
+                JOptionPane.showMessageDialog(null, "Player 1 Wins!",
+                    "GAME OVER", JOptionPane.INFORMATION_MESSAGE);
+                parent.gameOver();
+                score.player1 = 0;
+                score.player2 = 0;
+                    
+            }
         }
         
     }

@@ -16,7 +16,7 @@ public class PongFrame extends JFrame{
     PongPanel panel;
     
     public PongFrame(){
-        panel = new PongPanel();
+        panel = new PongPanel(this);
         this.add(panel);
         this.setTitle("Pong");
         this.setResizable(false);
@@ -26,4 +26,12 @@ public class PongFrame extends JFrame{
         this.setVisible(true);
         this.setLocationRelativeTo(null);
     }
+    
+    public void gameOver(){
+        
+        MainMenu menu = new MainMenu();
+        menu.show();
+        this.dispose();
+    }
+    
 }
