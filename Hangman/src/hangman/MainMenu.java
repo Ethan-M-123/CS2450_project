@@ -69,9 +69,9 @@ public class MainMenu extends javax.swing.JFrame {
         highscoreButton = new javax.swing.JButton();
         creditsButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        playPongButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(600, 400));
         setResizable(false);
 
         playButton.setText("Play");
@@ -97,13 +97,22 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Misc/teamClassyLogo.png"))); // NOI18N
 
+        playPongButton.setText("Play Pong");
+        playPongButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                playPongButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(54, 54, 54)
-                .addComponent(jLabel2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(playPongButton, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 190, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(creditsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -125,8 +134,10 @@ public class MainMenu extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(highscoreButton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(creditsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(creditsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(playPongButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36))
         );
 
         pack();
@@ -159,6 +170,13 @@ public class MainMenu extends javax.swing.JFrame {
             this.dispose();
         } 
     }//GEN-LAST:event_creditsButtonActionPerformed
+
+    private void playPongButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playPongButtonActionPerformed
+        // TODO add your handling code here:
+        PongFrame pong = new PongFrame();
+        pong.show();
+        this.dispose();
+    }//GEN-LAST:event_playPongButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -201,5 +219,6 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JButton highscoreButton;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JButton playButton;
+    private javax.swing.JButton playPongButton;
     // End of variables declaration//GEN-END:variables
 }
