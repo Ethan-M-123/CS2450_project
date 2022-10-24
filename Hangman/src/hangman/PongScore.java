@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package hangman;
 
 import java.awt.Color;
@@ -31,8 +28,8 @@ public class PongScore extends Rectangle{
         
         g.drawLine(PANEL_WIDTH/2, 0, PANEL_WIDTH/2, PANEL_HEIGHT);
         
-        g.drawString(String.valueOf(player1), (PANEL_WIDTH/2)-75, 50);
-        g.drawString(String.valueOf(player2), (PANEL_WIDTH/2)+10, 50);
+        //g.drawString(String.valueOf(player1), (PANEL_WIDTH/2)-75, 50);
+        //g.drawString(String.valueOf(player2), (PANEL_WIDTH/2)+10, 50);
         
     }
 }

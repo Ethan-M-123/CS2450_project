@@ -20,12 +20,12 @@ import javax.swing.JButton;
  */
 public class PongPanel extends JPanel implements Runnable{
     
-    static final int PANEL_WIDTH = 1000;
+    static final int PANEL_WIDTH = 400;
     static final int PANEL_HEIGHT = (int)(PANEL_WIDTH * ((double)5/9));
     static final Dimension SCREEN_SIZE = new Dimension(PANEL_WIDTH, PANEL_HEIGHT);
-    static final int BALL_DIAMETER = 20;
-    static final int PADDLE_WIDTH = 25;
-    static final int PADDLE_HEIGHT = 100;
+    static final int BALL_DIAMETER = 10;
+    static final int PADDLE_WIDTH = 15;
+    static final int PADDLE_HEIGHT = 60;
     
     Thread gameThread;
     Image image;
@@ -45,6 +45,7 @@ public class PongPanel extends JPanel implements Runnable{
         this.setFocusable(true);
         this.addKeyListener(new AL());
         this.setPreferredSize(SCREEN_SIZE);
+        
         
         gameThread = new Thread(this);
         gameThread.start();
@@ -143,7 +144,13 @@ public class PongPanel extends JPanel implements Runnable{
                 newPaddles();
                 newBall();
                 System.out.println(score.player1 + " " + score.player2);
+                
+                parent.player1.setText("Player 1 Score:\n" + score.player1);
+                parent.player2.setText("Player 2 Score:\n" + score.player2);
             } else {
+                parent.player1.setText("Player 1 Score:\n" + score.player1);
+                parent.player2.setText("Player 2 Score:\n" + score.player2);
+                
                 JOptionPane.showMessageDialog(null, "Player 2 Wins!",
                     "GAME OVER", JOptionPane.INFORMATION_MESSAGE);
                 parent.gameOver();
@@ -157,7 +164,12 @@ public class PongPanel extends JPanel implements Runnable{
                 newPaddles();
                 newBall();
                 System.out.println(score.player1 + " " + score.player2);
+                parent.player1.setText("Player 1 Score:\n" + score.player1);
+                parent.player2.setText("Player 2 Score:\n" + score.player2);
             } else {
+                parent.player1.setText("Player 1 Score:\n" + score.player1);
+                parent.player2.setText("Player 2 Score:\n" + score.player2);
+                
                 JOptionPane.showMessageDialog(null, "Player 1 Wins!",
                     "GAME OVER", JOptionPane.INFORMATION_MESSAGE);
                 parent.gameOver();
