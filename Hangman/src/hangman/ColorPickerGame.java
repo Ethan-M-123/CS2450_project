@@ -8,10 +8,20 @@ import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 import javax.swing.*;
 
-/**
- *
- * @author mrnoo, Simon
- */
+/***************************************************************  
+*  file: ColorPickerGame.java
+*  author: Shane, Simon, Dixon, Ethan, Marvin
+*  class: CS 2450.01  
+*  
+*  assignment: Project V1.1 
+*  date last modified: 09/24/2022
+*  
+*  purpose: ,
+*            
+*           . 
+*  
+****************************************************************/
+
 public class ColorPickerGame {
 
     static Player p = new Player("test", 0);
