@@ -36,7 +36,7 @@ public class PongPanel extends JPanel implements Runnable{
     PongBall ball;
     PongScore score;
     PongFrame parent;
-    JButton quitButton;
+    //JButton quitButton;
     boolean spacePressed;
     
     public PongPanel(PongFrame parent){
@@ -52,7 +52,6 @@ public class PongPanel extends JPanel implements Runnable{
         
         gameThread = new Thread(this);
         gameThread.start();
-
         this.parent = parent;
     }
     
@@ -84,9 +83,11 @@ public class PongPanel extends JPanel implements Runnable{
     }
     
     public void move(){
-        paddle1.move();
-        paddle2.move();
-        ball.move();
+        if (spacePressed) {
+            paddle1.move();
+            paddle2.move();
+            ball.move();
+        }
     }
     
     public void checkCollision(){
@@ -151,8 +152,8 @@ public class PongPanel extends JPanel implements Runnable{
                 
                 parent.player1.setText("\n\nPlayer 1 Score:\n" + score.player1);
                 parent.player2.setText("\n\nPlayer 2 Score:\n" + score.player2);
-                
                 spacePressed = false;
+                
             } else {
                 parent.player1.setText("\n\nPlayer 1 Score:\n" + score.player1);
                 parent.player2.setText("\n\nPlayer 2 Score:\n" + score.player2);
@@ -172,7 +173,7 @@ public class PongPanel extends JPanel implements Runnable{
                 System.out.println(score.player1 + " " + score.player2);
                 parent.player1.setText("\n\nPlayer 1 Score:\n" + score.player1);
                 parent.player2.setText("\n\nPlayer 2 Score:\n" + score.player2);
-                
+
                 spacePressed = false;
                 
             } else {
@@ -215,6 +216,10 @@ public class PongPanel extends JPanel implements Runnable{
         public void keyPressed(KeyEvent e){
             paddle1.keyPressed(e);
             paddle2.keyPressed(e);
+            
+            if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+                spacePressed = true;
+            }
         }
         
         public void keyReleased(KeyEvent e){
