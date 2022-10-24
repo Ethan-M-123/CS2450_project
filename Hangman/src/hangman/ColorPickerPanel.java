@@ -21,16 +21,19 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 /***************************************************************  
-*  file: ColorPickerPanel.java
- * @author mrnoo, Simon
+*  file: ColorPickerGame.java
+*  author: Shane, Simon, Dixon, Ethan, Marvin
 *  class: CS 2450.01  
 *  
 *  assignment: Project V1.1 
-*  date last modified: 9/28/2022
+*  date last modified: 09/24/2022
 *  
-*  purpose: 
+*  purpose: ,
+*            
+*           . 
 *  
 ****************************************************************/
+
 public class ColorPickerPanel extends JPanel implements MouseListener, MouseMotionListener {
 
     ArrayList<Color> cl;

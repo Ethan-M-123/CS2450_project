@@ -5,7 +5,7 @@
 
 /***************************************************************  
 *  file: MainMenu.java
-*  author: Shane, Simon, Marvin
+*  author: Shane, Simon, Dixon, Ethan, Marvin
 *  class: CS 2450.01  
 *  
 *  assignment: Project V1.0 
@@ -72,6 +72,9 @@ public class MainMenu extends javax.swing.JFrame {
         playPongButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setMaximumSize(new java.awt.Dimension(600, 400));
+        setPreferredSize(new java.awt.Dimension(600, 400));
         setResizable(false);
 
         playButton.setText("Play");

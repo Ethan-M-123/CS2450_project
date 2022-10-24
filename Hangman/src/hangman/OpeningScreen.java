@@ -1,12 +1,14 @@
 /***************************************************************  
 *  file: OpeningScreen.java
-*  author: Shane
+*  author: Shane, Simon, Dixon, Ethan, Marvin
 *  class: CS 2450.01  
 *  
 *  assignment: Project V1.0 
-*  date last modified: 9/21/2022
+*  date last modified: 9/24/2022
 *  
-*  purpose: Shows the name of our game and our dev team name
+*  purpose: Shows the name of our game and our dev team name,
+*           listens for ESC and F1 keystrokes on any screen 
+*           for quitting and the credits respectively. 
 *  
 ****************************************************************/  
 package hangman;

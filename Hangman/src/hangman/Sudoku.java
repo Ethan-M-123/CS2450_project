@@ -1,13 +1,14 @@
 /** *************************************************************
  *  file: Sudoku.java
  *
- * @author Shane, Simon, Dixon class: CS 2450.01
+ * @author Shane, Simon, Dixon 
+ * class: CS 2450.01
  *
  * assignment: Project V1.2 
  * date last modified: 10/17/2022
  *
  * purpose: 
- * Creates a sudoku puzzle for the player to solve, decrementing
+ * Creates a Sudoku puzzle for the player to solve, decrementing
  * points for squares guessed wrong. No square that was guessed 
  * wrong can decrement again.
 ***************************************************************

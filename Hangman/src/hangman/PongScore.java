@@ -6,10 +6,19 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
-/**
- *
- * @author mrnoo
- */
+/***************************************************************  
+*  file: ColorPickerGame.java
+*  author: Shane, Simon, Dixon, Ethan, Marvin
+*  class: CS 2450.01  
+*  
+*  assignment: Project V1.3 
+*  date last modified: 10/24/2022
+*  
+*  purpose: 
+* 
+*  
+****************************************************************/
+
 public class PongScore extends Rectangle{
     
     static int PANEL_WIDTH;
