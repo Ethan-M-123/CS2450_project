@@ -240,6 +240,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square6_2.setEditable(false);
         square6_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square6_2.setForeground(new java.awt.Color(0, 51, 153));
         square6_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square6_2.setText("2");
         square6_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -283,6 +284,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square5_8.setEditable(false);
         square5_8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square5_8.setForeground(new java.awt.Color(0, 51, 153));
         square5_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square5_8.setText("3");
         square5_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -296,6 +298,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square3_4.setEditable(false);
         square3_4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square3_4.setForeground(new java.awt.Color(0, 51, 153));
         square3_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square3_4.setText("3");
         square3_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -329,6 +332,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square0_5.setEditable(false);
         square0_5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square0_5.setForeground(new java.awt.Color(0, 51, 153));
         square0_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square0_5.setText("6");
         square0_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -402,6 +406,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square5_1.setEditable(false);
         square5_1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square5_1.setForeground(new java.awt.Color(0, 51, 153));
         square5_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square5_1.setText("4");
         square5_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -445,6 +450,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square3_7.setEditable(false);
         square3_7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square3_7.setForeground(new java.awt.Color(0, 51, 153));
         square3_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square3_7.setText("8");
         square3_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -498,6 +504,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square1_6.setEditable(false);
         square1_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square1_6.setForeground(new java.awt.Color(0, 51, 153));
         square1_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square1_6.setText("4");
         square1_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -511,6 +518,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square2_6.setEditable(false);
         square2_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square2_6.setForeground(new java.awt.Color(0, 51, 153));
         square2_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square2_6.setText("6");
         square2_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -534,6 +542,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square6_1.setEditable(false);
         square6_1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square6_1.setForeground(new java.awt.Color(0, 51, 153));
         square6_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square6_1.setText("5");
         square6_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -587,6 +596,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square7_2.setEditable(false);
         square7_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square7_2.setForeground(new java.awt.Color(0, 51, 153));
         square7_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square7_2.setText("1");
         square7_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -610,6 +620,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square3_0.setEditable(false);
         square3_0.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square3_0.setForeground(new java.awt.Color(0, 51, 153));
         square3_0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square3_0.setText("5");
         square3_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -633,6 +644,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square8_3.setEditable(false);
         square8_3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square8_3.setForeground(new java.awt.Color(0, 51, 153));
         square8_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square8_3.setText("9");
         square8_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -656,6 +668,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square0_8.setEditable(false);
         square0_8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square0_8.setForeground(new java.awt.Color(0, 51, 153));
         square0_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square0_8.setText("7");
         square0_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -669,6 +682,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square5_2.setEditable(false);
         square5_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square5_2.setForeground(new java.awt.Color(0, 51, 153));
         square5_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square5_2.setText("8");
         square5_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -722,6 +736,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square3_6.setEditable(false);
         square3_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square3_6.setForeground(new java.awt.Color(0, 51, 153));
         square3_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square3_6.setText("7");
         square3_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -775,6 +790,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square0_3.setEditable(false);
         square0_3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square0_3.setForeground(new java.awt.Color(0, 51, 153));
         square0_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square0_3.setText("4");
         square0_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -788,6 +804,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square0_0.setEditable(false);
         square0_0.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square0_0.setForeground(new java.awt.Color(0, 51, 153));
         square0_0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square0_0.setText("8");
         square0_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -811,6 +828,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square4_4.setEditable(false);
         square4_4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square4_4.setForeground(new java.awt.Color(0, 51, 153));
         square4_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square4_4.setText("7");
         square4_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -834,6 +852,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square2_1.setEditable(false);
         square2_1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square2_1.setForeground(new java.awt.Color(0, 51, 153));
         square2_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square2_1.setText("1");
         square2_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -847,6 +866,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square8_0.setEditable(false);
         square8_0.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square8_0.setForeground(new java.awt.Color(0, 51, 153));
         square8_0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square8_0.setText("3");
         square8_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -870,6 +890,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square8_8.setEditable(false);
         square8_8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square8_8.setForeground(new java.awt.Color(0, 51, 153));
         square8_8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square8_8.setText("5");
         square8_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -883,6 +904,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square8_5.setEditable(false);
         square8_5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square8_5.setForeground(new java.awt.Color(0, 51, 153));
         square8_5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square8_5.setText("2");
         square8_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -936,6 +958,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square3_2.setEditable(false);
         square3_2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square3_2.setForeground(new java.awt.Color(0, 51, 153));
         square3_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square3_2.setText("9");
         square3_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -969,6 +992,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square5_6.setEditable(false);
         square5_6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square5_6.setForeground(new java.awt.Color(0, 51, 153));
         square5_6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square5_6.setText("1");
         square5_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -1062,6 +1086,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square6_7.setEditable(false);
         square6_7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square6_7.setForeground(new java.awt.Color(0, 51, 153));
         square6_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square6_7.setText("9");
         square6_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -1085,6 +1110,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square5_4.setEditable(false);
         square5_4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square5_4.setForeground(new java.awt.Color(0, 51, 153));
         square5_4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square5_4.setText("2");
         square5_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -1118,6 +1144,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         square2_7.setEditable(false);
         square2_7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        square2_7.setForeground(new java.awt.Color(0, 51, 153));
         square2_7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         square2_7.setText("5");
         square2_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
