@@ -37,27 +37,31 @@ public class PongPanel extends JPanel implements Runnable{
     PongScore score;
     PongFrame parent;
     JButton quitButton;
+    boolean spacePressed;
     
     public PongPanel(PongFrame parent){
         newPaddles();
         newBall();
         score = new PongScore(PANEL_WIDTH, PANEL_HEIGHT);
+        spacePressed = false;
         this.setFocusable(true);
         this.addKeyListener(new AL());
         this.setPreferredSize(SCREEN_SIZE);
         
         
+        
         gameThread = new Thread(this);
         gameThread.start();
-        
+
         this.parent = parent;
     }
     
     public void newBall(){
-        random = new Random();
-        int randomY = random.nextInt(PANEL_HEIGHT - BALL_DIAMETER);
-        //ball = new PongBall((PANEL_WIDTH/2) - (BALL_DIAMETER/2), (PANEL_HEIGHT/2) - (BALL_DIAMETER/2), BALL_DIAMETER, BALL_DIAMETER);
-        ball = new PongBall((PANEL_WIDTH/2) - (BALL_DIAMETER/2), randomY, BALL_DIAMETER, BALL_DIAMETER);
+        //random = new Random();
+        //int randomY = random.nextInt(PANEL_HEIGHT - BALL_DIAMETER);
+        ball = new PongBall((PANEL_WIDTH/2) - (BALL_DIAMETER/2), 
+                (PANEL_HEIGHT/2) - (BALL_DIAMETER/2), BALL_DIAMETER, BALL_DIAMETER);
+        //ball = new PongBall((PANEL_WIDTH/2) - (BALL_DIAMETER/2), randomY, BALL_DIAMETER, BALL_DIAMETER);
     }
     
     public void newPaddles(){
@@ -145,11 +149,13 @@ public class PongPanel extends JPanel implements Runnable{
                 newBall();
                 System.out.println(score.player1 + " " + score.player2);
                 
-                parent.player1.setText("Player 1 Score:\n" + score.player1);
-                parent.player2.setText("Player 2 Score:\n" + score.player2);
+                parent.player1.setText("\n\nPlayer 1 Score:\n" + score.player1);
+                parent.player2.setText("\n\nPlayer 2 Score:\n" + score.player2);
+                
+                spacePressed = false;
             } else {
-                parent.player1.setText("Player 1 Score:\n" + score.player1);
-                parent.player2.setText("Player 2 Score:\n" + score.player2);
+                parent.player1.setText("\n\nPlayer 1 Score:\n" + score.player1);
+                parent.player2.setText("\n\nPlayer 2 Score:\n" + score.player2);
                 
                 JOptionPane.showMessageDialog(null, "Player 2 Wins!",
                     "GAME OVER", JOptionPane.INFORMATION_MESSAGE);
@@ -164,11 +170,14 @@ public class PongPanel extends JPanel implements Runnable{
                 newPaddles();
                 newBall();
                 System.out.println(score.player1 + " " + score.player2);
-                parent.player1.setText("Player 1 Score:\n" + score.player1);
-                parent.player2.setText("Player 2 Score:\n" + score.player2);
+                parent.player1.setText("\n\nPlayer 1 Score:\n" + score.player1);
+                parent.player2.setText("\n\nPlayer 2 Score:\n" + score.player2);
+                
+                spacePressed = false;
+                
             } else {
-                parent.player1.setText("Player 1 Score:\n" + score.player1);
-                parent.player2.setText("Player 2 Score:\n" + score.player2);
+                parent.player1.setText("\n\nPlayer 1 Score:\n" + score.player1);
+                parent.player2.setText("\n\nPlayer 2 Score:\n" + score.player2);
                 
                 JOptionPane.showMessageDialog(null, "Player 1 Wins!",
                     "GAME OVER", JOptionPane.INFORMATION_MESSAGE);
@@ -187,11 +196,12 @@ public class PongPanel extends JPanel implements Runnable{
         double amountOfTicks = 60.0;
         double ns = 1000000000 / amountOfTicks;
         double delta = 0;
+        
         while(true){
             long now = System.nanoTime();
             delta += (now - lastTime)/ns;
             lastTime = now;
-            if(delta >= 1){
+            if(delta >= 1) {
                 move();
                 checkCollision();
                 repaint();

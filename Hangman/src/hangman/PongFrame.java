@@ -1,16 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
+
+
+
+
+
+
 package hangman;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.JFrame;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 import java.util.Calendar;
 import javax.swing.JButton;
 import static javax.swing.JComponent.WHEN_IN_FOCUSED_WINDOW;
@@ -19,10 +19,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.KeyStroke;
 
-/**
- *
- * @author mrnoo
- */
+
 public class PongFrame extends JFrame{
     
     PongPanel panel;
@@ -127,19 +124,23 @@ public class PongFrame extends JFrame{
         
         // Set Player stats
         player1.setEditable(false);
-        player1.setFont(new java.awt.Font("Tahoma", 0, 12));
+        player1.setFont(new java.awt.Font("Tahoma", 0, 15));
+        player1.setLineWrap(true);
+        player1.setWrapStyleWord(true);
         player1.setBackground(this.getBackground());
         player1.setPreferredSize(new Dimension(92, 50));
         player1.setFocusable(false);
         
         player2.setEditable(false);
-        player2.setFont(new java.awt.Font("Tahoma", 0, 12));
+        player2.setFont(new java.awt.Font("Tahoma", 0, 15));
+        player2.setLineWrap(true);
+        player2.setWrapStyleWord(true);
         player2.setBackground(this.getBackground());
         player2.setPreferredSize(new Dimension(92, 50));
         player2.setFocusable(false);
         
-        player1.setText("Player 1 Score:\n0");
-        player2.setText("Player 2 Score:\n0");
+        player1.setText("\n\nPlayer 1 Score:\n" + panel.score.player1);
+        player2.setText("\n\nPlayer 2 Score:\n" + panel.score.player2);
         
         // Add Game to Frame
         this.add(player1, BorderLayout.LINE_START);
