@@ -1,11 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
-*/
-
 /***************************************************************  
 *  file: Hangman.java  
-*  author: ...
+*  author: Shane, Marvin
 *  class: CS 2450.01  
 *  
 *  assignment: Project V1.0 
@@ -23,7 +18,9 @@ package hangman;
  */
 public class Hangman {
     
-    /**
+    /** method: main
+     * purpose: Called when class is created and sets
+     *  up the opening screen, then the main menu
      * @param args the command line arguments
      */
     public static void main(String[] args) {

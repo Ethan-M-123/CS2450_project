@@ -1,32 +1,37 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
+/***************************************************************  
+*  file: ColorPickerGame.java
+*  author: Shane, Simon, Dixon, Ethan, Marvin
+*  class: CS 2450.01  
+*  
+*  assignment: Project V1.3 
+*  date last modified: 09/24/2022
+*  
+*  purpose: 
+*   Creates JFrame and objects to hold player information and 
+*   high score, then adds the game panel
+****************************************************************/
+
+
 package hangman;
 
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 import javax.swing.*;
 
-/***************************************************************  
-*  file: ColorPickerGame.java
-*  author: Shane, Simon, Dixon, Ethan, Marvin
-*  class: CS 2450.01  
-*  
-*  assignment: Project V1.1 
-*  date last modified: 09/24/2022
-*  
-*  purpose: ,
-*            
-*           . 
-*  
-****************************************************************/
+
 
 public class ColorPickerGame {
 
     static Player p = new Player("test", 0);
     static HighscoresController hsc;
 
+    /** Constructor
+     * Sets up player and high score controller for 
+     * the color picker game
+     * 
+     * @param p object that holds the player's name and score
+     * @param hsc high score controller that is passed from caller
+     */
     public ColorPickerGame(Player p, HighscoresController hsc) {
         this.p = p;
         this.hsc = hsc;
@@ -41,6 +46,10 @@ public class ColorPickerGame {
         });
     }
 
+    /** StartGui
+     * Sets up JFrame and adds game panel to the 
+     * frame.
+     */
     private static void startGui() {
         System.out.println("Gui on EDT? " + SwingUtilities.isEventDispatchThread());
         JFrame f = new JFrame("Color Picker Game");

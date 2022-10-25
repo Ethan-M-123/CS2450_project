@@ -3,7 +3,7 @@
 *  author: Simon Nguyen
 *  class: CS 2450.01  
 *  
-*  assignment: Project V1.2
+*  assignment: Project V1.3
 *  date last modified: 10/10/2022
 *  
 *  purpose: Creates the action that displays info about the game 

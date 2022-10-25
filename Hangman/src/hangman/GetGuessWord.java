@@ -1,25 +1,23 @@
-package hangman;
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
 /***************************************************************  
 *  file: GetGuessWord.java  
 *  author: M. Sevilla 
 *  class: CS 2450.01  
 *  
-*  assignment: Project V1.0 
+*  assignment: Project V1.3 
 *  date last modified: 9/21/2022
 *  
-*  purpose: This program provides the callee with a random word and methods to 
+*  purpose: This program provides the caller with a random word and methods to 
 *  get a new  random word, get said word's hidden form, and get the current word
 *  that the created GetGuessWord object is on 
 *  
 ****************************************************************/  
 
+
+package hangman;
 import java.math.* ;
+
+
+
 public class GetGuessWord {
     private String[] words;
     private String currentWord;

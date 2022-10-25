@@ -1,16 +1,9 @@
-package hangman;
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-
 /***************************************************************  
-*  file: PlayScreen.java
+*  file: HangmanPlayScreen.java
 *  author: M. Sevilla; Shane; Simon
 *  class: CS 2450.01  
 *  
-*  assignment: Project V1.2 
+*  assignment: Project V1.3 
 *  date last modified: 10/10/2022
 *  
 *  purpose: Displays the controls for the user to play the game as well as the
@@ -18,6 +11,10 @@ package hangman;
 *  color picker game.
 *  
 ****************************************************************/  
+
+
+package hangman;
+
 
 import java.util.Date;
 import java.util.Calendar;
@@ -48,6 +45,10 @@ public class HangmanPlayScreen extends javax.swing.JFrame{
     ImageIcon[] hangManParts;
     static HighscoresController hsc;
     
+    
+    //Constructor
+    //purpose: Initiates the components of the game panel, 
+    //      and the panel's size
     public HangmanPlayScreen(HighscoresController hsc) {
         initComponents();
         this.setSize(600, 400);
@@ -762,7 +763,8 @@ public class HangmanPlayScreen extends javax.swing.JFrame{
     }//GEN-LAST:event_btn_SkipActionPerformed
 
     
-    //when a letter button is pressed it runs the checkGuess() method with the 
+
+    //purpose: when a letter button is pressed it runs the checkGuess() method with the 
     //corresponding letter as a paramater, disables the selected button, and 
     //changes the color of the button to indicate it is disabled
     private void buttonZActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonZActionPerformed
@@ -921,7 +923,9 @@ public class HangmanPlayScreen extends javax.swing.JFrame{
         buttonA.setBackground(java.awt.Color.BLACK);
     }//GEN-LAST:event_buttonAActionPerformed
 
-    //When the get new word button is pressed the word to be guessed is randomly
+    
+    //method: btn_GetNewWordActionPerformed
+    //purpose: When the get new word button is pressed the word to be guessed is randomly
     //chosen again, the displayed letter and hangman are reset, and all letter
     //buttons are re-enabled and colored white again
     private void btn_GetNewWordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_GetNewWordActionPerformed
@@ -1048,7 +1052,10 @@ public class HangmanPlayScreen extends javax.swing.JFrame{
         });
     }
     
-    //Checks if the guessed letter is in the current word to be guessed, if the
+    
+    
+    //method: checkGuess
+    //purpose: Checks if the guessed letter is in the current word to be guessed, if the
     //guess is correct the letter is displayed and replaces each dash that was 
     //hiding it and the number of right answers is increased. If the player has
     //finished the word then the end screen is displayed. If the guess is incorrect

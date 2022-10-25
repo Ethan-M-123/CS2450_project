@@ -50,8 +50,10 @@ public class EndScreen extends javax.swing.JFrame {
     }
     
     
-    /** Creates EndScreen for users that cannot add their code to 
-     * the high score list
+    /** Constructor
+     * Purpose: Creates new form EndScreen. If test is true, 
+     * then allows player to add score, if test is false, 
+     * then only will allow score to be displayed.
      * 
      * @param test True if the score can be added, False if not.
      */
@@ -78,6 +80,12 @@ public class EndScreen extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     
+    
+    /** Method: retrieveLatestScore
+     * purpose: reads in the latest score stored 
+     *  in a file, then returning that score 
+     *  to the caller
+     */
     private int retrieveLatestScore()
     {
         String playerName = null;
@@ -105,6 +113,14 @@ public class EndScreen extends javax.swing.JFrame {
         return score;
     }
     
+    
+    /** method: setScore
+     * purpose: Sets the label that displays 
+     * the player's score
+     * 
+     * @param x the score of the player 
+     *          that was found/specified
+     */
     private void setScore(int x)
     {
       label_ScoreDisplay.setText(String.valueOf(x));  
@@ -211,6 +227,12 @@ public class EndScreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    /** method: btn_EndActionPerformed 
+     * purpose: Specifies the end button's action, storing
+     * score if the score is high enough
+     * 
+     */
     private void btn_EndActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_EndActionPerformed
         /* 
         //Keeping this in case the person who made the Player class ever comes 

@@ -1,7 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+/***************************************************************  
+*  file: ColorPickerPanel.java
+*  author: Shane, Simon, Dixon, Ethan, Marvin
+*  class: CS 2450.01  
+*  
+*  assignment: Project V1.3
+*  date last modified: 09/24/2022
+*  
+*  purpose: 
+*   Game panel for the color picker game that creates the 
+*   color picker buttons, randomizes the buttons' positions, colors,
+*   and placement, as well keeps track of the player's score
+*   Adds the specified GUI components, like the time stamp.
+****************************************************************/
+
+
+
 package hangman;
 
 import java.awt.Color;
@@ -20,19 +33,6 @@ import java.util.Date;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-/***************************************************************  
-*  file: ColorPickerGame.java
-*  author: Shane, Simon, Dixon, Ethan, Marvin
-*  class: CS 2450.01  
-*  
-*  assignment: Project V1.1 
-*  date last modified: 09/24/2022
-*  
-*  purpose: ,
-*            
-*           . 
-*  
-****************************************************************/
 
 public class ColorPickerPanel extends JPanel implements MouseListener, MouseMotionListener {
 
@@ -55,6 +55,7 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
     Ellipse2D.Double q4;
     Ellipse2D.Double q5;
 
+    // Default constructor
     public ColorPickerPanel() {
         
         this(new Player());
@@ -102,6 +103,13 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
         */
     }
 
+    
+    /** Overloaded constructor
+     *  Sets up components for the color picker game
+     * 
+     * @param p Player object that stores the player's
+     *          name and score.
+     */
     public ColorPickerPanel(Player p) {
         super();
         setPreferredSize(new Dimension(600, 400));
@@ -155,18 +163,40 @@ public class ColorPickerPanel extends JPanel implements MouseListener, MouseMoti
     }
 
     
+    /** method: getRoundNum
+     * 
+     * Purpose: returns the round number of the 
+     *  color picker game
+     */
     public int getRoundNum() {
         return roundNum;
     }
 
+    
+    /** method: resetRoundNum
+     * 
+     * resets the round number to 0
+     * 
+     */
     public void resetRoundNum() {
         roundNum = 0;
     }
 
+    /** method: getMaxRoundNum 
+     * purpose: returns the maximum number of 
+     * rounds for the color picker game
+     */
     public int getMaxRoundNum() {
         return NUM_OF_ROUNDS;
     }
 
+    
+    /** method: setMaxRoundNum
+     * purpose: sets the maximum number of
+     *  rounds to an integer specified
+     * @param i the maximum number of rounds
+     *          specified
+     */
     public void setMaxRoundNum(int i) {
         NUM_OF_ROUNDS = i;
     }

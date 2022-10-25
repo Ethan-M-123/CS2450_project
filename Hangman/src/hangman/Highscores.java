@@ -1,14 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-
 /***************************************************************  
 *  file: Highscores.java  
 *  author: Shane
 *  class: CS 2450.01  
 *  
-*  assignment: Project V1.0 
+*  assignment: Project V1.3 
 *  date last modified: 9/21/2022
 *  
 *  purpose: Displays an organized list of scores from highest (top) to lowest 
@@ -26,18 +21,19 @@ import javax.swing.*;
  * @author Shane
  */
 public class Highscores extends javax.swing.JFrame {
-
-    /**
-     * Creates new form Highscores
-     */
     
     public static int[] highscores = new int[5];
     public static String[] highscoreNames = {"ABC", "ABC", "ABC", "ABC", "ABC"}; 
+    
+    /** Constructor: Highscores
+     * purpose: Creates new form Highscores, displaying the top 5
+     * high scores found from the high scores file
+     */
     public Highscores() {
         initComponents();
         setSize(600,400);
         
-// Escape Key Exit
+        // Escape Key Exit
         highscoresTitle.getInputMap(WHEN_IN_FOCUSED_WINDOW)
                 .put(KeyStroke.getKeyStroke("ESCAPE"), "leaveGame");
         highscoresTitle.getActionMap().put("leaveGame", new LeaveGame());
@@ -157,14 +153,17 @@ public class Highscores extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    //Takes user to the main menu if they press the back button
+    
+    //Method: jButton1ActionPerformed
+    //purpose: Takes user to the main menu if they press the back button
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         MainMenu temp = new MainMenu();
         temp.show();
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    /**
+    /**method: main
+     * purpose: runs the Highscores frame to visible
      * @param args the command line arguments
      */
     public static void main(String args[]) {

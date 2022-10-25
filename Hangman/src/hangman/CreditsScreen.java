@@ -1,21 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-package hangman;
-
 /***************************************************************  
 *  file: CreditsScreen.java  
 *  author: D. Dixon; S. Baxter; E. Melero; M. Sevilla; S. Nguyen 
 *  class: CS 2450.01  
 *  
-*  assignment: Project V1.0 
+*  assignment: Project V1.3
 *  date last modified: 9/21/2022
 *  
 *  purpose: Display all hard working members of the group who worked on this 
 *  project to make it playable. 
 *  
 ****************************************************************/  
+
+package hangman;
+
 
 import hangman.MainMenu;
 import static javax.swing.JComponent.WHEN_IN_FOCUSED_WINDOW;
