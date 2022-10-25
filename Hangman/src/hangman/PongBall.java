@@ -1,7 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+/***************************************************************  
+*  file: PongBall.java
+*  author: Ethan
+*  class: CS 2450.01  
+*  
+*  assignment: Project V1.3 
+*  date last modified: 10/24/2022
+*  
+*  purpose: ,
+*   Creates instance of the ball for the pong game, which is 
+*   created in a set position, has it's x and y directions
+*   randomized, and repaints after the ball moves
+****************************************************************/
+
 package hangman;
 
 import java.awt.Color;
@@ -9,19 +19,7 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.util.Random;
 
-/***************************************************************  
-*  file: ColorPickerGame.java
-*  author: Shane, Simon, Dixon, Ethan, Marvin
-*  class: CS 2450.01  
-*  
-*  assignment: Project V1.3 
-*  date last modified: 10/24/2022
-*  
-*  purpose: ,
-*            
-*           . 
-*  
-****************************************************************/
+
 
 public class PongBall extends Rectangle{
     
@@ -51,10 +49,12 @@ public class PongBall extends Rectangle{
         setYDirection(randomYDirection*initialSpeed);
     }
     
+    // Sets the velocity for the x coordinate
     public void setXDirection(int randomXDirection){
         xVelocity = randomXDirection;
     }
     
+    //Sets the velocity for the y coordinate
     public void setYDirection(int randomYDirection){
         yVelocity = randomYDirection;
     }

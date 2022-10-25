@@ -1,14 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
 /***************************************************************  
 *  file: Player.java  
-*  author: ...
+*  author: 
 *  class: CS 2450.01  
 *  
-*  assignment: Project V1.0 
+*  assignment: Project V1.3 
 *  date last modified: 9/21/2022
 *  
 *  purpose: A class which provides the project with a object that includes

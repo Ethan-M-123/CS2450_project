@@ -1,7 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+/***************************************************************  
+*  file: PongPanel.java
+*  author: Shane, Simon, Dixon, Ethan, Marvin
+*  class: CS 2450.01  
+*  
+*  assignment: Project V1.3 
+*  date last modified: 10/24/2022
+*  
+*  purpose: 
+*  Holds the components of the pong game, creating a thread 
+*   that updates the panel continuously, moving the paddles 
+*   and ball as well as checking for collisions between the 
+*   edges of the panel or the paddles with the ball. Key listeners are 
+*   implemented in order to move the paddles and start the game. 
+*   Increments the score of each player until one has won, 
+*   creating a dialog box displaying who won, then returning to the
+*   main menu.
+****************************************************************/
+
+
 package hangman;
 
 import java.awt.Dimension;
@@ -14,19 +30,6 @@ import javax.swing.JPanel;
 import javax.swing.JOptionPane;
 import javax.swing.JButton;
 
-/***************************************************************  
-*  file: ColorPickerGame.java
-*  author: Shane, Simon, Dixon, Ethan, Marvin
-*  class: CS 2450.01  
-*  
-*  assignment: Project V1.3 
-*  date last modified: 10/24/2022
-*  
-*  purpose: 
-*            
-*            
-*  
-****************************************************************/
 
 public class PongPanel extends JPanel implements Runnable{
     

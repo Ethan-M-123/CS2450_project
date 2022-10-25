@@ -1,3 +1,16 @@
+/***************************************************************  
+*  file: PongScore.java
+*  author: Shane, Simon, Dixon, Ethan, Marvin
+*  class: CS 2450.01  
+*  
+*  assignment: Project V1.3 
+*  date last modified: 10/24/2022
+*  
+*  purpose: 
+*   Creates the line in the middle of the pong game, separating the 
+*   two sides, and holds the scores for both players of the game.
+*  
+****************************************************************/
 
 package hangman;
 
@@ -6,18 +19,6 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
-/***************************************************************  
-*  file: ColorPickerGame.java
-*  author: Shane, Simon, Dixon, Ethan, Marvin
-*  class: CS 2450.01  
-*  
-*  assignment: Project V1.3 
-*  date last modified: 10/24/2022
-*  
-*  purpose: 
-* 
-*  
-****************************************************************/
 
 public class PongScore extends Rectangle{
     

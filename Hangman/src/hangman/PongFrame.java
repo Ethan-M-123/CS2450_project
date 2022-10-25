@@ -1,5 +1,5 @@
 /***************************************************************  
-*  file: ColorPickerGame.java
+*  file: PongFrame.java
 *  author: Shane, Simon, Dixon, Ethan, Marvin
 *  class: CS 2450.01  
 *  
@@ -7,9 +7,10 @@
 *  date last modified: 10/24/2022
 *  
 *  purpose: ,
-*            
-*           . 
-*  
+*   Displays the pong game and interface to the user, showing the
+*   each player's scores, the time, the title, and a quit button.
+*   The quit button takes the user back to the main menu. 
+*   The score is reset every time the frame is called. 
 ****************************************************************/
 
 package hangman;

@@ -3,7 +3,7 @@
 *  author: Shane, Simon, Dixon, Ethan, Marvin
 *  class: CS 2450.01  
 *  
-*  assignment: Project V1.0 
+*  assignment: Project V1.3 
 *  date last modified: 9/24/2022
 *  
 *  purpose: Shows the name of our game and our dev team name,

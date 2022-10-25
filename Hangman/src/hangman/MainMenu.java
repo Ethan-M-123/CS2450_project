@@ -1,14 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-
 /***************************************************************  
 *  file: MainMenu.java
 *  author: Shane, Simon, Dixon, Ethan, Marvin
 *  class: CS 2450.01  
 *  
-*  assignment: Project V1.0 
+*  assignment: Project V1.3 
 *  date last modified: 9/21/2022
 *  
 *  purpose: Is the main menu of the game, provides all inputs for the user to 
@@ -147,6 +142,8 @@ public class MainMenu extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    //method: highscoreButtonActionPerformed
     //Takes user to the highscore page from the main menu
     private void highscoreButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_highscoreButtonActionPerformed
         if(evt.getSource() == highscoreButton){
@@ -156,6 +153,8 @@ public class MainMenu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_highscoreButtonActionPerformed
 
+    
+    //method: playButtonActionPerformed
     //Takes user to the hangman play screen from the main menu
     private void playButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playButtonActionPerformed
         if(evt.getSource()== playButton){
@@ -165,6 +164,8 @@ public class MainMenu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_playButtonActionPerformed
 
+    
+    //method: creditsButtonActionPerformed
     //takes user to the credits screen from the main menu
     private void creditsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_creditsButtonActionPerformed
         if(evt.getSource()== creditsButton){
@@ -174,6 +175,10 @@ public class MainMenu extends javax.swing.JFrame {
         } 
     }//GEN-LAST:event_creditsButtonActionPerformed
 
+    
+    //method: playPongButtonActionPerformed
+    //purpose: takes user to the pong game from 
+    //      the main menu
     private void playPongButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playPongButtonActionPerformed
         // TODO add your handling code here:
         PongFrame pong = new PongFrame();

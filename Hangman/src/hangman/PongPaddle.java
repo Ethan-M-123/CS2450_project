@@ -1,7 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+/***************************************************************  
+*  file: PongPaddle.java
+*  author: Shane, Simon, Dixon, Ethan, Marvin
+*  class: CS 2450.01  
+*  
+*  assignment: Project V1.3 
+*  date last modified: 10/24/2022
+*  
+*  purpose: 
+*   Creates the paddle for the pong game, accepting the key 
+*   events for it's movement and moving the paddle accordingly
+****************************************************************/
+
 package hangman;
 
 import java.awt.Color;
@@ -9,19 +18,6 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 
-/***************************************************************  
-*  file: ColorPickerGame.java
-*  author: Shane, Simon, Dixon, Ethan, Marvin
-*  class: CS 2450.01  
-*  
-*  assignment: Project V1.3 
-*  date last modified: 10/24/2022
-*  
-*  purpose: ,
-*            
-*           . 
-*  
-****************************************************************/
 
 public class PongPaddle extends Rectangle{
     
