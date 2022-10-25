@@ -49,6 +49,7 @@ public class MainMenu extends javax.swing.JFrame {
         playButton.setToolTipText("Play a game of Hangman");
         highscoreButton.setToolTipText("View top 5 players' highscores");
         creditsButton.setToolTipText("View the developers of this game");
+        playPongButton.setToolTipText("Play a game of Pong");
     }
 
     /**
