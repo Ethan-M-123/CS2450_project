@@ -65,6 +65,7 @@ public class PongPanel extends JPanel implements Runnable{
         this.parent = parent;
     }
     
+    //generates a new ball at the center of the screen
     public void newBall(){
         //random = new Random();
         //int randomY = random.nextInt(PANEL_HEIGHT - BALL_DIAMETER);
@@ -73,6 +74,7 @@ public class PongPanel extends JPanel implements Runnable{
         //ball = new PongBall((PANEL_WIDTH/2) - (BALL_DIAMETER/2), randomY, BALL_DIAMETER, BALL_DIAMETER);
     }
     
+    //generates 2 new paddles, one at center left and one at center right
     public void newPaddles(){
         paddle1 = new PongPaddle(0,(PANEL_HEIGHT/2) - (PADDLE_HEIGHT/2),PADDLE_WIDTH, PADDLE_HEIGHT, 1);
         paddle2 = new PongPaddle(PANEL_WIDTH - PADDLE_WIDTH,(PANEL_HEIGHT/2) - (PADDLE_HEIGHT/2),PADDLE_WIDTH, PADDLE_HEIGHT, 2);
@@ -85,6 +87,7 @@ public class PongPanel extends JPanel implements Runnable{
         g.drawImage(image,0,0,this);
     }
     
+    //draws the paddles, ball, and score on the screen
     public void draw(Graphics g){
         paddle1.draw(g);
         paddle2.draw(g);
@@ -92,6 +95,7 @@ public class PongPanel extends JPanel implements Runnable{
         score.draw(g);
     }
     
+    //begins the game once the space bar is pressed
     public void move(){
         if (spacePressed) {
             paddle1.move();
@@ -222,6 +226,7 @@ public class PongPanel extends JPanel implements Runnable{
         
     }
     
+    //Custom class that detects if keys are pressed or released
     public class AL extends KeyAdapter{
         public void keyPressed(KeyEvent e){
             paddle1.keyPressed(e);

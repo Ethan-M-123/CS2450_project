@@ -29,12 +29,13 @@ public class PongPaddle extends Rectangle{
     int yVelocity;
     int speed = 10;
     
-    
+    //PongPaddle constructor uses inherited constructor from class Rectangle
     public PongPaddle(int x, int y, int PADDLE_WIDTH, int PADDLE_HEIGHT, int id){
         super(x,y,PADDLE_WIDTH,PADDLE_HEIGHT);
         this.id = id;
     }
     
+    //moves a paddle based on which key is pressed
     public void keyPressed(KeyEvent e){
         switch(id){
             case 1:
@@ -60,6 +61,7 @@ public class PongPaddle extends Rectangle{
         }
     }
     
+    //Makes a paddle stop moving once a key is released
     public void keyReleased(KeyEvent e){
         switch(id){
             case 1:
@@ -89,6 +91,7 @@ public class PongPaddle extends Rectangle{
         yVelocity = yDirection;
     }
     
+    //moves the paddles based on yVelocity
     public void move() {
         y = y + yVelocity;
     }

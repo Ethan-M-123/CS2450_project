@@ -40,7 +40,8 @@ public class PongFrame extends JFrame{
     JTextArea player2;
     JButton quit;
     
-    
+    /* Constructor for the Pong JFrame, initializes components and starts the 
+    game. */
     public PongFrame(){
         
         this.setPreferredSize(new Dimension(600, 400));

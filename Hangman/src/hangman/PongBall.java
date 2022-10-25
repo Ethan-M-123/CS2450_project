@@ -30,6 +30,10 @@ public class PongBall extends Rectangle{
     int yVelocity;
     int initialSpeed = 2;
     
+    /* Constructor for a new Pong ball that also uses the super()
+    constructor from the Rectangle class. Starts at position x,y with a set 
+    width and height */
+    
     public PongBall(int x, int y, int width, int height){
         super(x,y,width,height);
         random = new Random();
@@ -55,6 +59,8 @@ public class PongBall extends Rectangle{
         yVelocity = randomYDirection;
     }
     
+    /*Method that actually moves the pong ball, based on the x and y 
+    velocities of the ball*/
     public void move () {
         x += xVelocity;
         y += yVelocity;
